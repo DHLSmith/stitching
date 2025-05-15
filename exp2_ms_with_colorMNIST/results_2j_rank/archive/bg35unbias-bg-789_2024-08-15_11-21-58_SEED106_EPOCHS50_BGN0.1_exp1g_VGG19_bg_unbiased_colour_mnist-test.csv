@@ -1,0 +1,2 @@
+,model,dataset,seed,send_file,rcv_file,val_acc,name
+0,bg35unbias,bg,789,../exp1_ms_with_random_dataset/results_1g/2024-08-15_11-21-58_SEED106_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights,../exp1_ms_with_random_dataset/results_1g/2024-08-15_11-21-58_SEED106_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights,1.0,only

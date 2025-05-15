@@ -1,0 +1,4 @@
+Executed at 2025-03-26_10-37-33
+logging to ./results_2k/2025-03-26_10-37-33_SEED57_EPOCHS4_BGN0.1_exp2e_ResNet18_log.txt
+seed=57
+bg_noise=0.1
