@@ -1,0 +1,365 @@
+Executed at 2025-01-28_00-27-22
+logging to ./results_4_epochs/2025-01-28_00-27-22_SEED57_EPOCHS4_BGN0.1_exp2e_ResNet18_log.txt
+seed=57
+bg_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist.weights'
+stitch_train_epochs=10
+================================================
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_mix_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_only_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_unbiased_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_biased_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist.weights'
+Entering Confusion
+Accuracy Calculation for ResNet18 with key='mix'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 99.97 %
+Confusion Matrix
+tensor([[ 979,    0,    0,    0,    0,    0,    0,    1,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    2,    0,    0,    0, 1007]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 67.29 %
+Confusion Matrix
+tensor([[ 962,    1,    0,    0,    0,    0,    4,    1,   12,    0],
+        [   0, 1119,    5,    0,    4,    0,    2,    0,    5,    0],
+        [   4,    4,  974,    0,    6,    0,    0,    4,   40,    0],
+        [  12,   35,    2,    0,  340,    0,    1,    1,  619,    0],
+        [   0,   92,    0,    0,  890,    0,    0,    0,    0,    0],
+        [  10,   73,    0,    0,  620,    0,   30,    0,  159,    0],
+        [   0,   13,    0,    0,   17,    0,  921,    0,    7,    0],
+        [   0,  229,    1,    0,  261,    0,    0,  504,   28,    5],
+        [   2,   44,    0,    0,   53,    0,    0,    0,  875,    0],
+        [   2,   22,    0,    0,  475,    0,    0,    0,   26,  484]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bgonly'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 64.16 %
+Confusion Matrix
+tensor([[ 281,    0,    0,    0,    0,    0,  699,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  335,    0,    0,    0,    0,    0,  697,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,  588,    0,    0,  370,    0,    0,    0],
+        [   0,    0,    0,    0,  890,    0,    0,  138,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,   27,    0,    0,    0,    0,  683,  299]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bg'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 97.77 %
+Confusion Matrix
+tensor([[ 972,    0,    0,    0,    0,    1,    5,    1,    1,    0],
+        [   1, 1105,    0,    0,    0,    0,   10,    0,   19,    0],
+        [   3,    0, 1018,    1,    1,    0,    2,    0,    7,    0],
+        [   0,    0,    1,  996,    0,    4,    0,    1,    7,    1],
+        [   0,    0,    1,    0,  953,    1,   10,    2,    3,   12],
+        [   1,    0,    0,    8,    1,  860,    9,    0,   12,    1],
+        [   3,    2,    0,    0,    0,    2,  941,    0,   10,    0],
+        [   0,    1,   20,    3,    0,    0,    0, 1003,    0,    1],
+        [   5,    0,    2,    0,    1,    2,    1,    1,  959,    3],
+        [   2,    3,    0,    6,   12,    2,    0,    8,    6,  970]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'mix': 99.97, 'bw': 67.29, 'bgonly': 64.16, 'bg': 100.0, 'bias': 100.0, 'unbias': 97.77}
+Entering whole model check
+Already evaluated for ./results_4_epochs_rank/mix-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_mix_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bw-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bw_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bgonly-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_only_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bg-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_biased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Entering Stitch/Rank
+device='cuda:0'
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_4_epochs_rank/mix3unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/mix4unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/mix5unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/mix6unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/mix7unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/mix8unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_4_epochs_rank/bw3unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bw4unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bw5unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bw6unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bw7unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bw8unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_4_epochs_rank/bgonly3unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bgonly4unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bgonly5unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bgonly6unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bgonly7unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bgonly8unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_4_epochs_rank/bg3unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bg4unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bg5unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bg6unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bg7unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bg8unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_4_epochs_rank/bias3unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bias4unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bias5unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bias6unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bias7unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bias8unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_4_epochs_rank/unbias3unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/unbias4unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/unbias5unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 5 from unbias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 170.72
+Epoch 1, loss 45.91
+Epoch 2, loss 37.44
+Epoch 3, loss 32.92
+Epoch 4, loss 29.58
+Epoch 5, loss 27.52
+Epoch 6, loss 25.29
+Epoch 7, loss 23.89
+Epoch 8, loss 22.62
+Epoch 9, loss 21.38
+**** Finished Training ****
+Change in stitch weights: 1.007890224456787
+Largest abs weight change: 0.05426083505153656
+Number of weights changing > 0.1 of that: 7244
+Change in stitch bias: 0.027145417407155037
+Largest abs bias change: 0.0040347278118133545
+Number of bias changing > 0.1 of that: 114
+Test the trained stitch against biased data
+Test Accuracy: 98.45 %
+Confusion Matrix
+tensor([[ 972,    0,    0,    0,    1,    1,    4,    1,    1,    0],
+        [   0, 1122,    0,    0,    1,    0,    6,    2,    4,    0],
+        [   4,    0, 1024,    0,    0,    0,    2,    0,    2,    0],
+        [   0,    0,    0, 1002,    0,    2,    0,    1,    4,    1],
+        [   1,    0,    1,    1,  960,    0,    1,    1,    5,   12],
+        [   0,    0,    0,    4,    0,  882,    1,    0,    5,    0],
+        [   7,    3,    1,    0,    2,    2,  940,    0,    3,    0],
+        [   0,    1,    5,    4,    0,    0,    0, 1010,    1,    7],
+        [   3,    0,    4,    6,    2,    0,    2,    1,  952,    4],
+        [   4,    3,    0,    4,    8,    1,    0,    7,    1,  981]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_4_epochs_rank/unbias6unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 6 from unbias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 97.16
+Epoch 1, loss 29.98
+Epoch 2, loss 25.51
+Epoch 3, loss 23.14
+Epoch 4, loss 21.26
+Epoch 5, loss 20.15
+Epoch 6, loss 19.31
+Epoch 7, loss 18.68
+Epoch 8, loss 18.12
+Epoch 9, loss 17.39
+**** Finished Training ****
+Change in stitch weights: 0.8478789329528809
+Largest abs weight change: 0.03290237858891487
+Number of weights changing > 0.1 of that: 17539
+Change in stitch bias: 0.02664841338992119
+Largest abs bias change: 0.0028460361063480377
+Number of bias changing > 0.1 of that: 224
+Test the trained stitch against biased data
+Test Accuracy: 98.69 %
+Confusion Matrix
+tensor([[ 977,    0,    0,    0,    0,    0,    1,    1,    0,    1],
+        [   0, 1126,    1,    0,    1,    2,    2,    0,    3,    0],
+        [   1,    2, 1024,    0,    1,    0,    0,    1,    3,    0],
+        [   0,    1,    0, 1001,    0,    2,    0,    1,    5,    0],
+        [   0,    0,    0,    0,  963,    0,    2,    3,    3,   11],
+        [   1,    0,    0,    8,    1,  875,    3,    0,    3,    1],
+        [   2,    3,    0,    1,    1,    5,  943,    0,    3,    0],
+        [   0,    2,    4,    3,    0,    0,    0, 1015,    0,    4],
+        [   4,    0,    2,    1,    1,    1,    1,    1,  961,    2],
+        [   2,    3,    2,    4,    6,    0,    0,    4,    4,  984]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_4_epochs_rank/unbias7unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 7 from unbias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 79.53
+Epoch 1, loss 27.25
+Epoch 2, loss 24.17
+Epoch 3, loss 22.85
+Epoch 4, loss 21.45
+Epoch 5, loss 21.42
+Epoch 6, loss 20.77
+Epoch 7, loss 19.90
+Epoch 8, loss 19.35
+Epoch 9, loss 19.87
+**** Finished Training ****
+Change in stitch weights: 0.866224467754364
+Largest abs weight change: 0.012302946299314499
+Number of weights changing > 0.1 of that: 123492
+Change in stitch bias: 0.027022404596209526
+Largest abs bias change: 0.002018190920352936
+Number of bias changing > 0.1 of that: 465
+Test the trained stitch against biased data
+Test Accuracy: 98.62 %
+Confusion Matrix
+tensor([[ 975,    0,    0,    0,    0,    1,    2,    1,    1,    0],
+        [   1, 1129,    0,    0,    0,    0,    2,    0,    3,    0],
+        [   3,    0, 1024,    0,    1,    0,    0,    1,    3,    0],
+        [   0,    0,    1, 1002,    0,    3,    0,    0,    3,    1],
+        [   0,    0,    2,    0,  959,    0,    2,    2,    2,   15],
+        [   1,    0,    0,    4,    1,  878,    4,    0,    3,    1],
+        [   3,    3,    3,    0,    3,    5,  939,    0,    2,    0],
+        [   1,    1,    7,    2,    0,    0,    0, 1011,    0,    6],
+        [   5,    0,    3,    3,    1,    2,    2,    1,  954,    3],
+        [   1,    3,    0,    2,    7,    1,    0,    2,    2,  991]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_4_epochs_rank/unbias8unbias-bias-57_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 8 from unbias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 65.31
+Epoch 1, loss 27.94
+Epoch 2, loss 25.36
+Epoch 3, loss 23.89
+Epoch 4, loss 22.18
+Epoch 5, loss 21.52
+Epoch 6, loss 21.13
+Epoch 7, loss 20.24
+Epoch 8, loss 19.84
+Epoch 9, loss 20.14
+**** Finished Training ****
+Change in stitch weights: 0.8362503051757812
+Largest abs weight change: 0.01277678832411766
+Number of weights changing > 0.1 of that: 116144
+Change in stitch bias: 0.02693234570324421
+Largest abs bias change: 0.0020193755626678467
+Number of bias changing > 0.1 of that: 462
+Test the trained stitch against biased data
+Test Accuracy: 98.62 %
+Confusion Matrix
+tensor([[ 975,    0,    0,    0,    0,    0,    2,    1,    2,    0],
+        [   0, 1128,    0,    0,    1,    0,    2,    0,    4,    0],
+        [   4,    1, 1022,    0,    2,    0,    0,    2,    1,    0],
+        [   0,    1,    1, 1002,    0,    1,    0,    1,    2,    2],
+        [   0,    0,    1,    0,  964,    0,    1,    0,    1,   15],
+        [   1,    0,    0,    8,    1,  875,    4,    0,    2,    1],
+        [   3,    2,    0,    0,    2,    4,  944,    0,    3,    0],
+        [   0,    1,    4,    3,    0,    0,    0, 1014,    0,    6],
+        [   5,    1,    3,    3,    1,    4,    2,    1,  949,    5],
+        [   1,    3,    0,    4,    7,    1,    0,    3,    1,  989]],
+       dtype=torch.int32)
+===================================================================
+stitching_accuracies={'mix': {'unbias': {}}, 'bw': {'unbias': {}}, 'bgonly': {'unbias': {}}, 'bg': {'unbias': {}}, 'bias': {'unbias': {}}, 'unbias': {'unbias': {5: 98.45, 6: 98.69, 7: 98.62, 8: 98.62}}}
+stitching_penalties={'mix': {'unbias': {}}, 'bw': {'unbias': {}}, 'bgonly': {'unbias': {}}, 'bg': {'unbias': {}}, 'bias': {'unbias': {}}, 'unbias': {'unbias': {5: -0.6800000000000068, 6: -0.9200000000000017, 7: -0.8500000000000085, 8: -0.8500000000000085}}}
+synth-mix
+99.97
+Stitch Accuracy
+{}
+--------------------------
+synth-bw
+67.29
+Stitch Accuracy
+{}
+--------------------------
+synth-bgonly
+64.16
+Stitch Accuracy
+{}
+--------------------------
+synth-bg
+100.0
+Stitch Accuracy
+{}
+--------------------------
+synth-bias
+100.0
+Stitch Accuracy
+{}
+--------------------------
+synth-unbias
+97.77
+Stitch Accuracy
+{5: 98.45, 6: 98.69, 7: 98.62, 8: 98.62}
+--------------------------

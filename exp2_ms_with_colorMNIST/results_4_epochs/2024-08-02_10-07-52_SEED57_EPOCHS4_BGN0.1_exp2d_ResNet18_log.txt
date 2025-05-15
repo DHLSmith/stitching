@@ -1,0 +1,28 @@
+Executed at 2024-08-02_10-07-52
+logging to ./results_4_epochs/2024-08-02_10-07-52_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_log.txt
+seed=57
+bg_noise=0.1
+train_mix_mnist_model=True
+save_mix_mnist_model_as='./results_4_epochs/2024-08-02_10-07-52_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_mix_mnist.weights'
+original_train_epochs=4
+train_bw_mnist_model=True
+save_bw_mnist_model_as='./results_4_epochs/2024-08-02_10-07-52_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bw_mnist.weights'
+original_train_epochs=4
+train_bg_only_colour_mnist_model=True
+save_bg_only_colour_mnist_model_as='./results_4_epochs/2024-08-02_10-07-52_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_only_colour_mnist.weights'
+original_train_epochs=4
+train_bg_unbiased_colour_mnist_model=True
+save_bg_unbiased_colour_mnist_model_as='./results_4_epochs/2024-08-02_10-07-52_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_unbiased_colour_mnist.weights'
+original_train_epochs=4
+train_biased_colour_mnist_model=True
+save_biased_colour_mnist_model_as='./results_4_epochs/2024-08-02_10-07-52_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_biased_colour_mnist.weights'
+original_train_epochs=4
+train_unbiased_colour_mnist_model=True
+save_unbiased_colour_mnist_model_as='./results_4_epochs/2024-08-02_10-07-52_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist.weights'
+original_train_epochs=4
+stitch_train_epochs=10
+================================================
+Train ResNet18 on mix
+Epoch 0, loss 416.38
+Epoch 1, loss 133.56
+Train ResNet18 on mix

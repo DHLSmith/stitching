@@ -1,0 +1,216 @@
+Executed at 2025-03-26_12-56-46
+logging to ./results_2m/2025-03-26_12-56-46_SEED10_EPOCHS4_BGN0.1_exp2e_ResNet18_log.txt
+seed=10
+bg_noise=0.1
+gen_randinit_model=True
+save_randinit_model_as='./results_2m/2025-03-26_12-56-46_SEED10_EPOCHS4_BGN0.1_exp2e_ResNet18_randinit.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist.weights'
+stitch_train_epochs=10
+================================================
+model has already been initialised: save it as ./results_2m/2025-03-26_12-56-46_SEED10_EPOCHS4_BGN0.1_exp2e_ResNet18_randinit.weights
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist.weights'
+Entering Confusion
+Accuracy Calculation for ResNet18 with key='randinit'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 9.82 %
+Confusion Matrix
+tensor([[   0,    0,    0,    0,  980,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1135,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1032,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1010,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  892,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  958,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1028,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  974,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1009,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 97.80 %
+Confusion Matrix
+tensor([[ 972,    0,    0,    0,    0,    1,    5,    1,    1,    0],
+        [   1, 1105,    0,    0,    0,    0,   10,    0,   19,    0],
+        [   3,    0, 1019,    1,    1,    0,    1,    0,    7,    0],
+        [   0,    0,    0,  997,    0,    4,    0,    1,    7,    1],
+        [   0,    0,    1,    0,  953,    0,   10,    2,    4,   12],
+        [   1,    0,    0,    9,    1,  860,    9,    0,   11,    1],
+        [   3,    2,    0,    0,    0,    3,  941,    0,    9,    0],
+        [   0,    1,   22,    3,    0,    0,    0, 1001,    0,    1],
+        [   5,    0,    2,    0,    1,    2,    1,    1,  959,    3],
+        [   2,    3,    0,    7,   11,    1,    0,    7,    5,  973]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'randinit': 9.82, 'unbias': 97.8}
+Entering whole model check
+about to measure rank for randinit
+Measure Rank for key='randinit'
+about to measure rank for unbias
+Measure Rank for key='unbias'
+Entering Confusion
+Accuracy Calculation for ResNet18 with key='randinit'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 9.82 %
+Confusion Matrix
+tensor([[   0,    0,    0,    0,  980,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1135,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1032,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1010,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  892,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  958,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1028,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  974,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1009,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 97.80 %
+Confusion Matrix
+tensor([[ 972,    0,    0,    0,    0,    1,    5,    1,    1,    0],
+        [   1, 1105,    0,    0,    0,    0,   10,    0,   19,    0],
+        [   3,    0, 1019,    1,    1,    0,    1,    0,    7,    0],
+        [   0,    0,    0,  997,    0,    4,    0,    1,    7,    1],
+        [   0,    0,    1,    0,  953,    0,   10,    2,    4,   12],
+        [   1,    0,    0,    9,    1,  860,    9,    0,   11,    1],
+        [   3,    2,    0,    0,    0,    3,  941,    0,    9,    0],
+        [   0,    1,   22,    3,    0,    0,    0, 1001,    0,    1],
+        [   5,    0,    2,    0,    1,    2,    1,    1,  959,    3],
+        [   2,    3,    0,    7,   11,    1,    0,    7,    5,  973]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'randinit': 9.82, 'unbias': 97.8}
+Entering Stitch/Rank
+device='cuda:0'
+NOTE: Only running stitch with unbias receive model
+Evaluate ranks and output to ./results_2m_rank/randinit3unbias-bias-10_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from randinit to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Entering Stitch/Rank
+device='cuda:0'
+NOTE: Only running stitch with unbias receive model
+Evaluate ranks and output to ./results_2m_rank/randinit3unbias-bias-10_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from randinit to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Entering Stitch/Rank
+device='cuda:0'
+NOTE: Only running stitch with unbias receive model
+Evaluate ranks and output to ./results_2m_rank/randinit3unbias-bias-10_2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from randinit to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 261.06
+Epoch 1, loss 56.82
+Epoch 2, loss 40.69
+Epoch 3, loss 31.16
+Epoch 4, loss 25.93
+Epoch 5, loss 21.69
+Epoch 6, loss 20.04
+Epoch 7, loss 16.81
+Epoch 8, loss 15.66
+Epoch 9, loss 14.61
+**** Finished Training ****
+Entering Confusion
+Accuracy Calculation for ResNet18 with key='randinit'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 9.82 %
+Confusion Matrix
+tensor([[   0,    0,    0,    0,  980,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1135,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1032,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1010,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  892,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  958,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1028,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  974,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1009,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 14.30 %
+Confusion Matrix
+tensor([[ 976,    0,    0,    0,    4,    0,    0,    0,    0,    0],
+        [1085,   42,    0,    0,    8,    0,    0,    0,    0,    0],
+        [ 961,    0,   29,    0,   42,    0,    0,    0,    0,    0],
+        [ 925,    1,    1,    0,   83,    0,    0,    0,    0,    0],
+        [ 616,    0,    0,    0,  366,    0,    0,    0,    0,    0],
+        [ 886,    0,    0,    0,    6,    0,    0,    0,    0,    0],
+        [ 950,    1,    0,    0,    7,    0,    0,    0,    0,    0],
+        [ 882,    3,   16,    0,  110,    0,    0,   17,    0,    0],
+        [ 970,    0,    0,    0,    4,    0,    0,    0,    0,    0],
+        [ 717,    1,    0,    0,  291,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'randinit': 9.82, 'unbias': 14.3}
+Entering Confusion
+Accuracy Calculation for ResNet18 with key='randinit'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 9.82 %
+Confusion Matrix
+tensor([[   0,    0,    0,    0,  980,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1135,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1032,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1010,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  892,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  958,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1028,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  974,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1009,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 14.29 %
+Confusion Matrix
+tensor([[ 976,    0,    0,    0,    4,    0,    0,    0,    0,    0],
+        [1085,   43,    0,    0,    7,    0,    0,    0,    0,    0],
+        [ 960,    0,   29,    0,   43,    0,    0,    0,    0,    0],
+        [ 928,    1,    0,    0,   81,    0,    0,    0,    0,    0],
+        [ 618,    0,    0,    0,  364,    0,    0,    0,    0,    0],
+        [ 887,    0,    0,    0,    5,    0,    0,    0,    0,    0],
+        [ 951,    1,    0,    0,    6,    0,    0,    0,    0,    0],
+        [ 884,    3,   16,    0,  108,    0,    0,   17,    0,    0],
+        [ 968,    0,    0,    0,    6,    0,    0,    0,    0,    0],
+        [ 711,    1,    0,    0,  297,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'randinit': 9.82, 'unbias': 14.29}
+Entering Confusion
+Accuracy Calculation for ResNet18 with key='randinit'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 9.82 %
+Confusion Matrix
+tensor([[   0,    0,    0,    0,  980,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1135,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1032,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1010,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  892,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  958,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1028,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  974,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1009,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 14.29 %
+Confusion Matrix
+tensor([[ 976,    0,    0,    0,    4,    0,    0,    0,    0,    0],
+        [1085,   43,    0,    0,    7,    0,    0,    0,    0,    0],
+        [ 960,    0,   29,    0,   43,    0,    0,    0,    0,    0],
+        [ 928,    1,    0,    0,   81,    0,    0,    0,    0,    0],
+        [ 618,    0,    0,    0,  364,    0,    0,    0,    0,    0],
+        [ 887,    0,    0,    0,    5,    0,    0,    0,    0,    0],
+        [ 951,    1,    0,    0,    6,    0,    0,    0,    0,    0],
+        [ 884,    3,   16,    0,  108,    0,    0,   17,    0,    0],
+        [ 968,    0,    0,    0,    6,    0,    0,    0,    0,    0],
+        [ 711,    1,    0,    0,  297,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'randinit': 9.82, 'unbias': 14.29}
