@@ -1,0 +1,6 @@
+.ipynb_checkpoints/
+MNIST/
+__pycache__/
+~$*.xlsx
+/plot_results/*.txt
+*VGG19*.weights
