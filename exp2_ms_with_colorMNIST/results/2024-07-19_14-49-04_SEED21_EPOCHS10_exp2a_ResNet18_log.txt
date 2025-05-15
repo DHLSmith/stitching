@@ -1,0 +1,400 @@
+Executed at 2024-07-19_14-49-04
+seed=21
+train_bw_mnist_model=True
+save_bw_mnist_model_as='./results/2024-07-19_14-49-04_SEED21_EPOCHS10_exp2a_ResNet18_bw_mnist.weights'
+original_train_epochs=10
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_unbiased_colour_mnist.weights'
+train_stitch=True
+stitch_train_epochs=10
+synthetic_dataset_noise=0.1
+================================================
+Train ResNet18 on bw
+Epoch 0, loss 122.29
+Epoch 1, loss 25.16
+Epoch 2, loss 17.94
+Epoch 3, loss 14.86
+Epoch 4, loss 12.18
+Epoch 5, loss 11.31
+Epoch 6, loss 9.38
+Epoch 7, loss 8.97
+Epoch 8, loss 7.24
+Epoch 9, loss 7.71
+**** Finished Training ****
+saveas='./results/2024-07-19_14-49-04_SEED21_EPOCHS10_exp2a_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_biased_colour_mnist.weights'
+val['loadfrom']='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_unbiased_colour_mnist.weights'
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18
+Test Accuracy: 99.06 %
+Confusion Matrix
+tensor([[ 966,    0,    1,    0,    0,    0,    8,    0,    4,    1],
+        [   0, 1131,    0,    0,    0,    0,    3,    1,    0,    0],
+        [   1,    3, 1012,    4,    1,    0,    1,    4,    6,    0],
+        [   0,    0,    0, 1007,    0,    1,    0,    0,    2,    0],
+        [   0,    0,    0,    0,  973,    0,    4,    0,    0,    5],
+        [   1,    0,    0,   10,    0,  880,    1,    0,    0,    0],
+        [   0,    2,    0,    0,    0,    2,  953,    0,    1,    0],
+        [   0,    2,    3,    2,    0,    0,    0, 1015,    3,    3],
+        [   0,    0,    1,    1,    0,    1,    0,    1,  970,    0],
+        [   0,    1,    0,    2,    3,    1,    0,    0,    3,  999]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='biased_colour'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbiased_colour'
+Test the Trained Resnet18
+Test Accuracy: 98.21 %
+Confusion Matrix
+tensor([[ 977,    1,    0,    0,    0,    0,    1,    1,    0,    0],
+        [   0, 1126,    2,    1,    0,    0,    4,    0,    2,    0],
+        [   2,    1, 1018,    2,    1,    0,    1,    1,    6,    0],
+        [   1,    0,    1,  990,    0,    7,    0,    2,    8,    1],
+        [   1,    1,    1,    0,  937,    1,    2,    1,    0,   38],
+        [   2,    0,    0,    5,    0,  880,    1,    1,    2,    1],
+        [   3,    3,    1,    0,    1,    4,  944,    0,    2,    0],
+        [   0,    2,    4,    0,    0,    0,    0, 1006,    4,   12],
+        [   5,    0,    0,    2,    2,    4,    0,    1,  948,   12],
+        [   3,    1,    0,    0,    1,    5,    0,    3,    1,  995]],
+       dtype=torch.int32)
+tensor(10000)
+Train the stitch to a model stitched after layer 3 from bw to bw
+Epoch 0, loss 643.22
+Epoch 1, loss 91.76
+Epoch 2, loss 70.14
+Epoch 3, loss 60.62
+Epoch 4, loss 53.86
+Epoch 5, loss 49.19
+Epoch 6, loss 45.73
+Epoch 7, loss 44.22
+Epoch 8, loss 40.94
+Epoch 9, loss 39.19
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 97.78 %
+Confusion Matrix
+tensor([[ 972,    0,    2,    0,    0,    1,    1,    1,    3,    0],
+        [   0, 1116,    1,    1,    2,    2,    4,    1,    8,    0],
+        [   3,    2, 1007,    3,    1,    0,    4,    6,    5,    1],
+        [   0,    0,    5,  988,    0,    4,    0,    1,    7,    5],
+        [   0,    1,    0,    0,  956,    0,    4,    3,    5,   13],
+        [   1,    0,    0,   13,    0,  871,    3,    0,    2,    2],
+        [   3,    4,    1,    0,    1,    1,  943,    0,    5,    0],
+        [   0,    2,    6,    6,    1,    0,    0, 1005,    1,    7],
+        [   4,    3,    1,    5,    2,    3,    5,    3,  943,    5],
+        [   0,    3,    0,    2,    5,    1,    0,   11,   10,  977]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 4 from bw to bw
+Epoch 0, loss 182.65
+Epoch 1, loss 61.29
+Epoch 2, loss 49.37
+Epoch 3, loss 44.55
+Epoch 4, loss 40.88
+Epoch 5, loss 38.26
+Epoch 6, loss 35.60
+Epoch 7, loss 34.40
+Epoch 8, loss 32.40
+Epoch 9, loss 32.05
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 98.05 %
+Confusion Matrix
+tensor([[ 972,    0,    3,    0,    0,    0,    3,    1,    1,    0],
+        [   2, 1119,    0,    1,    1,    1,    3,    2,    6,    0],
+        [   3,    5, 1014,    0,    2,    0,    2,    2,    4,    0],
+        [   0,    0,    2,  997,    0,    6,    0,    1,    4,    0],
+        [   0,    0,    0,    0,  959,    0,    3,    3,    2,   15],
+        [   1,    0,    0,   12,    0,  873,    2,    0,    4,    0],
+        [   5,    3,    2,    0,    2,    2,  937,    0,    7,    0],
+        [   0,    5,    6,    3,    1,    0,    0, 1005,    1,    7],
+        [   1,    2,    2,    5,    0,    1,    2,    1,  956,    4],
+        [   3,    2,    0,    0,    8,    3,    0,    9,   11,  973]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 5 from bw to bw
+Epoch 0, loss 273.89
+Epoch 1, loss 56.23
+Epoch 2, loss 45.18
+Epoch 3, loss 39.05
+Epoch 4, loss 35.80
+Epoch 5, loss 33.23
+Epoch 6, loss 31.06
+Epoch 7, loss 29.81
+Epoch 8, loss 28.64
+Epoch 9, loss 27.37
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 98.36 %
+Confusion Matrix
+tensor([[ 974,    0,    0,    0,    0,    0,    3,    1,    2,    0],
+        [   2, 1119,    0,    3,    1,    1,    3,    1,    5,    0],
+        [   2,    3, 1021,    0,    1,    0,    2,    2,    1,    0],
+        [   0,    0,    1, 1002,    0,    1,    0,    0,    5,    1],
+        [   1,    3,    0,    0,  958,    0,    5,    1,    2,   12],
+        [   2,    0,    0,    7,    0,  876,    1,    1,    3,    2],
+        [   3,    2,    2,    0,    1,    3,  944,    0,    3,    0],
+        [   0,    3,    6,    3,    2,    0,    0, 1008,    3,    3],
+        [   0,    2,    2,    6,    4,    3,    1,    3,  951,    2],
+        [   1,    3,    0,    4,    5,    3,    0,    4,    6,  983]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 6 from bw to bw
+Epoch 0, loss 119.87
+Epoch 1, loss 37.62
+Epoch 2, loss 32.35
+Epoch 3, loss 30.27
+Epoch 4, loss 28.46
+Epoch 5, loss 27.05
+Epoch 6, loss 26.44
+Epoch 7, loss 24.91
+Epoch 8, loss 24.67
+Epoch 9, loss 23.86
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 98.45 %
+Confusion Matrix
+tensor([[ 977,    0,    0,    0,    0,    0,    2,    1,    0,    0],
+        [   0, 1126,    0,    0,    2,    0,    2,    2,    3,    0],
+        [   2,    2, 1012,    4,    2,    0,    1,    6,    3,    0],
+        [   0,    0,    0,  998,    0,    5,    0,    1,    6,    0],
+        [   0,    2,    0,    0,  960,    0,    3,    2,    3,   12],
+        [   2,    0,    0,   11,    0,  867,    5,    1,    6,    0],
+        [   2,    4,    0,    0,    1,    3,  945,    0,    2,    1],
+        [   0,    2,    4,    2,    0,    0,    0, 1013,    3,    4],
+        [   4,    0,    1,    5,    0,    1,    0,    3,  958,    2],
+        [   1,    4,    0,    2,    4,    0,    0,    2,    7,  989]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 7 from bw to bw
+Epoch 0, loss 89.85
+Epoch 1, loss 39.94
+Epoch 2, loss 36.78
+Epoch 3, loss 33.83
+Epoch 4, loss 33.22
+Epoch 5, loss 32.37
+Epoch 6, loss 30.93
+Epoch 7, loss 30.61
+Epoch 8, loss 28.88
+Epoch 9, loss 29.52
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 98.15 %
+Confusion Matrix
+tensor([[ 974,    0,    0,    1,    0,    0,    4,    1,    0,    0],
+        [   0, 1122,    0,    2,    1,    0,    3,    2,    5,    0],
+        [   1,    2, 1013,    3,    2,    0,    1,    5,    5,    0],
+        [   0,    0,    1,  998,    0,    2,    0,    1,    8,    0],
+        [   1,    1,    1,    0,  959,    0,    4,    2,    2,   12],
+        [   3,    0,    0,   12,    1,  857,    8,    1,    9,    1],
+        [   2,    4,    0,    0,    1,    3,  946,    0,    2,    0],
+        [   0,    4,    2,    2,    1,    0,    0, 1012,    5,    2],
+        [   3,    2,    1,    6,    2,    1,    0,    2,  954,    3],
+        [   0,    5,    1,    4,    6,    1,    0,    2,   10,  980]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 8 from bw to bw
+Epoch 0, loss 84.42
+Epoch 1, loss 40.02
+Epoch 2, loss 35.81
+Epoch 3, loss 34.08
+Epoch 4, loss 32.80
+Epoch 5, loss 31.29
+Epoch 6, loss 31.30
+Epoch 7, loss 30.66
+Epoch 8, loss 29.84
+Epoch 9, loss 29.97
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 98.28 %
+Confusion Matrix
+tensor([[ 975,    0,    0,    1,    0,    0,    2,    2,    0,    0],
+        [   1, 1122,    1,    4,    1,    0,    2,    1,    2,    1],
+        [   1,    2, 1014,    4,    2,    0,    1,    5,    3,    0],
+        [   0,    0,    0,  998,    0,    1,    0,    1,   10,    0],
+        [   0,    1,    1,    0,  960,    0,    3,    2,    2,   13],
+        [   2,    0,    0,    7,    0,  864,    6,    2,    9,    2],
+        [   2,    3,    0,    0,    1,    3,  947,    0,    1,    1],
+        [   0,    4,    2,    1,    0,    0,    0, 1013,    5,    3],
+        [   7,    0,    1,    7,    2,    1,    0,    2,  952,    2],
+        [   0,    4,    1,    2,    4,    1,    0,    3,   11,  983]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 3 from bw to biased_colour
+Epoch 0, loss 3775.65
+Epoch 1, loss 2853.38
+Epoch 2, loss 2534.18
+Epoch 3, loss 2197.04
+Epoch 4, loss 2069.40
+Epoch 5, loss 1922.97
+Epoch 6, loss 1718.50
+Epoch 7, loss 1607.37
+Epoch 8, loss 1497.44
+Epoch 9, loss 1402.95
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 41.21 %
+Confusion Matrix
+tensor([[ 46,   1,  70,  27,  24,  21,  92, 515, 180,   4],
+        [ 13, 973,   1,  28,  13,   0,   4,  96,   3,   4],
+        [ 20,   8, 306,  58,   4,  38,  96, 275, 219,   8],
+        [ 12,  14,  10, 422,   2,  67, 135, 191, 152,   5],
+        [  1,  30,   5,   1, 254,  54,  75, 359,  84, 119],
+        [  2,  45,   2,  57,   9, 298, 264,  82,  90,  43],
+        [  2,  14,  11,  19,   5,  42, 483, 327,  43,  12],
+        [  7, 103,   0,  24,  49,  11,  39, 732,  27,  36],
+        [  2,  12,  12,  21,  60, 263,  78, 142, 361,  23],
+        [  0,  74,   6,   2, 146, 156,  74, 243,  62, 246]], dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 4 from bw to biased_colour
+Epoch 0, loss 3354.90
+Epoch 1, loss 2494.56
+Epoch 2, loss 1949.00
+Epoch 3, loss 675.75
+Epoch 4, loss 500.71
+Epoch 5, loss 424.24
+Epoch 6, loss 383.68
+Epoch 7, loss 353.52
+Epoch 8, loss 332.50
+Epoch 9, loss 311.42
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 76.79 %
+Confusion Matrix
+tensor([[ 657,   25,   65,   20,    0,    2,   72,  119,    7,   13],
+        [   0, 1007,    5,   51,    3,   13,   16,   27,   10,    3],
+        [   5,    3,  864,   73,    6,    3,    0,   18,   60,    0],
+        [   3,    9,   63,  871,    0,   12,   21,    6,   24,    1],
+        [   0,   56,    6,    3,  734,   14,    0,   74,   40,   55],
+        [   1,    5,    8,   29,    3,  665,   52,    5,   93,   31],
+        [  21,    7,   29,    9,    0,   21,  808,   31,    7,   25],
+        [   2,   43,   90,   17,   26,    1,    2,  809,    6,   32],
+        [   2,   35,   79,   80,   22,  203,   22,    5,  501,   25],
+        [   3,   30,   39,    2,   32,   29,    8,   39,   64,  763]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 5 from bw to biased_colour
+Epoch 0, loss 644.87
+Epoch 1, loss 147.22
+Epoch 2, loss 115.56
+Epoch 3, loss 99.31
+Epoch 4, loss 88.63
+Epoch 5, loss 79.89
+Epoch 6, loss 75.01
+Epoch 7, loss 69.87
+Epoch 8, loss 67.13
+Epoch 9, loss 64.86
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 96.86 %
+Confusion Matrix
+tensor([[ 966,    0,    9,    0,    0,    0,    1,    2,    2,    0],
+        [   0, 1111,    2,   14,    3,    0,    1,    1,    3,    0],
+        [   1,    0, 1010,    5,    3,    0,    0,   11,    2,    0],
+        [   0,    3,    4,  984,    0,    6,    0,    2,   11,    0],
+        [   0,    3,    2,    0,  953,    0,    2,    9,    4,    9],
+        [   1,    0,    0,    8,    1,  861,   11,    2,    8,    0],
+        [   5,    4,    3,    5,    0,   10,  926,    1,    4,    0],
+        [   0,    4,   10,   10,    7,    0,    0,  993,    2,    2],
+        [   1,    2,    8,    9,    4,    2,    0,    3,  943,    2],
+        [   2,   11,    3,    0,   11,   10,    0,   16,   17,  939]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 6 from bw to biased_colour
+Epoch 0, loss 243.77
+Epoch 1, loss 72.75
+Epoch 2, loss 56.89
+Epoch 3, loss 49.09
+Epoch 4, loss 45.57
+Epoch 5, loss 41.63
+Epoch 6, loss 40.08
+Epoch 7, loss 38.69
+Epoch 8, loss 37.32
+Epoch 9, loss 35.21
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 98.19 %
+Confusion Matrix
+tensor([[ 973,    0,    3,    0,    0,    0,    2,    0,    2,    0],
+        [   1, 1121,    2,    3,    2,    0,    3,    2,    1,    0],
+        [   0,    3, 1015,    3,    0,    0,    0,    7,    3,    1],
+        [   0,    1,    1, 1000,    0,    1,    0,    1,    6,    0],
+        [   0,    1,    4,    0,  958,    0,    2,    2,    4,   11],
+        [   2,    0,    0,    8,    0,  871,    3,    1,    6,    1],
+        [   3,    5,    0,    0,    1,    4,  938,    0,    7,    0],
+        [   0,    3,    2,    2,    4,    0,    0, 1011,    4,    2],
+        [   2,    0,    1,    6,    2,    2,    1,    1,  955,    4],
+        [   0,    3,    1,    6,    6,    3,    0,    3,   10,  977]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 7 from bw to biased_colour
+Epoch 0, loss 76.91
+Epoch 1, loss 36.78
+Epoch 2, loss 33.86
+Epoch 3, loss 32.04
+Epoch 4, loss 31.49
+Epoch 5, loss 30.52
+Epoch 6, loss 29.61
+Epoch 7, loss 28.89
+Epoch 8, loss 28.30
+Epoch 9, loss 27.91
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 98.16 %
+Confusion Matrix
+tensor([[ 975,    0,    0,    1,    0,    1,    1,    2,    0,    0],
+        [   0, 1118,    0,    5,    1,    0,    3,    1,    7,    0],
+        [   1,    2, 1012,    4,    2,    0,    1,    6,    4,    0],
+        [   0,    0,    1,  996,    0,    3,    0,    1,    9,    0],
+        [   0,    1,    0,    0,  960,    0,    3,    3,    3,   12],
+        [   2,    0,    0,    8,    0,  866,    5,    0,   10,    1],
+        [   3,    2,    0,    0,    1,    5,  944,    0,    2,    1],
+        [   0,    5,    2,    2,    0,    0,    0, 1012,    6,    1],
+        [   2,    0,    1,   11,    2,    1,    1,    2,  952,    2],
+        [   0,    2,    0,    5,    3,    6,    0,    2,   10,  981]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 8 from bw to biased_colour
+Epoch 0, loss 92.28
+Epoch 1, loss 36.56
+Epoch 2, loss 33.88
+Epoch 3, loss 32.33
+Epoch 4, loss 31.16
+Epoch 5, loss 29.83
+Epoch 6, loss 29.07
+Epoch 7, loss 28.62
+Epoch 8, loss 28.69
+Epoch 9, loss 27.43
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 98.26 %
+Confusion Matrix
+tensor([[ 974,    0,    0,    1,    0,    1,    1,    1,    2,    0],
+        [   0, 1122,    1,    4,    1,    0,    2,    1,    4,    0],
+        [   1,    2, 1015,    4,    2,    0,    1,    4,    3,    0],
+        [   0,    0,    0,  999,    0,    1,    0,    1,    9,    0],
+        [   0,    1,    0,    0,  963,    0,    3,    3,    3,    9],
+        [   2,    0,    0,    7,    0,  868,    4,    0,   10,    1],
+        [   2,    4,    0,    0,    1,    6,  943,    0,    1,    1],
+        [   0,    4,    2,    2,    1,    0,    0, 1009,    5,    5],
+        [   2,    1,    2,    7,    2,    1,    0,    3,  954,    2],
+        [   0,    3,    1,    4,    5,    3,    0,    4,   10,  979]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 3 from bw to unbiased_colour

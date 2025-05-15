@@ -1,0 +1,24 @@
+Executed at 2024-07-31_00-28-29
+logging to ./results/2024-07-31_00-28-29_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_log.txt
+seed=54
+bg_noise=0.1
+train_mix_mnist_model=True
+save_mix_mnist_model_as='./results/2024-07-31_00-28-29_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_mix_mnist.weights'
+original_train_epochs=10
+train_bw_mnist_model=True
+save_bw_mnist_model_as='./results/2024-07-31_00-28-29_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bw_mnist.weights'
+original_train_epochs=10
+train_bg_only_colour_mnist_model=True
+save_bg_only_colour_mnist_model_as='./results/2024-07-31_00-28-29_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bg_only_colour_mnist.weights'
+original_train_epochs=10
+train_bg_unbiased_colour_mnist_model=True
+save_bg_unbiased_colour_mnist_model_as='./results/2024-07-31_00-28-29_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bg_unbiased_colour_mnist.weights'
+original_train_epochs=10
+train_biased_colour_mnist_model=True
+save_biased_colour_mnist_model_as='./results/2024-07-31_00-28-29_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_biased_colour_mnist.weights'
+original_train_epochs=10
+train_unbiased_colour_mnist_model=True
+save_unbiased_colour_mnist_model_as='./results/2024-07-31_00-28-29_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist.weights'
+original_train_epochs=10
+stitch_train_epochs=10
+================================================

@@ -1,0 +1,53 @@
+Executed at 2024-07-19_14-07-32
+seed=21
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_bw_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_unbiased_colour_mnist.weights'
+train_stitch=True
+stitch_train_epochs=20
+synthetic_dataset_noise=0.1
+================================================
+Train the stitch to a model stitched after layer 3
+Epoch 0, loss 780.63
+Epoch 1, loss 261.94
+Epoch 2, loss 204.05
+Epoch 3, loss 175.54
+Epoch 4, loss 161.67
+Epoch 5, loss 144.22
+Epoch 6, loss 137.16
+Epoch 7, loss 131.85
+Epoch 8, loss 123.81
+Epoch 9, loss 124.45
+Epoch 10, loss 117.54
+Epoch 11, loss 115.97
+Epoch 12, loss 113.34
+Epoch 13, loss 111.13
+Epoch 14, loss 109.90
+Epoch 15, loss 107.56
+Epoch 16, loss 105.09
+Epoch 17, loss 102.86
+Epoch 18, loss 105.26
+Epoch 19, loss 103.66
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 93.72 %
+Confusion Matrix
+tensor([[ 954,    1,    0,    2,    0,    7,    3,    8,    4,    1],
+        [   0, 1105,    5,    2,    2,    2,    3,    1,   15,    0],
+        [   7,    6,  959,   13,    3,    3,   10,   10,   21,    0],
+        [   1,    0,    8,  952,    2,   11,    0,   13,   15,    8],
+        [   1,    3,    5,    0,  914,    0,    8,    3,    5,   43],
+        [   5,    2,    0,   28,    0,  827,    7,    6,    7,   10],
+        [   9,    7,    2,    0,    5,   15,  914,    0,    6,    0],
+        [   2,    6,   15,    4,    3,    1,    0,  959,    4,   34],
+        [  20,    6,    5,    7,   10,   18,    8,   19,  856,   25],
+        [   4,    4,    0,   11,   31,    6,    1,   18,    2,  932]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 4
+Epoch 0, loss 1258.01
+Epoch 1, loss 562.53
+Epoch 2, loss 413.73

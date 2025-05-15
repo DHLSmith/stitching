@@ -1,0 +1,16 @@
+Executed at 2024-07-19_23-24-58
+seed=37
+bg_noise=0.1
+train_bg_unbiased_colour_mnist_model=True
+save_bg_unbiased_colour_mnist_model_as='./results/2024-07-19_23-24-58_SEED37_EPOCHS10_BGN0.1_exp2b_ResNet18_bg_unbiased_colour_mnist.weights'
+original_train_epochs=10
+train_biased_colour_mnist_model=True
+save_biased_colour_mnist_model_as='./results/2024-07-19_23-24-58_SEED37_EPOCHS10_BGN0.1_exp2b_ResNet18_biased_colour_mnist.weights'
+original_train_epochs=10
+train_unbiased_colour_mnist_model=True
+save_unbiased_colour_mnist_model_as='./results/2024-07-19_23-24-58_SEED37_EPOCHS10_BGN0.1_exp2b_ResNet18_unbiased_colour_mnist.weights'
+original_train_epochs=10
+train_stitch=True
+stitch_train_epochs=10
+================================================
+Train ResNet18 on bg_unbiased_colour

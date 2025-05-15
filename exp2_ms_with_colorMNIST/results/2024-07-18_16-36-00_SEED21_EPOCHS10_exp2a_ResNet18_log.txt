@@ -1,0 +1,9 @@
+Executed at 2024-07-18_16-36-00
+seed=21
+train_mnist_model=True
+save_model_as='./results/2024-07-18_16-10-58_SEED21_EPOCHS10_exp2a_ResNet18_ColorMNIST.weights'
+original_train_epochs=10
+train_stitch=True
+stitch_train_epochs=10
+synthetic_dataset_noise=0.1
+================================================

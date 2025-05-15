@@ -1,0 +1,54 @@
+Executed at 2024-07-19_07-52-10
+seed=21
+train_bw_mnist_model=True
+save_bw_mnist_model_as='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_bw_mnist.weights'
+original_train_epochs=10
+train_biased_colour_mnist_model=True
+save_biased_colour_mnist_model_as='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_biased_colour_mnist.weights'
+original_train_epochs=10
+train_unbiased_colour_mnist_model=True
+save_unbiased_colour_mnist_model_as='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_unbiased_colour_mnist.weights'
+original_train_epochs=10
+train_stitch=True
+stitch_train_epochs=10
+synthetic_dataset_noise=0.1
+================================================
+Train ResNet18 on bw
+Epoch 0, loss 99.69
+Epoch 1, loss 23.54
+Epoch 2, loss 16.51
+Epoch 3, loss 13.76
+Epoch 4, loss 10.71
+Epoch 5, loss 10.48
+Epoch 6, loss 8.09
+Epoch 7, loss 8.51
+Epoch 8, loss 7.46
+Epoch 9, loss 6.48
+**** Finished Training ****
+saveas='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_bw_mnist.weights'
+Train ResNet18 on biased_colour
+Epoch 0, loss 106.03
+Epoch 1, loss 4.09
+Epoch 2, loss 0.44
+Epoch 3, loss 0.12
+Epoch 4, loss 0.04
+Epoch 5, loss 0.13
+Epoch 6, loss 0.04
+Epoch 7, loss 0.05
+Epoch 8, loss 0.08
+Epoch 9, loss 0.05
+**** Finished Training ****
+saveas='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_biased_colour_mnist.weights'
+Train ResNet18 on unbiased_colour
+Epoch 0, loss 297.93
+Epoch 1, loss 51.65
+Epoch 2, loss 35.41
+Epoch 3, loss 28.49
+Epoch 4, loss 24.48
+Epoch 5, loss 20.20
+Epoch 6, loss 30.26
+Epoch 7, loss 22.47
+Epoch 8, loss 15.06
+Epoch 9, loss 13.32
+**** Finished Training ****
+saveas='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_unbiased_colour_mnist.weights'

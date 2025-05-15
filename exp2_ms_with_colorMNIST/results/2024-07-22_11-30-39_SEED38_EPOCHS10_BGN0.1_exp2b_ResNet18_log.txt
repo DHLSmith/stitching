@@ -1,0 +1,15 @@
+Executed at 2024-07-22_11-30-39
+seed=38
+bg_noise=0.1
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load=None
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='results/2024-07-20_11-32-04_SEED38_EPOCHS10_BGN0.1_exp2b_ResNet18_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='results/2024-07-20_11-32-04_SEED38_EPOCHS10_BGN0.1_exp2b_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='results/2024-07-20_11-32-04_SEED38_EPOCHS10_BGN0.1_exp2b_ResNet18_unbiased_colour_mnist.weights'
+train_stitch=True
+stitch_train_epochs=10
+================================================
+val['loadfrom']=None

@@ -1,0 +1,11 @@
+Executed at 2024-07-18_16-42-37
+seed=21
+train_bw_mnist_model=False
+bw_mnist_model_to_load='../exp1_ms_with_random_dataset/results/2024-07-11_15-34-33_resnet18_mnist.weights'
+train_biased_colour_mnist_model=True
+save_biased_colour_mnist_model_as='./results/2024-07-18_16-42-37_SEED21_EPOCHS10_exp2a_ResNet18_biased_colour_mnist.weights'
+original_train_epochs=10
+train_stitch=True
+stitch_train_epochs=10
+synthetic_dataset_noise=0.1
+================================================

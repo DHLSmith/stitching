@@ -1,0 +1,103 @@
+Executed at 2024-07-20_11-32-04
+seed=38
+bg_noise=0.1
+train_bg_unbiased_colour_mnist_model=True
+save_bg_unbiased_colour_mnist_model_as='./results/2024-07-20_11-32-04_SEED38_EPOCHS10_BGN0.1_exp2b_ResNet18_bg_unbiased_colour_mnist.weights'
+original_train_epochs=10
+train_biased_colour_mnist_model=True
+save_biased_colour_mnist_model_as='./results/2024-07-20_11-32-04_SEED38_EPOCHS10_BGN0.1_exp2b_ResNet18_biased_colour_mnist.weights'
+original_train_epochs=10
+train_unbiased_colour_mnist_model=True
+save_unbiased_colour_mnist_model_as='./results/2024-07-20_11-32-04_SEED38_EPOCHS10_BGN0.1_exp2b_ResNet18_unbiased_colour_mnist.weights'
+original_train_epochs=10
+train_stitch=True
+stitch_train_epochs=10
+================================================
+Train ResNet18 on bg_unbiased_colour
+Epoch 0, loss 80.45
+Epoch 1, loss 7.95
+Epoch 2, loss 0.96
+Epoch 3, loss 1.47
+Epoch 4, loss 2.64
+Epoch 5, loss 1.55
+Epoch 6, loss 1.21
+Epoch 7, loss 1.25
+Epoch 8, loss 0.20
+Epoch 9, loss 0.33
+**** Finished Training ****
+saveas='./results/2024-07-20_11-32-04_SEED38_EPOCHS10_BGN0.1_exp2b_ResNet18_bg_unbiased_colour_mnist.weights'
+Train ResNet18 on biased_colour
+Epoch 0, loss 51.37
+Epoch 1, loss 1.59
+Epoch 2, loss 2.53
+Epoch 3, loss 1.46
+Epoch 4, loss 0.57
+Epoch 5, loss 1.27
+Epoch 6, loss 0.28
+Epoch 7, loss 0.15
+Epoch 8, loss 0.14
+Epoch 9, loss 0.37
+**** Finished Training ****
+saveas='./results/2024-07-20_11-32-04_SEED38_EPOCHS10_BGN0.1_exp2b_ResNet18_biased_colour_mnist.weights'
+Train ResNet18 on unbiased_colour
+Epoch 0, loss 279.17
+Epoch 1, loss 47.95
+Epoch 2, loss 35.52
+Epoch 3, loss 25.53
+Epoch 4, loss 21.67
+Epoch 5, loss 19.12
+Epoch 6, loss 16.26
+Epoch 7, loss 15.20
+Epoch 8, loss 12.85
+Epoch 9, loss 11.41
+**** Finished Training ****
+saveas='./results/2024-07-20_11-32-04_SEED38_EPOCHS10_BGN0.1_exp2b_ResNet18_unbiased_colour_mnist.weights'
+Accuracy Calculation for ResNet18 with key='bg_unbiased_colour'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1004,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1002,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1003,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  985,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1003,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1003,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1003,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,  999,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  995,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1003]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='biased_colour'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbiased_colour'
+Test the Trained Resnet18
+Test Accuracy: 98.52 %
+Confusion Matrix
+tensor([[ 976,    1,    0,    0,    0,    1,    1,    1,    0,    0],
+        [   0, 1128,    1,    2,    1,    0,    1,    1,    1,    0],
+        [   1,    0, 1024,    0,    3,    0,    0,    3,    1,    0],
+        [   0,    1,    4,  993,    0,    2,    0,    2,    6,    2],
+        [   0,    0,    0,    0,  977,    0,    1,    0,    0,    4],
+        [   2,    0,    0,   10,    0,  875,    3,    0,    2,    0],
+        [   5,    2,    0,    0,    7,    1,  943,    0,    0,    0],
+        [   0,    3,    7,    0,    2,    0,    0, 1012,    1,    3],
+        [  11,    2,    2,    1,    2,    1,    6,    0,  946,    3],
+        [   2,    5,    2,    1,    8,    3,    0,    6,    4,  978]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'bg_unbiased_colour': 100.0, 'biased_colour': 100.0, 'unbiased_colour': 98.52}

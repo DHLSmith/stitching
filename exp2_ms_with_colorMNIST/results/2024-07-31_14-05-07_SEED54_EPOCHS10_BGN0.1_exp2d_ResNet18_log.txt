@@ -1,0 +1,229 @@
+Executed at 2024-07-31_14-05-07
+logging to ./results/2024-07-31_14-05-07_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_log.txt
+seed=54
+bg_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist.weights'
+stitch_train_epochs=10
+================================================
+val['loadfrom']='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_mix_mnist.weights'
+val['loadfrom']='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bg_only_colour_mnist.weights'
+val['loadfrom']='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bg_unbiased_colour_mnist.weights'
+val['loadfrom']='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_biased_colour_mnist.weights'
+val['loadfrom']='./results/2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist.weights'
+Entering Confusion
+Accuracy Calculation for ResNet18 with key='mix'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    1,    0,    0,  957,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 69.16 %
+Confusion Matrix
+tensor([[ 977,    0,    1,    0,    0,    0,    0,    0,    2,    0],
+        [   0, 1127,    4,    0,    1,    0,    0,    0,    3,    0],
+        [   4,    4,  990,    0,    1,    0,    0,    0,   33,    0],
+        [  24,  173,    3,    7,   10,    0,    0,    0,  785,    8],
+        [   0,   51,    0,    0,  929,    0,    0,    0,    2,    0],
+        [  29,  227,    0,    0,  138,    3,    4,    0,  491,    0],
+        [  33,   64,    0,    0,   13,    0,  822,    0,   26,    0],
+        [  46,  390,   16,    0,   38,    0,    0,  395,  135,    8],
+        [   5,   34,    0,    0,    2,    0,    1,    0,  932,    0],
+        [  16,   66,    0,    0,  129,    0,    0,    0,   64,  734]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bgonly'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 53.28 %
+Confusion Matrix
+tensor([[  14,    0,    0,    0,  961,    0,    5,    0,    0,    0],
+        [   0, 1129,    0,    6,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  967,    0,    2,   32,    0,    0,   31,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,  227,  605,    0,  126,    0,    0,    0],
+        [   0,    0,    0,    0, 1022,    0,    0,    6,    0,    0],
+        [   0,    0,    0,    0,  858,    0,    0,    0,  116,    0],
+        [   0,    0,    0,  365,  491,    0,    6,    0,   61,   86]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bg'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 98.59 %
+Confusion Matrix
+tensor([[ 975,    0,    0,    0,    0,    0,    2,    1,    1,    1],
+        [   3, 1123,    0,    2,    0,    0,    2,    2,    3,    0],
+        [   1,    0, 1025,    0,    1,    0,    0,    3,    2,    0],
+        [   1,    0,    5,  981,    0,   11,    0,    3,    4,    5],
+        [   0,    0,    0,    0,  974,    0,    0,    0,    0,    8],
+        [   2,    0,    0,    3,    0,  868,    5,    1,    5,    8],
+        [   3,    3,    0,    0,    2,    3,  946,    0,    1,    0],
+        [   0,    0,    2,    0,    0,    0,    0, 1020,    1,    5],
+        [   4,    1,    4,    2,    3,    1,    1,    2,  950,    6],
+        [   0,    2,    0,    0,    5,    0,    0,    2,    3,  997]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'mix': 99.99, 'bw': 69.16, 'bgonly': 53.28, 'bg': 100.0, 'bias': 100.0, 'unbias': 98.59}
+Entering whole model check
+Already evaluated for ./results_rank/mix-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_mix_mnist-test.csv
+Already evaluated for ./results_rank/bw-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bw_mnist-test.csv
+Already evaluated for ./results_rank/bgonly-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bg_only_colour_mnist-test.csv
+Already evaluated for ./results_rank/bg-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_bg_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_biased_colour_mnist-test.csv
+Already evaluated for ./results_rank/unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Entering Stitch/Rank
+device='cuda:0'
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_rank/mix3unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/mix4unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/mix5unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/mix6unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/mix7unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/mix8unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_rank/bw3unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bw4unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bw5unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bw6unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bw7unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bw8unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_rank/bgonly3unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bgonly4unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bgonly5unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bgonly6unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bgonly7unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bgonly8unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_rank/bg3unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bg4unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bg5unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bg6unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bg7unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bg8unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_rank/bias3unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bias4unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bias5unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bias6unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bias7unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/bias8unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Already evaluated for ./results_rank/unbias3unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/unbias4unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/unbias5unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/unbias6unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/unbias7unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_rank/unbias8unbias-bias-54_2024-07-31_00-38-04_SEED54_EPOCHS10_BGN0.1_exp2d_ResNet18_unbiased_colour_mnist-test.csv
+stitching_accuracies={'mix': {'unbias': {}}, 'bw': {'unbias': {}}, 'bgonly': {'unbias': {}}, 'bg': {'unbias': {}}, 'bias': {'unbias': {}}, 'unbias': {'unbias': {}}}
+stitching_penalties={'mix': {'unbias': {}}, 'bw': {'unbias': {}}, 'bgonly': {'unbias': {}}, 'bg': {'unbias': {}}, 'bias': {'unbias': {}}, 'unbias': {'unbias': {}}}
+synth-mix
+99.99
+Stitch Accuracy
+{}
+--------------------------
+synth-bw
+69.16
+Stitch Accuracy
+{}
+--------------------------
+synth-bgonly
+53.28
+Stitch Accuracy
+{}
+--------------------------
+synth-bg
+100.0
+Stitch Accuracy
+{}
+--------------------------
+synth-bias
+100.0
+Stitch Accuracy
+{}
+--------------------------
+synth-unbias
+98.59
+Stitch Accuracy
+{}
+--------------------------

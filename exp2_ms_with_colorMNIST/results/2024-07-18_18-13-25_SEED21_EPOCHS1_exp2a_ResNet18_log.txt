@@ -1,0 +1,29 @@
+Executed at 2024-07-18_18-13-25
+seed=21
+train_bw_mnist_model=False
+bw_mnist_model_to_load='../exp1_ms_with_random_dataset/results/2024-07-11_15-34-33_resnet18_mnist.weights'
+train_biased_colour_mnist_model=True
+save_biased_colour_mnist_model_as='./results/2024-07-18_18-13-25_SEED21_EPOCHS1_exp2a_ResNet18_biased_colour_mnist.weights'
+original_train_epochs=1
+train_unbiased_colour_mnist_model=True
+save_unbiased_colour_mnist_model_as='./results/2024-07-18_18-13-25_SEED21_EPOCHS1_exp2a_ResNet18_unbiased_colour_mnist.weights'
+original_train_epochs=1
+train_stitch=True
+stitch_train_epochs=10
+synthetic_dataset_noise=0.1
+================================================
+Train ResNet18 on bw
+Train ResNet18 on bw
+Epoch 0, loss 274.71
+**** Finished Training ****
+saveas='./results/2024-07-18_18-13-25_SEED21_EPOCHS1_exp2a_ResNet18_unbiased_colour_mnist.weights'
+Train ResNet18 on biased_colour
+Epoch 0, loss 45.19
+**** Finished Training ****
+saveas='./results/2024-07-18_18-13-25_SEED21_EPOCHS1_exp2a_ResNet18_unbiased_colour_mnist.weights'
+Train ResNet18 on unbiased_colour
+Epoch 0, loss 31.85
+**** Finished Training ****
+saveas='./results/2024-07-18_18-13-25_SEED21_EPOCHS1_exp2a_ResNet18_unbiased_colour_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results/2024-07-11_15-34-33_resnet18_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results/2024-07-11_15-34-33_resnet18_mnist.weights'

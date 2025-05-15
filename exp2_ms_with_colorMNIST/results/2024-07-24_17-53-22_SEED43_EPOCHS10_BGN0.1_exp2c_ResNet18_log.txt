@@ -1,0 +1,1234 @@
+Executed at 2024-07-24_17-53-22
+seed=43
+bg_noise=0.1
+train_mix_mnist_model=True
+save_mix_mnist_model_as='./results/2024-07-24_17-53-22_SEED43_EPOCHS10_BGN0.1_exp2c_ResNet18_mix_mnist.weights'
+original_train_epochs=10
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results/2024-07-19_14-49-04_SEED21_EPOCHS10_exp2a_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results/2024-07-22_17-24-48_SEED41_EPOCHS10_BGN0.1_exp2b_ResNet18_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results/2024-07-22_17-24-48_SEED41_EPOCHS10_BGN0.1_exp2b_ResNet18_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results/2024-07-22_17-24-48_SEED41_EPOCHS10_BGN0.1_exp2b_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results/2024-07-22_17-24-48_SEED41_EPOCHS10_BGN0.1_exp2b_ResNet18_unbiased_colour_mnist.weights'
+train_stitch=True
+stitch_train_epochs=10
+================================================
+Train ResNet18 on mix
+Epoch 0, loss 308.91
+Epoch 1, loss 29.24
+Epoch 2, loss 20.78
+Epoch 3, loss 14.24
+Epoch 4, loss 11.52
+Epoch 5, loss 9.94
+Epoch 6, loss 10.84
+Epoch 7, loss 8.15
+Epoch 8, loss 7.05
+Epoch 9, loss 6.76
+**** Finished Training ****
+saveas='./results/2024-07-24_17-53-22_SEED43_EPOCHS10_BGN0.1_exp2c_ResNet18_mix_mnist.weights'
+val['loadfrom']='./results/2024-07-19_14-49-04_SEED21_EPOCHS10_exp2a_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results/2024-07-22_17-24-48_SEED41_EPOCHS10_BGN0.1_exp2b_ResNet18_bg_only_colour_mnist.weights'
+val['loadfrom']='./results/2024-07-22_17-24-48_SEED41_EPOCHS10_BGN0.1_exp2b_ResNet18_bg_unbiased_colour_mnist.weights'
+val['loadfrom']='./results/2024-07-22_17-24-48_SEED41_EPOCHS10_BGN0.1_exp2b_ResNet18_biased_colour_mnist.weights'
+val['loadfrom']='./results/2024-07-22_17-24-48_SEED41_EPOCHS10_BGN0.1_exp2b_ResNet18_unbiased_colour_mnist.weights'
+Accuracy Calculation for ResNet18 with key='mix'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 79.09 %
+Confusion Matrix
+tensor([[ 839,    0,    1,    0,    0,    0,  128,    1,   11,    0],
+        [   0, 1115,    0,    0,    0,    0,   14,    0,    6,    0],
+        [   0,    3,  987,    0,    1,    0,    6,    5,   30,    0],
+        [   0,  136,    7,  178,    0,    2,   74,   14,  599,    0],
+        [   0,   72,    0,    0,  840,    0,   68,    1,    0,    1],
+        [   0,   28,    0,    0,    0,  306,  461,    3,   94,    0],
+        [   0,    3,    0,    0,    0,    0,  953,    0,    2,    0],
+        [   0,   29,    7,    1,    1,    0,    0,  976,   13,    1],
+        [   0,    5,    0,    0,    2,    0,   15,    1,  951,    0],
+        [   2,   79,    0,    0,    6,    2,    8,   44,  104,  764]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bg_only_colour'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 72.72 %
+Confusion Matrix
+tensor([[ 963,    0,    0,    0,    0,    0,    0,   17,    0,    0],
+        [   0, 1110,    1,   22,    0,    2,    0,    0,    0,    0],
+        [   0,    0,  824,  125,    0,    1,    0,    0,   82,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   3,    0,    0,  414,    0,    0,  541,    0,    0,    0],
+        [   0,    0,    0,    0,  255,    0,    0,  773,    0,    0],
+        [   0,    0,    0,  510,  320,    0,    0,    0,  144,    0],
+        [   0,    0,    0,  148,  444,    1,    0,    0,  383,   33]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bg_unbiased_colour'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='biased_colour'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbiased_colour'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 97.97 %
+Confusion Matrix
+tensor([[ 976,    0,    0,    0,    0,    0,    2,    1,    1,    0],
+        [   0, 1129,    2,    1,    0,    0,    2,    0,    1,    0],
+        [   7,    2, 1015,    5,    1,    0,    0,    1,    1,    0],
+        [   0,    0,    7,  981,    0,    8,    0,    2,    8,    4],
+        [   0,    0,    1,    0,  973,    0,    1,    1,    1,    5],
+        [   3,    0,    0,    8,    0,  869,    7,    0,    2,    3],
+        [   2,    3,    2,    0,    2,    1,  946,    0,    2,    0],
+        [   1,    5,    7,    1,    0,    0,    0, 1006,    1,    7],
+        [   6,    9,    2,    3,    7,    2,    5,    5,  934,    1],
+        [   3,    5,    2,    4,   13,    4,    0,    3,    7,  968]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'mix': 100.0, 'bw': 79.09, 'bg_only_colour': 72.72, 'bg_unbiased_colour': 100.0, 'biased_colour': 100.0, 'unbiased_colour': 97.97}
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Train the stitch to a model stitched after layer 3 from mix to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 161.19
+Epoch 1, loss 39.73
+Epoch 2, loss 27.64
+Epoch 3, loss 23.39
+Epoch 4, loss 20.12
+Epoch 5, loss 17.10
+Epoch 6, loss 15.19
+Epoch 7, loss 14.00
+Epoch 8, loss 12.58
+Epoch 9, loss 11.87
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.49 %
+Confusion Matrix
+tensor([[ 972,    0,    2,    0,    0,    0,    3,    2,    0,    1],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1026,    0,    0,    2,    0,    0,    4,    0],
+        [   0,    0,    0, 1008,    0,    0,    0,    2,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   1,    1,    0,    0,    1,    0,  955,    0,    0,    0],
+        [   1,    3,    6,    3,    1,    0,    0, 1011,    0,    3],
+        [   0,    0,    1,    0,    3,    1,    2,    0,  965,    2],
+        [   0,    0,    0,    2,    0,    3,    0,    1,    0, 1003]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 4 from mix to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 238.39
+Epoch 1, loss 29.44
+Epoch 2, loss 19.08
+Epoch 3, loss 14.26
+Epoch 4, loss 10.98
+Epoch 5, loss 9.26
+Epoch 6, loss 8.40
+Epoch 7, loss 7.23
+Epoch 8, loss 6.13
+Epoch 9, loss 5.61
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.71 %
+Confusion Matrix
+tensor([[ 978,    0,    0,    0,    0,    0,    0,    2,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   3,    3,    0,    0,    1,    0,  951,    0,    0,    0],
+        [   0,    2,    1,    0,    0,    1,    0, 1022,    1,    1],
+        [   0,    0,    1,    1,    0,    0,    0,    0,  972,    0],
+        [   1,    2,    1,    4,    1,    1,    0,    1,    1,  997]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 5 from mix to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 151.26
+Epoch 1, loss 12.90
+Epoch 2, loss 9.02
+Epoch 3, loss 7.01
+Epoch 4, loss 5.72
+Epoch 5, loss 5.01
+Epoch 6, loss 4.50
+Epoch 7, loss 4.10
+Epoch 8, loss 3.71
+Epoch 9, loss 3.90
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.98 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  981,    0,    0,    1,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    1,    0,    0,    0,    0, 1027,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 6 from mix to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 51.97
+Epoch 1, loss 4.87
+Epoch 2, loss 3.43
+Epoch 3, loss 2.88
+Epoch 4, loss 2.56
+Epoch 5, loss 2.28
+Epoch 6, loss 1.84
+Epoch 7, loss 1.25
+Epoch 8, loss 1.43
+Epoch 9, loss 1.48
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 7 from mix to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 39.82
+Epoch 1, loss 3.21
+Epoch 2, loss 2.30
+Epoch 3, loss 1.99
+Epoch 4, loss 1.75
+Epoch 5, loss 1.66
+Epoch 6, loss 1.32
+Epoch 7, loss 1.38
+Epoch 8, loss 1.20
+Epoch 9, loss 1.17
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    1,    0, 1008]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 8 from mix to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 45.17
+Epoch 1, loss 3.47
+Epoch 2, loss 2.22
+Epoch 3, loss 1.72
+Epoch 4, loss 1.69
+Epoch 5, loss 1.77
+Epoch 6, loss 1.41
+Epoch 7, loss 1.29
+Epoch 8, loss 1.42
+Epoch 9, loss 1.08
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Train the stitch to a model stitched after layer 3 from bw to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 304.81
+Epoch 1, loss 116.14
+Epoch 2, loss 87.24
+Epoch 3, loss 73.83
+Epoch 4, loss 64.82
+Epoch 5, loss 59.79
+Epoch 6, loss 54.27
+Epoch 7, loss 51.37
+Epoch 8, loss 48.83
+Epoch 9, loss 45.93
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 97.26 %
+Confusion Matrix
+tensor([[ 970,    6,    2,    0,    0,    0,    0,    2,    0,    0],
+        [   0, 1124,    5,    0,    0,    0,    3,    0,    3,    0],
+        [   7,    2, 1018,    4,    0,    0,    0,    0,    1,    0],
+        [   0,    0,    1,  981,    0,   22,    1,    1,    2,    2],
+        [   0,    2,    1,    2,  955,    5,    7,    2,    0,    8],
+        [   0,    0,    0,    7,    0,  883,    1,    0,    0,    1],
+        [   5,    5,    1,    0,    5,    3,  936,    0,    3,    0],
+        [   3,    1,   13,    3,    0,    0,    0,  988,    1,   19],
+        [  11,    0,    5,    5,    2,    8,    5,    8,  924,    6],
+        [   5,    4,    2,    3,    3,   18,    2,   15,   10,  947]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 4 from bw to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 195.78
+Epoch 1, loss 63.72
+Epoch 2, loss 52.14
+Epoch 3, loss 44.57
+Epoch 4, loss 41.33
+Epoch 5, loss 38.34
+Epoch 6, loss 35.47
+Epoch 7, loss 34.06
+Epoch 8, loss 31.87
+Epoch 9, loss 30.71
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 98.13 %
+Confusion Matrix
+tensor([[ 973,    1,    1,    0,    0,    0,    4,    1,    0,    0],
+        [   2, 1120,    5,    1,    0,    0,    5,    0,    2,    0],
+        [   4,    0, 1020,    4,    1,    0,    1,    0,    2,    0],
+        [   1,    0,    4,  988,    0,    8,    0,    1,    7,    1],
+        [   0,    0,    0,    0,  966,    2,    3,    1,    1,    9],
+        [   0,    0,    0,    6,    0,  879,    2,    0,    5,    0],
+        [   7,    3,    0,    0,    1,    1,  945,    0,    1,    0],
+        [   1,    1,    8,    0,    0,    0,    0, 1008,    2,    8],
+        [  13,    0,    6,    4,    3,    2,    3,    2,  935,    6],
+        [   3,    0,    0,    7,    3,    5,    1,    7,    4,  979]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 5 from bw to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 186.01
+Epoch 1, loss 47.77
+Epoch 2, loss 37.65
+Epoch 3, loss 32.21
+Epoch 4, loss 29.09
+Epoch 5, loss 26.56
+Epoch 6, loss 24.81
+Epoch 7, loss 23.07
+Epoch 8, loss 21.51
+Epoch 9, loss 20.68
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 98.76 %
+Confusion Matrix
+tensor([[ 975,    1,    1,    0,    0,    0,    0,    1,    2,    0],
+        [   1, 1127,    1,    1,    0,    0,    4,    0,    0,    1],
+        [   5,    1, 1025,    0,    0,    0,    0,    1,    0,    0],
+        [   0,    0,    1,  999,    0,    4,    0,    0,    5,    1],
+        [   0,    0,    0,    0,  970,    2,    1,    1,    1,    7],
+        [   0,    0,    0,    6,    0,  883,    2,    0,    1,    0],
+        [   4,    1,    0,    0,    2,    4,  943,    0,    3,    1],
+        [   0,    1,    4,    2,    3,    0,    0, 1013,    1,    4],
+        [   0,    0,    2,    3,    5,    0,    1,    2,  957,    4],
+        [   2,    0,    0,    2,    7,    4,    0,    5,    5,  984]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 6 from bw to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 124.03
+Epoch 1, loss 25.98
+Epoch 2, loss 21.31
+Epoch 3, loss 19.31
+Epoch 4, loss 17.13
+Epoch 5, loss 16.36
+Epoch 6, loss 15.44
+Epoch 7, loss 14.58
+Epoch 8, loss 13.86
+Epoch 9, loss 13.73
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.16 %
+Confusion Matrix
+tensor([[ 978,    0,    1,    0,    0,    0,    0,    1,    0,    0],
+        [   2, 1127,    2,    1,    0,    0,    2,    1,    0,    0],
+        [   1,    0, 1030,    0,    0,    0,    0,    1,    0,    0],
+        [   1,    0,    0, 1001,    0,    5,    0,    1,    2,    0],
+        [   0,    0,    0,    0,  975,    1,    0,    1,    0,    5],
+        [   0,    0,    0,    7,    0,  881,    2,    0,    2,    0],
+        [   0,    1,    0,    0,    0,    3,  952,    0,    2,    0],
+        [   0,    4,    2,    2,    0,    0,    0, 1014,    1,    5],
+        [   0,    0,    0,    3,    2,    1,    0,    2,  964,    2],
+        [   0,    1,    0,    2,    4,    0,    0,    3,    5,  994]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 7 from bw to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 77.87
+Epoch 1, loss 30.79
+Epoch 2, loss 27.80
+Epoch 3, loss 25.63
+Epoch 4, loss 23.47
+Epoch 5, loss 22.69
+Epoch 6, loss 21.60
+Epoch 7, loss 20.90
+Epoch 8, loss 20.38
+Epoch 9, loss 20.54
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 98.81 %
+Confusion Matrix
+tensor([[ 978,    0,    0,    1,    0,    0,    0,    1,    0,    0],
+        [   3, 1124,    1,    2,    0,    1,    1,    3,    0,    0],
+        [   1,    3, 1025,    0,    1,    0,    0,    2,    0,    0],
+        [   0,    1,    0, 1001,    0,    1,    0,    2,    5,    0],
+        [   0,    0,    0,    0,  973,    0,    2,    1,    0,    6],
+        [   2,    0,    0,   12,    0,  874,    2,    0,    2,    0],
+        [   2,    3,    0,    0,    1,    5,  944,    0,    2,    1],
+        [   0,    5,    2,    0,    0,    0,    0, 1016,    2,    3],
+        [   2,    0,    0,    8,    3,    1,    0,    2,  955,    3],
+        [   2,    3,    1,    2,    3,    0,    0,    2,    5,  991]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 8 from bw to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 97.10
+Epoch 1, loss 30.18
+Epoch 2, loss 26.63
+Epoch 3, loss 24.41
+Epoch 4, loss 22.81
+Epoch 5, loss 21.73
+Epoch 6, loss 20.08
+Epoch 7, loss 20.30
+Epoch 8, loss 19.26
+Epoch 9, loss 18.36
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 98.84 %
+Confusion Matrix
+tensor([[ 976,    0,    2,    1,    0,    0,    0,    1,    0,    0],
+        [   2, 1125,    1,    2,    0,    1,    1,    3,    0,    0],
+        [   1,    1, 1026,    0,    1,    0,    0,    3,    0,    0],
+        [   0,    0,    1,  997,    0,    2,    0,    4,    6,    0],
+        [   0,    0,    0,    0,  972,    0,    3,    1,    1,    5],
+        [   3,    0,    0,   12,    0,  873,    2,    0,    2,    0],
+        [   2,    3,    0,    0,    1,    5,  945,    0,    2,    0],
+        [   0,    2,    2,    0,    0,    0,    0, 1019,    3,    2],
+        [   1,    0,    0,    6,    3,    1,    0,    2,  959,    2],
+        [   1,    1,    0,    3,    3,    0,    0,    2,    7,  992]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Train the stitch to a model stitched after layer 3 from bg_only_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 694.32
+Epoch 1, loss 63.28
+Epoch 2, loss 29.14
+Epoch 3, loss 21.67
+Epoch 4, loss 16.90
+Epoch 5, loss 14.04
+Epoch 6, loss 13.20
+Epoch 7, loss 11.72
+Epoch 8, loss 10.05
+Epoch 9, loss 10.96
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.90 %
+Confusion Matrix
+tensor([[ 976,    0,    0,    0,    1,    0,    0,    3,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    1, 1009,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   1,    0,    0,    0,    0,    0,  957,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    1,    0,    0,  973,    0],
+        [   0,    0,    0,    0,    0,    2,    0,    1,    0, 1006]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 4 from bg_only_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 442.96
+Epoch 1, loss 67.46
+Epoch 2, loss 16.72
+Epoch 3, loss 13.10
+Epoch 4, loss 10.64
+Epoch 5, loss 9.54
+Epoch 6, loss 8.76
+Epoch 7, loss 7.44
+Epoch 8, loss 6.69
+Epoch 9, loss 6.19
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.95 %
+Confusion Matrix
+tensor([[ 979,    0,    0,    0,    0,    0,    0,    1,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   2,    0,    0,    0,    0,    1,  955,    0,    0,    0],
+        [   1,    0,    0,    0,    0,    0,    0, 1027,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 5 from bg_only_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 178.67
+Epoch 1, loss 13.48
+Epoch 2, loss 8.52
+Epoch 3, loss 6.62
+Epoch 4, loss 5.81
+Epoch 5, loss 4.55
+Epoch 6, loss 4.04
+Epoch 7, loss 4.21
+Epoch 8, loss 3.03
+Epoch 9, loss 3.01
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.93 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1134,    0,    1,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1031,    0,    0,    0,    0,    0,    0,    1],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   1,    0,    0,    0,    0,    0,  957,    0,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0, 1027,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    3, 1006]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 6 from bg_only_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 70.98
+Epoch 1, loss 7.05
+Epoch 2, loss 4.74
+Epoch 3, loss 4.27
+Epoch 4, loss 3.82
+Epoch 5, loss 3.12
+Epoch 6, loss 2.78
+Epoch 7, loss 2.61
+Epoch 8, loss 2.74
+Epoch 9, loss 2.45
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0, 1027,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 7 from bg_only_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 45.15
+Epoch 1, loss 8.85
+Epoch 2, loss 7.78
+Epoch 3, loss 6.25
+Epoch 4, loss 5.67
+Epoch 5, loss 5.39
+Epoch 6, loss 4.83
+Epoch 7, loss 4.86
+Epoch 8, loss 4.67
+Epoch 9, loss 3.92
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.98 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0, 1027,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    1, 1008]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 8 from bg_only_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 46.49
+Epoch 1, loss 9.42
+Epoch 2, loss 6.98
+Epoch 3, loss 6.89
+Epoch 4, loss 5.91
+Epoch 5, loss 5.57
+Epoch 6, loss 5.17
+Epoch 7, loss 5.05
+Epoch 8, loss 4.93
+Epoch 9, loss 4.53
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.98 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0, 1027,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    1, 1008]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Train the stitch to a model stitched after layer 3 from bg_unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 485.95
+Epoch 1, loss 38.53
+Epoch 2, loss 22.22
+Epoch 3, loss 16.74
+Epoch 4, loss 12.90
+Epoch 5, loss 11.09
+Epoch 6, loss 9.69
+Epoch 7, loss 8.56
+Epoch 8, loss 7.50
+Epoch 9, loss 7.53
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.81 %
+Confusion Matrix
+tensor([[ 978,    0,    0,    0,    0,    0,    0,    2,    0,    0],
+        [   0, 1131,    0,    0,    0,    3,    0,    0,    0,    1],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1009,    0,    0,    0,    1,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   1,    0,    0,    0,    0,    0,  957,    0,    0,    0],
+        [   0,    1,    0,    0,    0,    0,    0, 1027,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   3,    1,    1,    0,    0,    4,    0,    1,    0,  999]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 4 from bg_unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 150.26
+Epoch 1, loss 24.01
+Epoch 2, loss 15.61
+Epoch 3, loss 12.05
+Epoch 4, loss 9.75
+Epoch 5, loss 9.00
+Epoch 6, loss 7.70
+Epoch 7, loss 6.25
+Epoch 8, loss 5.89
+Epoch 9, loss 5.20
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.91 %
+Confusion Matrix
+tensor([[ 979,    0,    0,    0,    0,    0,    0,    1,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  981,    0,    0,    0,    1,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   2,    0,    0,    0,    0,    0,  956,    0,    0,    0],
+        [   0,    1,    0,    0,    0,    1,    0, 1026,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0,    0,  973,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    1,    1, 1007]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 5 from bg_unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 136.17
+Epoch 1, loss 7.30
+Epoch 2, loss 5.49
+Epoch 3, loss 4.10
+Epoch 4, loss 3.15
+Epoch 5, loss 2.40
+Epoch 6, loss 2.32
+Epoch 7, loss 2.44
+Epoch 8, loss 1.65
+Epoch 9, loss 1.98
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.98 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   1,    0,    0,    0,    0,    0,  957,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    1,    0,    0,    0,    0, 1008]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 6 from bg_unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 61.13
+Epoch 1, loss 2.98
+Epoch 2, loss 2.60
+Epoch 3, loss 1.55
+Epoch 4, loss 1.11
+Epoch 5, loss 1.19
+Epoch 6, loss 0.96
+Epoch 7, loss 0.93
+Epoch 8, loss 0.68
+Epoch 9, loss 0.65
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 7 from bg_unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 27.26
+Epoch 1, loss 1.83
+Epoch 2, loss 1.21
+Epoch 3, loss 1.07
+Epoch 4, loss 0.80
+Epoch 5, loss 0.70
+Epoch 6, loss 0.60
+Epoch 7, loss 0.53
+Epoch 8, loss 0.56
+Epoch 9, loss 0.50
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 8 from bg_unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 26.85
+Epoch 1, loss 1.87
+Epoch 2, loss 1.18
+Epoch 3, loss 0.93
+Epoch 4, loss 0.79
+Epoch 5, loss 0.68
+Epoch 6, loss 0.57
+Epoch 7, loss 0.51
+Epoch 8, loss 0.49
+Epoch 9, loss 0.44
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Train the stitch to a model stitched after layer 3 from biased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 209.73
+Epoch 1, loss 36.32
+Epoch 2, loss 23.08
+Epoch 3, loss 17.19
+Epoch 4, loss 13.98
+Epoch 5, loss 11.88
+Epoch 6, loss 11.10
+Epoch 7, loss 9.42
+Epoch 8, loss 8.83
+Epoch 9, loss 8.00
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.77 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1029,    0,    0,    0,    0,    0,    3,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    1,    0,  891,    0,    0,    0,    0],
+        [   1,    2,    0,    0,    0,    0,  955,    0,    0,    0],
+        [   0,    2,    5,    1,    0,    0,    0, 1019,    0,    1],
+        [   0,    0,    1,    0,    0,    2,    0,    0,  971,    0],
+        [   0,    2,    1,    1,    0,    0,    0,    0,    0, 1005]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 4 from biased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 241.00
+Epoch 1, loss 25.78
+Epoch 2, loss 17.43
+Epoch 3, loss 13.77
+Epoch 4, loss 11.83
+Epoch 5, loss 10.06
+Epoch 6, loss 8.47
+Epoch 7, loss 7.74
+Epoch 8, loss 7.25
+Epoch 9, loss 6.44
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.88 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1031,    0,    0,    0,    0,    0,    0,    1],
+        [   0,    0,    0, 1008,    0,    1,    1,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    1,    0,    0,    0,    0,  956,    1,    0,    0],
+        [   1,    1,    0,    0,    0,    0,    1, 1024,    0,    1],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   1,    0,    1,    0,    0,    0,    0,    1,    0, 1006]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 5 from biased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 132.08
+Epoch 1, loss 12.64
+Epoch 2, loss 6.97
+Epoch 3, loss 5.00
+Epoch 4, loss 3.81
+Epoch 5, loss 3.29
+Epoch 6, loss 2.69
+Epoch 7, loss 2.53
+Epoch 8, loss 2.00
+Epoch 9, loss 2.02
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.98 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0,    0,  973,    0],
+        [   0,    0,    0,    0,    0,    1,    0,    0,    0, 1008]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 6 from biased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 104.60
+Epoch 1, loss 3.50
+Epoch 2, loss 2.35
+Epoch 3, loss 1.80
+Epoch 4, loss 1.40
+Epoch 5, loss 1.20
+Epoch 6, loss 1.10
+Epoch 7, loss 0.91
+Epoch 8, loss 0.85
+Epoch 9, loss 0.97
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 7 from biased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 35.65
+Epoch 1, loss 2.49
+Epoch 2, loss 1.79
+Epoch 3, loss 1.39
+Epoch 4, loss 1.27
+Epoch 5, loss 0.98
+Epoch 6, loss 0.94
+Epoch 7, loss 0.76
+Epoch 8, loss 0.65
+Epoch 9, loss 0.68
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 8 from biased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 40.18
+Epoch 1, loss 2.57
+Epoch 2, loss 1.71
+Epoch 3, loss 1.24
+Epoch 4, loss 1.01
+Epoch 5, loss 0.90
+Epoch 6, loss 0.77
+Epoch 7, loss 0.78
+Epoch 8, loss 0.70
+Epoch 9, loss 0.61
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Train the stitch to a model stitched after layer 3 from unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 214.06
+Epoch 1, loss 37.07
+Epoch 2, loss 26.17
+Epoch 3, loss 20.85
+Epoch 4, loss 18.29
+Epoch 5, loss 15.67
+Epoch 6, loss 14.53
+Epoch 7, loss 12.87
+Epoch 8, loss 12.44
+Epoch 9, loss 11.73
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 99.34 %
+Confusion Matrix
+tensor([[ 971,    0,    0,    0,    1,    0,    3,    2,    0,    3],
+        [   0, 1131,    1,    0,    0,    2,    1,    0,    0,    0],
+        [   0,    0, 1023,    2,    0,    0,    2,    0,    5,    0],
+        [   1,    0,    0, 1004,    0,    1,    0,    4,    0,    0],
+        [   0,    0,    0,    0,  980,    0,    2,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   2,    3,    0,    0,    1,    3,  948,    1,    0,    0],
+        [   0,    2,    0,    1,    1,    1,    0, 1022,    1,    0],
+        [   1,    0,    1,    1,    4,    1,    0,    0,  965,    1],
+        [   2,    1,    1,    0,    3,    0,    0,    3,    1,  998]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 4 from unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 153.47
+Epoch 1, loss 36.60
+Epoch 2, loss 27.44
+Epoch 3, loss 22.18
+Epoch 4, loss 19.13
+Epoch 5, loss 17.39
+Epoch 6, loss 16.35
+Epoch 7, loss 14.82
+Epoch 8, loss 14.37
+Epoch 9, loss 13.20
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 98.94 %
+Confusion Matrix
+tensor([[ 975,    2,    0,    0,    0,    0,    1,    1,    0,    1],
+        [   0, 1131,    2,    0,    0,    0,    2,    0,    0,    0],
+        [   1,    0, 1026,    1,    1,    0,    1,    0,    2,    0],
+        [   0,    0,    1, 1007,    0,    0,    0,    0,    2,    0],
+        [   0,    0,    1,    0,  969,    0,    1,    1,    4,    6],
+        [   1,    1,    0,    2,    0,  883,    1,    0,    3,    1],
+        [   6,    5,    1,    0,    0,    1,  944,    0,    1,    0],
+        [   1,    1,    4,    0,    1,    0,    0, 1017,    0,    4],
+        [   1,    0,    8,    0,    5,    2,    0,    0,  956,    2],
+        [   4,    3,    0,    4,    2,    0,    0,    7,    3,  986]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 5 from unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 162.03
+Epoch 1, loss 31.46
+Epoch 2, loss 25.67
+Epoch 3, loss 21.54
+Epoch 4, loss 19.55
+Epoch 5, loss 17.61
+Epoch 6, loss 16.28
+Epoch 7, loss 15.24
+Epoch 8, loss 14.35
+Epoch 9, loss 13.54
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 98.92 %
+Confusion Matrix
+tensor([[ 977,    1,    1,    0,    0,    0,    0,    1,    0,    0],
+        [   0, 1128,    1,    3,    1,    0,    1,    0,    1,    0],
+        [   0,    0, 1029,    0,    0,    0,    0,    0,    3,    0],
+        [   0,    0,    1, 1007,    0,    1,    0,    1,    0,    0],
+        [   0,    0,    0,    0,  976,    0,    0,    1,    2,    3],
+        [   2,    0,    0,    8,    0,  877,    1,    1,    2,    1],
+        [   3,    3,    2,    0,    1,    6,  942,    0,    1,    0],
+        [   0,    4,    5,    1,    1,    0,    0, 1009,    1,    7],
+        [   0,    0,    5,    0,    1,    0,    1,    2,  963,    2],
+        [   4,    2,    0,    4,    8,    1,    0,    4,    2,  984]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 6 from unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 109.06
+Epoch 1, loss 28.91
+Epoch 2, loss 23.67
+Epoch 3, loss 21.36
+Epoch 4, loss 19.87
+Epoch 5, loss 17.84
+Epoch 6, loss 16.90
+Epoch 7, loss 15.89
+Epoch 8, loss 15.41
+Epoch 9, loss 14.41
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 98.77 %
+Confusion Matrix
+tensor([[ 976,    0,    1,    1,    0,    0,    0,    1,    1,    0],
+        [   0, 1129,    1,    2,    0,    0,    2,    0,    1,    0],
+        [   5,    1, 1020,    1,    2,    0,    0,    1,    2,    0],
+        [   0,    0,    1, 1001,    0,    3,    0,    1,    4,    0],
+        [   0,    0,    0,    0,  972,    0,    2,    0,    4,    4],
+        [   1,    0,    0,   10,    0,  872,    4,    0,    2,    3],
+        [   6,    3,    0,    0,    2,    1,  945,    0,    1,    0],
+        [   0,    2,    2,    1,    0,    0,    0, 1016,    2,    5],
+        [   3,    0,    2,    0,    1,    0,    2,    4,  959,    3],
+        [   1,    2,    1,    3,    7,    1,    0,    5,    2,  987]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 7 from unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 72.36
+Epoch 1, loss 24.29
+Epoch 2, loss 22.06
+Epoch 3, loss 20.00
+Epoch 4, loss 19.45
+Epoch 5, loss 18.51
+Epoch 6, loss 17.86
+Epoch 7, loss 17.28
+Epoch 8, loss 16.64
+Epoch 9, loss 16.55
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 98.63 %
+Confusion Matrix
+tensor([[ 977,    0,    0,    1,    0,    0,    0,    1,    1,    0],
+        [   0, 1130,    0,    1,    0,    0,    2,    0,    2,    0],
+        [   3,    1, 1017,    2,    1,    0,    2,    4,    2,    0],
+        [   0,    0,    2,  996,    0,    4,    0,    2,    4,    2],
+        [   0,    0,    0,    0,  973,    0,    1,    0,    2,    6],
+        [   2,    0,    0,    9,    0,  874,    2,    0,    2,    3],
+        [   5,    2,    0,    0,    2,    4,  941,    0,    4,    0],
+        [   0,    2,    3,    2,    0,    0,    0, 1020,    1,    0],
+        [   5,    0,    1,    2,    2,    1,    1,    6,  955,    1],
+        [   2,    3,    3,    3,    9,    3,    0,    3,    3,  980]],
+       dtype=torch.int32)
+===================================================================
+Train the stitch to a model stitched after layer 8 from unbiased_colour to unbiased_colour
+Use the biased data loader (train and test) regardless of what unbiased_colour was trained on
+Epoch 0, loss 68.81
+Epoch 1, loss 24.11
+Epoch 2, loss 21.99
+Epoch 3, loss 20.45
+Epoch 4, loss 19.21
+Epoch 5, loss 18.43
+Epoch 6, loss 18.02
+Epoch 7, loss 17.32
+Epoch 8, loss 17.42
+Epoch 9, loss 16.66
+**** Finished Training ****
+Test the trained stitch against biased data
+Test Accuracy: 98.60 %
+Confusion Matrix
+tensor([[ 976,    0,    0,    1,    0,    0,    1,    1,    1,    0],
+        [   0, 1126,    1,    1,    0,    0,    3,    0,    4,    0],
+        [   4,    2, 1020,    4,    0,    0,    0,    1,    1,    0],
+        [   0,    0,    2, 1002,    0,    1,    0,    1,    4,    0],
+        [   0,    0,    1,    0,  973,    0,    0,    0,    3,    5],
+        [   1,    0,    1,   12,    1,  868,    4,    1,    2,    2],
+        [   2,    2,    1,    0,    2,    4,  944,    0,    3,    0],
+        [   0,    1,    5,    2,    0,    0,    0, 1016,    2,    2],
+        [   5,    1,    3,    1,    1,    1,    3,    5,  953,    1],
+        [   2,    3,    2,    4,    7,    1,    0,    3,    5,  982]],
+       dtype=torch.int32)
+===================================================================
+stitching_accuracies={'mix': {'unbiased_colour': {3: 99.49, 4: 99.71, 5: 99.98, 6: 100.0, 7: 99.99, 8: 100.0}}, 'bw': {'unbiased_colour': {3: 97.26, 4: 98.13, 5: 98.76, 6: 99.16, 7: 98.81, 8: 98.84}}, 'bg_only_colour': {'unbiased_colour': {3: 99.9, 4: 99.95, 5: 99.93, 6: 99.99, 7: 99.98, 8: 99.98}}, 'bg_unbiased_colour': {'unbiased_colour': {3: 99.81, 4: 99.91, 5: 99.98, 6: 100.0, 7: 100.0, 8: 100.0}}, 'biased_colour': {'unbiased_colour': {3: 99.77, 4: 99.88, 5: 99.98, 6: 100.0, 7: 100.0, 8: 100.0}}, 'unbiased_colour': {'unbiased_colour': {3: 99.34, 4: 98.94, 5: 98.92, 6: 98.77, 7: 98.63, 8: 98.6}}}
+stitching_penalties={'mix': {'unbiased_colour': {3: -1.519999999999996, 4: -1.7399999999999949, 5: -2.010000000000005, 6: -2.030000000000001, 7: -2.019999999999996, 8: -2.030000000000001}}, 'bw': {'unbiased_colour': {3: 0.7099999999999937, 4: -0.1599999999999966, 5: -0.7900000000000063, 6: -1.1899999999999977, 7: -0.8400000000000034, 8: -0.8700000000000045}}, 'bg_only_colour': {'unbiased_colour': {3: -1.9300000000000068, 4: -1.980000000000004, 5: -1.960000000000008, 6: -2.019999999999996, 7: -2.010000000000005, 8: -2.010000000000005}}, 'bg_unbiased_colour': {'unbiased_colour': {3: -1.8400000000000034, 4: -1.9399999999999977, 5: -2.010000000000005, 6: -2.030000000000001, 7: -2.030000000000001, 8: -2.030000000000001}}, 'biased_colour': {'unbiased_colour': {3: -1.7999999999999972, 4: -1.9099999999999966, 5: -2.010000000000005, 6: -2.030000000000001, 7: -2.030000000000001, 8: -2.030000000000001}}, 'unbiased_colour': {'unbiased_colour': {3: -1.3700000000000045, 4: -0.9699999999999989, 5: -0.9500000000000028, 6: -0.7999999999999972, 7: -0.6599999999999966, 8: -0.6299999999999955}}}
+mix-unbiased_colour
+97.97
+Stitch Accuracy
+99.49
+99.71
+99.98
+100.0
+99.99
+100.0
+--------------------------
+bw-unbiased_colour
+97.97
+Stitch Accuracy
+97.26
+98.13
+98.76
+99.16
+98.81
+98.84
+--------------------------
+bg_only_colour-unbiased_colour
+97.97
+Stitch Accuracy
+99.9
+99.95
+99.93
+99.99
+99.98
+99.98
+--------------------------
+bg_unbiased_colour-unbiased_colour
+97.97
+Stitch Accuracy
+99.81
+99.91
+99.98
+100.0
+100.0
+100.0
+--------------------------
+biased_colour-unbiased_colour
+97.97
+Stitch Accuracy
+99.77
+99.88
+99.98
+100.0
+100.0
+100.0
+--------------------------
+unbiased_colour-unbiased_colour
+97.97
+Stitch Accuracy
+99.34
+98.94
+98.92
+98.77
+98.63
+98.6
+--------------------------

@@ -1,0 +1,64 @@
+Executed at 2024-07-19_09-51-03
+seed=21
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_bw_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_unbiased_colour_mnist.weights'
+train_stitch=True
+stitch_train_epochs=10
+synthetic_dataset_noise=0.1
+================================================
+val['loadfrom']='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_biased_colour_mnist.weights'
+val['loadfrom']='./results/2024-07-19_07-52-10_SEED21_EPOCHS10_exp2a_ResNet18_unbiased_colour_mnist.weights'
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18
+Test Accuracy: 99.20 %
+Confusion Matrix
+tensor([[ 973,    0,    0,    0,    0,    0,    3,    1,    3,    0],
+        [   0, 1130,    0,    0,    0,    0,    1,    2,    2,    0],
+        [   0,    0, 1028,    2,    0,    0,    0,    2,    0,    0],
+        [   0,    0,    0, 1002,    0,    5,    0,    0,    3,    0],
+        [   0,    0,    0,    0,  960,    0,    3,    0,    1,   18],
+        [   1,    0,    0,    2,    0,  888,    1,    0,    0,    0],
+        [   3,    1,    0,    0,    1,    1,  950,    0,    2,    0],
+        [   0,    1,    5,    1,    0,    0,    0, 1019,    1,    1],
+        [   2,    0,    3,    0,    0,    1,    0,    1,  966,    1],
+        [   0,    0,    1,    0,    0,    2,    0,    1,    1, 1004]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='biased_colour'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbiased_colour'
+Test the Trained Resnet18
+Test Accuracy: 98.12 %
+Confusion Matrix
+tensor([[ 975,    1,    0,    0,    0,    1,    2,    1,    0,    0],
+        [   0, 1123,    2,    1,    0,    0,    5,    2,    2,    0],
+        [   2,    1, 1021,    1,    1,    0,    0,    1,    5,    0],
+        [   1,    1,    2,  987,    0,    9,    0,    2,    7,    1],
+        [   0,    1,    1,    0,  932,    1,    4,    1,    1,   41],
+        [   2,    0,    0,    5,    0,  877,    2,    2,    2,    2],
+        [   4,    2,    1,    0,    1,    5,  941,    0,    4,    0],
+        [   1,    1,    4,    0,    0,    0,    0, 1007,    4,   11],
+        [   3,    0,    0,    2,    2,    4,    1,    1,  951,   10],
+        [   2,    1,    1,    1,    1,    4,    0,    0,    1,  998]],
+       dtype=torch.int32)
+tensor(10000)
+Train the stitch to a model stitched after layer 3
