@@ -1,0 +1,75 @@
+Evaluate ranks and output to ./results_2j_rank/mix35unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+stitch into model mix
+Train the stitch after layer 35
+Epoch 0, loss 50.14
+Epoch 1, loss 6.41
+Epoch 2, loss 5.00
+Epoch 3, loss 5.01
+Epoch 4, loss 4.90
+Epoch 5, loss 4.57
+Epoch 6, loss 4.10
+Epoch 7, loss 3.96
+Epoch 8, loss 3.59
+Epoch 9, loss 3.56
+Epoch 10, loss 3.62
+Epoch 11, loss 3.62
+Epoch 12, loss 3.22
+Epoch 13, loss 3.21
+Epoch 14, loss 3.33
+Epoch 15, loss 3.20
+Epoch 16, loss 3.00
+Epoch 17, loss 2.92
+Epoch 18, loss 2.74
+Epoch 19, loss 3.00
+Epoch 20, loss 3.77
+Epoch 21, loss 2.94
+Epoch 22, loss 2.89
+Epoch 23, loss 2.71
+Epoch 24, loss 2.60
+Epoch 25, loss 2.80
+Epoch 26, loss 2.83
+Epoch 27, loss 2.65
+Epoch 28, loss 2.37
+Epoch 29, loss 2.42
+Epoch 30, loss 2.56
+Epoch 31, loss 2.48
+Epoch 32, loss 2.32
+Epoch 33, loss 2.68
+Epoch 34, loss 2.35
+Epoch 35, loss 2.47
+Epoch 36, loss 2.34
+Epoch 37, loss 2.42
+Epoch 38, loss 2.35
+Epoch 39, loss 2.02
+Epoch 40, loss 2.41
+Epoch 41, loss 2.09
+Epoch 42, loss 2.31
+Epoch 43, loss 2.19
+Epoch 44, loss 2.31
+Epoch 45, loss 2.20
+Epoch 46, loss 2.28
+Epoch 47, loss 2.16
+Epoch 48, loss 2.54
+Epoch 49, loss 2.48
+**** Finished Training ****
+Change in stitch weights: 7.310797214508057
+Largest abs weight change: 0.06014649569988251
+Number of weights changing > 0.1 of that: 197673
+Change in stitch bias: 0.3196987807750702
+Largest abs bias change: 0.02401508390903473
+Number of bias changing > 0.1 of that: 461
+Test the trained stitch
+Test Accuracy: 99.83 %
+Confusion Matrix
+tensor([[ 972,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1122,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  969,    0,    0,    0,    0,    1,    0,    0],
+        [   0,    0,    1, 1055,    0,    1,    0,    1,    1,    0],
+        [   0,    0,    0,    0, 1003,    0,    1,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  869,    0,    0,    0,    0],
+        [   0,    1,    0,    0,    0,    1,  945,    0,    0,    0],
+        [   0,    0,    1,    0,    0,    0,    0, 1028,    0,    2],
+        [   0,    0,    1,    0,    0,    1,    0,    0,  972,    0],
+        [   0,    1,    0,    0,    2,    0,    0,    1,    0, 1048]],
+       dtype=torch.int32)
+===================================================================

@@ -1,0 +1,119 @@
+Executed at 2025-01-10_22-46-03
+logging to ./results_2h/2025-01-10_22-46-03_SEED789_EPOCHS50_BGN0.1_exp2h_VGG19_log.txt
+seed=789
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2024-08-13_23-21-37_SEED105_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+stitch_train_epochs=50
+================================================
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2024-08-13_23-21-37_SEED105_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+Accuracy Calculation for VGG19 with key='bg'
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1004,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1003,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1003,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  999,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  996,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1002,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1002,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  989,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0,  999]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'bg': 100.0}
+Evaluate ranks and output to ./results_2h_rank/bg1bg104-bg-789_2024-08-13_23-21-37_SEED105_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+Train the stitch after layer 1
+Epoch 0, loss 915.58
+Epoch 1, loss 88.56
+Epoch 2, loss 65.97
+Epoch 3, loss 25.55
+Epoch 4, loss 20.47
+Epoch 5, loss 10.74
+Epoch 6, loss 8.90
+Epoch 7, loss 8.13
+Epoch 8, loss 6.29
+Epoch 9, loss 4.73
+Epoch 10, loss 4.14
+Epoch 11, loss 2.89
+Epoch 12, loss 3.27
+Epoch 13, loss 4.60
+Epoch 14, loss 3.13
+Epoch 15, loss 5.23
+Epoch 16, loss 2.40
+Epoch 17, loss 3.44
+Epoch 18, loss 2.24
+Epoch 19, loss 2.88
+Epoch 20, loss 2.96
+Epoch 21, loss 2.93
+Epoch 22, loss 5.53
+Epoch 23, loss 7.82
+Epoch 24, loss 3.88
+Epoch 25, loss 14.14
+Epoch 26, loss 3.19
+Epoch 27, loss 2.03
+Epoch 28, loss 2.84
+Epoch 29, loss 23.63
+Epoch 30, loss 5.30
+Epoch 31, loss 10.02
+Epoch 32, loss 4.09
+Epoch 33, loss 3.17
+Epoch 34, loss 3.18
+Epoch 35, loss 4.05
+Epoch 36, loss 1.64
+Epoch 37, loss 2.27
+Epoch 38, loss 2.93
+Epoch 39, loss 6.87
+Epoch 40, loss 3.03
+Epoch 41, loss 2.39
+Epoch 42, loss 1.99
+Epoch 43, loss 9.47
+Epoch 44, loss 13.09
+Epoch 45, loss 3.84
+Epoch 46, loss 1.56
+Epoch 47, loss 3.39
+Epoch 48, loss 6.81
+Epoch 49, loss 2.58
+**** Finished Training ****
+Change in stitch weights: 4.688538074493408
+Largest abs weight change: 0.22095656394958496
+Number of weights changing > 0.1 of that: 3365
+Change in stitch bias: 0.567720890045166
+Largest abs bias change: 0.1223485916852951
+Number of bias changing > 0.1 of that: 59
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1004,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1003,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1003,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  999,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  996,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1002,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1002,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  989,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0,  999]],
+       dtype=torch.int32)
+===================================================================
+stitching_accuracies={'bg': {1: 100.0}}
+stitching_penalties={'bg': {1: 0.0}}
+bg
+100.0
+Stitch Accuracy
+layer=1 100.0
+--------------------------

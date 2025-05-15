@@ -1,0 +1,2 @@
+,offset,model,dataset,seed,send_file,rcv_file,val_acc,name
+0,2,bw3bw,bw,13,./results_4_epochs/2024-08-02_16-08-24_SEED58_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist.weights,./results_4_epochs/2024-08-02_16-08-24_SEED58_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist.weights,0.9151,only

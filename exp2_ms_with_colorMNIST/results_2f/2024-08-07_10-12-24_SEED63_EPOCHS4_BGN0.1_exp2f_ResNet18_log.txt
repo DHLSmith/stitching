@@ -1,0 +1,1464 @@
+Executed at 2024-08-07_10-12-24
+logging to ./results_2f/2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_log.txt
+seed=63
+bg_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='./results_4_epochs/2024-08-01_07-35-14_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=True
+save_unbiased_colour_mnist_model_as='./results_2f/2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist.weights'
+original_train_epochs=4
+stitch_train_epochs=10
+================================================
+val['loadfrom']='./results_4_epochs/2024-08-01_07-35-14_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_mix_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_only_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_bg_unbiased_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-02_11-10-38_SEED57_EPOCHS4_BGN0.1_exp2d_ResNet18_biased_colour_mnist.weights'
+Train ResNet18 on unbias
+Epoch 0, loss 209.30
+Rebuilding unbias train_loader
+Epoch 1, loss 46.76
+Rebuilding unbias train_loader
+Epoch 2, loss 31.25
+Rebuilding unbias train_loader
+Epoch 3, loss 23.82
+Rebuilding unbias train_loader
+**** Finished Training ****
+saveas='./results_2f/2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist.weights'
+Entering Confusion
+Accuracy Calculation for ResNet18 with key='mix'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 67.36 %
+Confusion Matrix
+tensor([[ 959,    2,    0,    0,    0,    0,    5,    1,   13,    0],
+        [   0, 1120,    5,    0,    4,    0,    2,    0,    4,    0],
+        [   3,    3,  974,    0,    8,    0,    0,    4,   40,    0],
+        [  15,   30,    2,    0,  322,    0,    1,    1,  639,    0],
+        [   0,   87,    0,    0,  895,    0,    0,    0,    0,    0],
+        [   8,   77,    0,    0,  620,    0,   32,    0,  155,    0],
+        [   1,   16,    0,    0,   18,    0,  918,    0,    5,    0],
+        [   0,  207,    2,    0,  261,    0,    0,  530,   23,    5],
+        [   2,   42,    0,    0,   51,    0,    0,    0,  879,    0],
+        [   1,   27,    0,    0,  495,    0,    0,    0,   25,  461]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bgonly'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 64.32 %
+Confusion Matrix
+tensor([[ 277,    0,    0,    0,    0,    0,  703,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  364,    0,    0,    0,    0,    0,  668,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,  591,    0,    0,  367,    0,    0,    0],
+        [   0,    0,    0,    0,  882,    0,    0,  146,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,   33,    0,    0,    0,    0,  691,  285]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bg'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18 against BIASED TEST DATALOADER
+Test Accuracy: 98.52 %
+Confusion Matrix
+tensor([[ 975,    0,    1,    0,    0,    0,    2,    1,    1,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   1,    1, 1028,    0,    0,    0,    0,    1,    1,    0],
+        [   3,    0,    1,  981,    0,   16,    0,    2,    4,    3],
+        [   0,    0,    3,    0,  968,    0,    1,    0,    3,    7],
+        [   3,    0,    0,    1,    0,  879,    6,    1,    2,    0],
+        [   7,    4,    1,    0,    3,    1,  940,    0,    2,    0],
+        [   0,    2,    2,    1,    2,    0,    0, 1015,    1,    5],
+        [   9,    2,    3,    2,    3,    3,    2,    3,  943,    4],
+        [   1,    2,    1,    0,    7,    5,    0,    3,    2,  988]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'mix': 100.0, 'bw': 67.36, 'bgonly': 64.32, 'bg': 100.0, 'bias': 100.0, 'unbias': 98.52}
+Entering whole model check
+Measure Rank for key='mix'
+Measure Rank for key='bw'
+Measure Rank for key='bgonly'
+Measure Rank for key='bg'
+Measure Rank for key='bias'
+Measure Rank for key='unbias'
+Entering Stitch/Rank
+device='cuda:0'
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Evaluate ranks and output to ./results_2f_rank/mix3unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from mix to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 196.75
+Epoch 1, loss 20.50
+Epoch 2, loss 12.95
+Epoch 3, loss 10.42
+Epoch 4, loss 8.80
+Epoch 5, loss 7.05
+Epoch 6, loss 6.65
+Epoch 7, loss 5.49
+Epoch 8, loss 5.15
+Epoch 9, loss 4.54
+**** Finished Training ****
+Change in stitch weights: 0.9181997179985046
+Largest abs weight change: 0.08117736876010895
+Number of weights changing > 0.1 of that: 1916
+Change in stitch bias: 0.027952536940574646
+Largest abs bias change: 0.005681633949279785
+Number of bias changing > 0.1 of that: 61
+Test the trained stitch against biased data
+Test Accuracy: 99.88 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   1,    0,    1,    0,    0,    1,  955,    0,    0,    0],
+        [   0,    0,    3,    0,    0,    0,    0, 1025,    0,    0],
+        [   0,    0,    0,    0,    0,    1,    0,    0,  972,    1],
+        [   0,    1,    1,    0,    0,    2,    0,    0,    0, 1005]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/mix4unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 4 from mix to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 210.31
+Epoch 1, loss 22.93
+Epoch 2, loss 14.33
+Epoch 3, loss 11.00
+Epoch 4, loss 10.32
+Epoch 5, loss 7.96
+Epoch 6, loss 7.26
+Epoch 7, loss 7.06
+Epoch 8, loss 6.02
+Epoch 9, loss 5.33
+**** Finished Training ****
+Change in stitch weights: 0.9592686891555786
+Largest abs weight change: 0.08954928815364838
+Number of weights changing > 0.1 of that: 1964
+Change in stitch bias: 0.026068681851029396
+Largest abs bias change: 0.005567684769630432
+Number of bias changing > 0.1 of that: 58
+Test the trained stitch against biased data
+Test Accuracy: 99.90 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  979,    0,    0,    1,    2,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   1,    0,    0,    2,    0,    0,  955,    0,    0,    0],
+        [   0,    0,    1,    1,    1,    0,    0, 1025,    0,    0],
+        [   0,    0,    1,    0,    0,    0,    0,    0,  973,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/mix5unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 5 from mix to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 240.89
+Epoch 1, loss 9.48
+Epoch 2, loss 6.59
+Epoch 3, loss 5.66
+Epoch 4, loss 4.07
+Epoch 5, loss 4.52
+Epoch 6, loss 2.98
+Epoch 7, loss 3.21
+Epoch 8, loss 2.88
+Epoch 9, loss 3.21
+**** Finished Training ****
+Change in stitch weights: 0.8645452260971069
+Largest abs weight change: 0.04010884463787079
+Number of weights changing > 0.1 of that: 8290
+Change in stitch bias: 0.02647702395915985
+Largest abs bias change: 0.003992736339569092
+Number of bias changing > 0.1 of that: 117
+Test the trained stitch against biased data
+Test Accuracy: 99.95 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   1,    0,    0,    0,    0,    0,  957,    0,    0,    0],
+        [   0,    0,    2,    0,    0,    0,    0, 1026,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0,    0,  972,    1],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/mix6unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 6 from mix to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 120.29
+Epoch 1, loss 5.80
+Epoch 2, loss 3.92
+Epoch 3, loss 3.44
+Epoch 4, loss 2.94
+Epoch 5, loss 2.29
+Epoch 6, loss 2.32
+Epoch 7, loss 2.07
+Epoch 8, loss 1.71
+Epoch 9, loss 1.81
+**** Finished Training ****
+Change in stitch weights: 0.8087571859359741
+Largest abs weight change: 0.030133437365293503
+Number of weights changing > 0.1 of that: 18626
+Change in stitch bias: 0.02666393108665943
+Largest abs bias change: 0.002852499485015869
+Number of bias changing > 0.1 of that: 235
+Test the trained stitch against biased data
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1009,    0,    0,    0,    0,    1,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/mix7unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 7 from mix to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 39.19
+Epoch 1, loss 4.75
+Epoch 2, loss 3.42
+Epoch 3, loss 2.54
+Epoch 4, loss 2.31
+Epoch 5, loss 2.40
+Epoch 6, loss 2.06
+Epoch 7, loss 2.05
+Epoch 8, loss 1.72
+Epoch 9, loss 1.85
+**** Finished Training ****
+Change in stitch weights: 0.7827147841453552
+Largest abs weight change: 0.012293519452214241
+Number of weights changing > 0.1 of that: 114956
+Change in stitch bias: 0.02671924978494644
+Largest abs bias change: 0.002018742263317108
+Number of bias changing > 0.1 of that: 458
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/mix8unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 8 from mix to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 37.41
+Epoch 1, loss 3.86
+Epoch 2, loss 3.00
+Epoch 3, loss 2.35
+Epoch 4, loss 2.37
+Epoch 5, loss 1.99
+Epoch 6, loss 2.28
+Epoch 7, loss 1.81
+Epoch 8, loss 2.16
+Epoch 9, loss 1.55
+**** Finished Training ****
+Change in stitch weights: 0.768051028251648
+Largest abs weight change: 0.01238391362130642
+Number of weights changing > 0.1 of that: 112857
+Change in stitch bias: 0.02531771920621395
+Largest abs bias change: 0.0020148754119873047
+Number of bias changing > 0.1 of that: 460
+Test the trained stitch against biased data
+Test Accuracy: 99.98 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  981,    0,    0,    0,    1,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    1,    0,    0,    0,    0,  957,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Evaluate ranks and output to ./results_2f_rank/bw3unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from bw to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 243.76
+Epoch 1, loss 58.57
+Epoch 2, loss 48.02
+Epoch 3, loss 41.16
+Epoch 4, loss 37.34
+Epoch 5, loss 34.91
+Epoch 6, loss 32.99
+Epoch 7, loss 31.21
+Epoch 8, loss 29.39
+Epoch 9, loss 28.24
+**** Finished Training ****
+Change in stitch weights: 1.0687124729156494
+Largest abs weight change: 0.10133782774209976
+Number of weights changing > 0.1 of that: 1702
+Change in stitch bias: 0.02772562950849533
+Largest abs bias change: 0.005704186856746674
+Number of bias changing > 0.1 of that: 57
+Test the trained stitch against biased data
+Test Accuracy: 98.32 %
+Confusion Matrix
+tensor([[ 976,    1,    1,    0,    0,    0,    1,    1,    0,    0],
+        [   1, 1129,    3,    0,    1,    0,    1,    0,    0,    0],
+        [   5,    1, 1020,    3,    0,    0,    0,    1,    2,    0],
+        [   0,    1,    1,  994,    0,    9,    0,    1,    2,    2],
+        [   0,    0,    0,    1,  963,    0,    2,    2,    3,   11],
+        [   0,    0,    0,    4,    0,  885,    1,    0,    2,    0],
+        [   5,    3,    2,    0,    5,    4,  933,    0,    6,    0],
+        [   0,    1,    5,    1,    0,    0,    0, 1007,    1,   13],
+        [   4,    0,    3,    1,    0,    5,    3,    2,  947,    9],
+        [   2,    0,    4,    3,    8,    4,    0,    7,    3,  978]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bw4unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 4 from bw to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 149.72
+Epoch 1, loss 56.87
+Epoch 2, loss 46.56
+Epoch 3, loss 40.68
+Epoch 4, loss 37.24
+Epoch 5, loss 34.58
+Epoch 6, loss 32.08
+Epoch 7, loss 30.11
+Epoch 8, loss 28.53
+Epoch 9, loss 26.99
+**** Finished Training ****
+Change in stitch weights: 0.9847647547721863
+Largest abs weight change: 0.09032174944877625
+Number of weights changing > 0.1 of that: 2004
+Change in stitch bias: 0.026514152064919472
+Largest abs bias change: 0.005684711039066315
+Number of bias changing > 0.1 of that: 56
+Test the trained stitch against biased data
+Test Accuracy: 98.16 %
+Confusion Matrix
+tensor([[ 973,    1,    1,    0,    0,    0,    2,    2,    0,    1],
+        [   1, 1124,    4,    0,    0,    0,    5,    0,    1,    0],
+        [   3,    1, 1019,    0,    2,    0,    1,    4,    2,    0],
+        [   0,    0,    0, 1000,    0,    5,    0,    1,    2,    2],
+        [   0,    0,    1,    0,  974,    0,    0,    0,    1,    6],
+        [   1,    0,    0,    2,    0,  881,    0,    0,    5,    3],
+        [   8,    2,    0,    0,    7,    4,  928,    0,    9,    0],
+        [   0,    0,    5,    2,    2,    0,    0, 1002,    1,   16],
+        [   3,    0,    3,    7,    3,    4,    7,    2,  934,   11],
+        [   4,    1,    1,    4,   11,    0,    0,    6,    1,  981]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bw5unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 5 from bw to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 243.18
+Epoch 1, loss 47.28
+Epoch 2, loss 37.50
+Epoch 3, loss 32.22
+Epoch 4, loss 29.46
+Epoch 5, loss 26.96
+Epoch 6, loss 25.39
+Epoch 7, loss 23.35
+Epoch 8, loss 22.05
+Epoch 9, loss 21.20
+**** Finished Training ****
+Change in stitch weights: 1.1242202520370483
+Largest abs weight change: 0.05752750486135483
+Number of weights changing > 0.1 of that: 7776
+Change in stitch bias: 0.026587076485157013
+Largest abs bias change: 0.0039791539311409
+Number of bias changing > 0.1 of that: 116
+Test the trained stitch against biased data
+Test Accuracy: 98.89 %
+Confusion Matrix
+tensor([[ 977,    1,    1,    0,    0,    0,    0,    1,    0,    0],
+        [   0, 1131,    1,    0,    0,    0,    2,    0,    1,    0],
+        [   3,    3, 1023,    0,    1,    0,    1,    0,    1,    0],
+        [   0,    0,    0, 1002,    0,    5,    0,    0,    1,    2],
+        [   0,    0,    0,    0,  977,    0,    0,    0,    2,    3],
+        [   0,    0,    0,    3,    0,  887,    1,    1,    0,    0],
+        [   0,    2,    0,    1,    4,    2,  944,    0,    5,    0],
+        [   0,    0,    6,    1,    0,    0,    0, 1012,    3,    6],
+        [   1,    0,    3,    5,    3,    2,    2,    1,  951,    6],
+        [   2,    0,    0,    2,    8,    0,    1,    6,    5,  985]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bw6unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 6 from bw to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 174.17
+Epoch 1, loss 37.54
+Epoch 2, loss 29.17
+Epoch 3, loss 25.13
+Epoch 4, loss 22.73
+Epoch 5, loss 21.53
+Epoch 6, loss 19.97
+Epoch 7, loss 19.59
+Epoch 8, loss 17.95
+Epoch 9, loss 17.58
+**** Finished Training ****
+Change in stitch weights: 0.9749927520751953
+Largest abs weight change: 0.04541042819619179
+Number of weights changing > 0.1 of that: 11538
+Change in stitch bias: 0.025302615016698837
+Largest abs bias change: 0.0028005018830299377
+Number of bias changing > 0.1 of that: 224
+Test the trained stitch against biased data
+Test Accuracy: 99.05 %
+Confusion Matrix
+tensor([[ 975,    0,    2,    0,    1,    0,    2,    0,    0,    0],
+        [   0, 1127,    3,    0,    0,    0,    1,    0,    4,    0],
+        [   2,    0, 1030,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    7,    0,    0,    2,    1],
+        [   0,    0,    0,    0,  975,    1,    1,    0,    0,    5],
+        [   0,    0,    0,    6,    0,  884,    1,    0,    1,    0],
+        [   1,    2,    0,    0,    0,    3,  947,    0,    5,    0],
+        [   0,    1,    3,    1,    2,    0,    0, 1017,    1,    3],
+        [   1,    0,    2,    4,    1,    0,    2,    1,  962,    1],
+        [   2,    0,    0,    2,    8,    0,    0,    5,    4,  988]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bw7unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 7 from bw to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 86.54
+Epoch 1, loss 37.26
+Epoch 2, loss 32.77
+Epoch 3, loss 30.85
+Epoch 4, loss 28.44
+Epoch 5, loss 27.22
+Epoch 6, loss 26.18
+Epoch 7, loss 25.89
+Epoch 8, loss 24.53
+Epoch 9, loss 24.20
+**** Finished Training ****
+Change in stitch weights: 0.8979723453521729
+Largest abs weight change: 0.01886499673128128
+Number of weights changing > 0.1 of that: 66022
+Change in stitch bias: 0.026145894080400467
+Largest abs bias change: 0.0020103156566619873
+Number of bias changing > 0.1 of that: 457
+Test the trained stitch against biased data
+Test Accuracy: 98.75 %
+Confusion Matrix
+tensor([[ 978,    0,    0,    0,    0,    0,    1,    1,    0,    0],
+        [   0, 1129,    0,    2,    0,    0,    2,    0,    1,    1],
+        [   2,    3, 1024,    0,    0,    0,    0,    2,    1,    0],
+        [   0,    0,    1,  994,    0,    4,    0,    3,    6,    2],
+        [   0,    0,    0,    1,  976,    0,    1,    0,    0,    4],
+        [   0,    0,    0,    7,    0,  874,    5,    1,    5,    0],
+        [   0,    2,    0,    0,    1,    5,  947,    0,    3,    0],
+        [   0,    5,    4,    2,    0,    0,    0, 1011,    1,    5],
+        [   1,    0,    0,   13,    0,    3,    0,    0,  957,    0],
+        [   2,    0,    0,    6,    6,    4,    0,    3,    3,  985]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bw8unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 8 from bw to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 107.76
+Epoch 1, loss 38.99
+Epoch 2, loss 34.29
+Epoch 3, loss 30.82
+Epoch 4, loss 28.88
+Epoch 5, loss 27.75
+Epoch 6, loss 27.02
+Epoch 7, loss 25.10
+Epoch 8, loss 24.21
+Epoch 9, loss 24.00
+**** Finished Training ****
+Change in stitch weights: 0.9540271759033203
+Largest abs weight change: 0.02124911919236183
+Number of weights changing > 0.1 of that: 56227
+Change in stitch bias: 0.027016976848244667
+Largest abs bias change: 0.0020196661353111267
+Number of bias changing > 0.1 of that: 466
+Test the trained stitch against biased data
+Test Accuracy: 98.87 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1128,    1,    1,    0,    0,    3,    0,    2,    0],
+        [   2,    2, 1025,    0,    0,    0,    1,    1,    1,    0],
+        [   0,    0,    0,  993,    1,   11,    0,    2,    3,    0],
+        [   0,    0,    0,    0,  978,    0,    1,    0,    0,    3],
+        [   1,    0,    0,    3,    0,  881,    3,    0,    4,    0],
+        [   0,    2,    0,    0,    0,    6,  947,    0,    3,    0],
+        [   0,    3,    5,    2,    1,    0,    0, 1009,    1,    7],
+        [   1,    0,    0,   13,    0,    3,    2,    0,  955,    0],
+        [   1,    0,    0,    4,    3,    3,    0,    3,    4,  991]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Evaluate ranks and output to ./results_2f_rank/bgonly3unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from bgonly to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 233.51
+Epoch 1, loss 21.68
+Epoch 2, loss 14.13
+Epoch 3, loss 9.92
+Epoch 4, loss 8.80
+Epoch 5, loss 7.32
+Epoch 6, loss 6.59
+Epoch 7, loss 5.19
+Epoch 8, loss 4.62
+Epoch 9, loss 5.15
+**** Finished Training ****
+Change in stitch weights: 0.9642872214317322
+Largest abs weight change: 0.07260214537382126
+Number of weights changing > 0.1 of that: 2465
+Change in stitch bias: 0.024948637932538986
+Largest abs bias change: 0.005501359701156616
+Number of bias changing > 0.1 of that: 55
+Test the trained stitch against biased data
+Test Accuracy: 99.90 %
+Confusion Matrix
+tensor([[ 976,    0,    0,    1,    0,    0,    0,    0,    0,    3],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1009,    0,    0,    0,    0,    1,    0],
+        [   0,    0,    0,    0,  981,    0,    0,    0,    1,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   2,    0,    0,    0,    0,    0,  956,    0,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0, 1027,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   1,    0,    0,    0,    0,    0,    0,    0,    0, 1008]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bgonly4unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 4 from bgonly to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 198.96
+Epoch 1, loss 13.18
+Epoch 2, loss 8.10
+Epoch 3, loss 7.16
+Epoch 4, loss 5.18
+Epoch 5, loss 4.73
+Epoch 6, loss 3.89
+Epoch 7, loss 4.16
+Epoch 8, loss 3.18
+Epoch 9, loss 2.81
+**** Finished Training ****
+Change in stitch weights: 0.8546475768089294
+Largest abs weight change: 0.06698817759752274
+Number of weights changing > 0.1 of that: 2334
+Change in stitch bias: 0.02784430794417858
+Largest abs bias change: 0.005702957510948181
+Number of bias changing > 0.1 of that: 58
+Test the trained stitch against biased data
+Test Accuracy: 99.98 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1031,    0,    0,    0,    0,    0,    1,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    1,    0,    0,    0,    0,    0, 1008]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bgonly5unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 5 from bgonly to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 176.80
+Epoch 1, loss 12.26
+Epoch 2, loss 8.72
+Epoch 3, loss 6.51
+Epoch 4, loss 6.04
+Epoch 5, loss 4.59
+Epoch 6, loss 4.03
+Epoch 7, loss 4.73
+Epoch 8, loss 4.54
+Epoch 9, loss 4.86
+**** Finished Training ****
+Change in stitch weights: 0.8290031552314758
+Largest abs weight change: 0.03652428090572357
+Number of weights changing > 0.1 of that: 8710
+Change in stitch bias: 0.029386991634964943
+Largest abs bias change: 0.004036620259284973
+Number of bias changing > 0.1 of that: 120
+Test the trained stitch against biased data
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1031,    0,    0,    0,    0,    0,    1,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bgonly6unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 6 from bgonly to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 106.89
+Epoch 1, loss 10.04
+Epoch 2, loss 6.53
+Epoch 3, loss 5.57
+Epoch 4, loss 5.54
+Epoch 5, loss 4.79
+Epoch 6, loss 4.67
+Epoch 7, loss 5.14
+Epoch 8, loss 4.19
+Epoch 9, loss 3.59
+**** Finished Training ****
+Change in stitch weights: 0.7640300393104553
+Largest abs weight change: 0.030254961922764778
+Number of weights changing > 0.1 of that: 17948
+Change in stitch bias: 0.02785330079495907
+Largest abs bias change: 0.002854499965906143
+Number of bias changing > 0.1 of that: 235
+Test the trained stitch against biased data
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1031,    0,    0,    0,    0,    0,    1,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bgonly7unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 7 from bgonly to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 39.11
+Epoch 1, loss 8.35
+Epoch 2, loss 7.18
+Epoch 3, loss 6.26
+Epoch 4, loss 5.13
+Epoch 5, loss 5.82
+Epoch 6, loss 5.71
+Epoch 7, loss 5.54
+Epoch 8, loss 5.51
+Epoch 9, loss 5.07
+**** Finished Training ****
+Change in stitch weights: 0.752436637878418
+Largest abs weight change: 0.011014009825885296
+Number of weights changing > 0.1 of that: 128389
+Change in stitch bias: 0.027023106813430786
+Largest abs bias change: 0.0020152516663074493
+Number of bias changing > 0.1 of that: 468
+Test the trained stitch against biased data
+Test Accuracy: 99.94 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1031,    0,    0,    0,    0,    0,    1,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    5,    0,    0, 1023,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bgonly8unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 8 from bgonly to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 38.88
+Epoch 1, loss 8.48
+Epoch 2, loss 7.10
+Epoch 3, loss 6.83
+Epoch 4, loss 6.59
+Epoch 5, loss 5.80
+Epoch 6, loss 6.17
+Epoch 7, loss 5.71
+Epoch 8, loss 5.57
+Epoch 9, loss 6.13
+**** Finished Training ****
+Change in stitch weights: 0.772485077381134
+Largest abs weight change: 0.011791905388236046
+Number of weights changing > 0.1 of that: 120553
+Change in stitch bias: 0.02681584656238556
+Largest abs bias change: 0.002016298472881317
+Number of bias changing > 0.1 of that: 459
+Test the trained stitch against biased data
+Test Accuracy: 99.96 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1030,    0,    0,    0,    0,    0,    2,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    2,    0,    0, 1026,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Evaluate ranks and output to ./results_2f_rank/bg3unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from bg to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 320.16
+Epoch 1, loss 28.22
+Epoch 2, loss 17.36
+Epoch 3, loss 12.31
+Epoch 4, loss 10.32
+Epoch 5, loss 9.40
+Epoch 6, loss 7.59
+Epoch 7, loss 6.90
+Epoch 8, loss 6.51
+Epoch 9, loss 6.04
+**** Finished Training ****
+Change in stitch weights: 1.1408517360687256
+Largest abs weight change: 0.19009703397750854
+Number of weights changing > 0.1 of that: 915
+Change in stitch bias: 0.024642502889037132
+Largest abs bias change: 0.005659028887748718
+Number of bias changing > 0.1 of that: 59
+Test the trained stitch against biased data
+Test Accuracy: 99.80 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1132,    0,    0,    2,    0,    0,    0,    0,    1],
+        [   0,    0, 1030,    1,    1,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1009,    0,    1,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    1,    0,    0,    0,  957,    0,    0,    0],
+        [   0,    0,    1,    1,    1,    0,    0, 1021,    0,    4],
+        [   0,    0,    0,    0,    0,    1,    0,    0,  973,    0],
+        [   0,    0,    2,    0,    0,    2,    0,    0,    1, 1004]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bg4unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 4 from bg to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 224.67
+Epoch 1, loss 12.43
+Epoch 2, loss 8.47
+Epoch 3, loss 5.79
+Epoch 4, loss 5.44
+Epoch 5, loss 4.80
+Epoch 6, loss 3.69
+Epoch 7, loss 3.51
+Epoch 8, loss 3.18
+Epoch 9, loss 3.45
+**** Finished Training ****
+Change in stitch weights: 0.9054282307624817
+Largest abs weight change: 0.0824786052107811
+Number of weights changing > 0.1 of that: 1952
+Change in stitch bias: 0.025920717045664787
+Largest abs bias change: 0.005639120936393738
+Number of bias changing > 0.1 of that: 59
+Test the trained stitch against biased data
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    1,    0,    0, 1008]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bg5unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 5 from bg to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 266.54
+Epoch 1, loss 12.44
+Epoch 2, loss 7.13
+Epoch 3, loss 4.94
+Epoch 4, loss 4.03
+Epoch 5, loss 3.25
+Epoch 6, loss 3.14
+Epoch 7, loss 3.20
+Epoch 8, loss 2.40
+Epoch 9, loss 2.44
+**** Finished Training ****
+Change in stitch weights: 0.8984190821647644
+Largest abs weight change: 0.05256360396742821
+Number of weights changing > 0.1 of that: 6463
+Change in stitch bias: 0.02745804935693741
+Largest abs bias change: 0.004036962985992432
+Number of bias changing > 0.1 of that: 115
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bg6unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 6 from bg to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 100.68
+Epoch 1, loss 4.10
+Epoch 2, loss 2.73
+Epoch 3, loss 2.45
+Epoch 4, loss 1.71
+Epoch 5, loss 1.41
+Epoch 6, loss 1.21
+Epoch 7, loss 1.62
+Epoch 8, loss 1.08
+Epoch 9, loss 1.25
+**** Finished Training ****
+Change in stitch weights: 0.7336120009422302
+Largest abs weight change: 0.021716687828302383
+Number of weights changing > 0.1 of that: 27098
+Change in stitch bias: 0.026669245213270187
+Largest abs bias change: 0.002848561853170395
+Number of bias changing > 0.1 of that: 230
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bg7unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 7 from bg to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 28.50
+Epoch 1, loss 2.54
+Epoch 2, loss 1.70
+Epoch 3, loss 1.58
+Epoch 4, loss 1.31
+Epoch 5, loss 1.15
+Epoch 6, loss 1.10
+Epoch 7, loss 0.92
+Epoch 8, loss 0.93
+Epoch 9, loss 1.28
+**** Finished Training ****
+Change in stitch weights: 0.7360939979553223
+Largest abs weight change: 0.011327501386404037
+Number of weights changing > 0.1 of that: 123848
+Change in stitch bias: 0.026871981099247932
+Largest abs bias change: 0.002015281468629837
+Number of bias changing > 0.1 of that: 460
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bg8unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 8 from bg to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 19.42
+Epoch 1, loss 2.12
+Epoch 2, loss 2.12
+Epoch 3, loss 2.18
+Epoch 4, loss 1.44
+Epoch 5, loss 1.23
+Epoch 6, loss 0.97
+Epoch 7, loss 1.02
+Epoch 8, loss 0.94
+Epoch 9, loss 0.93
+**** Finished Training ****
+Change in stitch weights: 0.708274781703949
+Largest abs weight change: 0.008813254535198212
+Number of weights changing > 0.1 of that: 151826
+Change in stitch bias: 0.027094952762126923
+Largest abs bias change: 0.002017159014940262
+Number of bias changing > 0.1 of that: 469
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Evaluate ranks and output to ./results_2f_rank/bias3unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from bias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 238.51
+Epoch 1, loss 21.69
+Epoch 2, loss 13.56
+Epoch 3, loss 9.90
+Epoch 4, loss 8.27
+Epoch 5, loss 6.70
+Epoch 6, loss 5.82
+Epoch 7, loss 5.32
+Epoch 8, loss 4.79
+Epoch 9, loss 3.91
+**** Finished Training ****
+Change in stitch weights: 0.9707802534103394
+Largest abs weight change: 0.0887259766459465
+Number of weights changing > 0.1 of that: 2105
+Change in stitch bias: 0.027047965675592422
+Largest abs bias change: 0.005663789808750153
+Number of bias changing > 0.1 of that: 60
+Test the trained stitch against biased data
+Test Accuracy: 99.91 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   2,    0,    0,    1,    0,    0,  954,    0,    1,    0],
+        [   0,    0,    0,    0,    1,    0,    0, 1027,    0,    0],
+        [   0,    0,    0,    1,    1,    0,    0,    0,  972,    0],
+        [   0,    0,    1,    0,    0,    1,    0,    0,    0, 1007]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bias4unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 4 from bias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 333.48
+Epoch 1, loss 19.65
+Epoch 2, loss 11.45
+Epoch 3, loss 8.03
+Epoch 4, loss 6.62
+Epoch 5, loss 5.13
+Epoch 6, loss 5.24
+Epoch 7, loss 3.92
+Epoch 8, loss 3.58
+Epoch 9, loss 3.30
+**** Finished Training ****
+Change in stitch weights: 1.1289442777633667
+Largest abs weight change: 0.1145925298333168
+Number of weights changing > 0.1 of that: 1766
+Change in stitch bias: 0.027965528890490532
+Largest abs bias change: 0.005656473338603973
+Number of bias changing > 0.1 of that: 61
+Test the trained stitch against biased data
+Test Accuracy: 99.94 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   2,    0,    0,    2,    0,    0,  954,    0,    0,    0],
+        [   0,    0,    1,    0,    0,    0,    0, 1027,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    1,    0,    0,    0, 1008]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bias5unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 5 from bias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 157.27
+Epoch 1, loss 10.34
+Epoch 2, loss 6.34
+Epoch 3, loss 4.56
+Epoch 4, loss 4.03
+Epoch 5, loss 3.31
+Epoch 6, loss 2.60
+Epoch 7, loss 2.44
+Epoch 8, loss 2.29
+Epoch 9, loss 2.15
+**** Finished Training ****
+Change in stitch weights: 0.8216870427131653
+Largest abs weight change: 0.037219349294900894
+Number of weights changing > 0.1 of that: 8112
+Change in stitch bias: 0.025827623903751373
+Largest abs bias change: 0.00403643399477005
+Number of bias changing > 0.1 of that: 114
+Test the trained stitch against biased data
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1031,    0,    0,    0,    0,    0,    1,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bias6unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 6 from bias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 70.92
+Epoch 1, loss 5.29
+Epoch 2, loss 2.97
+Epoch 3, loss 2.91
+Epoch 4, loss 1.79
+Epoch 5, loss 1.41
+Epoch 6, loss 1.48
+Epoch 7, loss 1.22
+Epoch 8, loss 1.20
+Epoch 9, loss 0.86
+**** Finished Training ****
+Change in stitch weights: 0.712820827960968
+Largest abs weight change: 0.02261979505419731
+Number of weights changing > 0.1 of that: 24758
+Change in stitch bias: 0.02682448737323284
+Largest abs bias change: 0.0028505846858024597
+Number of bias changing > 0.1 of that: 231
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bias7unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 7 from bias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 31.47
+Epoch 1, loss 2.19
+Epoch 2, loss 1.55
+Epoch 3, loss 1.17
+Epoch 4, loss 1.00
+Epoch 5, loss 0.93
+Epoch 6, loss 0.87
+Epoch 7, loss 0.62
+Epoch 8, loss 0.57
+Epoch 9, loss 0.55
+**** Finished Training ****
+Change in stitch weights: 0.7442156672477722
+Largest abs weight change: 0.01044066995382309
+Number of weights changing > 0.1 of that: 134495
+Change in stitch bias: 0.025477323681116104
+Largest abs bias change: 0.0020181164145469666
+Number of bias changing > 0.1 of that: 460
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/bias8unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 8 from bias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 38.98
+Epoch 1, loss 2.04
+Epoch 2, loss 1.60
+Epoch 3, loss 1.17
+Epoch 4, loss 1.11
+Epoch 5, loss 0.80
+Epoch 6, loss 0.76
+Epoch 7, loss 0.73
+Epoch 8, loss 0.60
+Epoch 9, loss 0.72
+**** Finished Training ****
+Change in stitch weights: 0.7638908624649048
+Largest abs weight change: 0.010762716643512249
+Number of weights changing > 0.1 of that: 132269
+Change in stitch bias: 0.026313291862607002
+Largest abs bias change: 0.0020173341035842896
+Number of bias changing > 0.1 of that: 453
+Test the trained stitch against biased data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+NOTE: Only running stitch with unbias receive model
+Evaluate ranks and output to ./results_2f_rank/unbias3unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from unbias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 183.27
+Epoch 1, loss 38.41
+Epoch 2, loss 28.37
+Epoch 3, loss 23.71
+Epoch 4, loss 19.92
+Epoch 5, loss 17.13
+Epoch 6, loss 15.18
+Epoch 7, loss 13.68
+Epoch 8, loss 12.32
+Epoch 9, loss 11.50
+**** Finished Training ****
+Change in stitch weights: 1.0285567045211792
+Largest abs weight change: 0.10710832476615906
+Number of weights changing > 0.1 of that: 1769
+Change in stitch bias: 0.028291068971157074
+Largest abs bias change: 0.005655795335769653
+Number of bias changing > 0.1 of that: 60
+Test the trained stitch against biased data
+Test Accuracy: 99.33 %
+Confusion Matrix
+tensor([[ 974,    0,    0,    0,    2,    1,    2,    1,    0,    0],
+        [   0, 1131,    1,    2,    0,    0,    1,    0,    0,    0],
+        [   0,    0, 1029,    0,    0,    0,    0,    0,    2,    1],
+        [   0,    0,    0, 1008,    0,    1,    0,    0,    0,    1],
+        [   0,    0,    0,    0,  976,    0,    0,    0,    1,    5],
+        [   0,    0,    0,    3,    0,  888,    0,    0,    1,    0],
+        [   4,    3,    4,    0,    1,    2,  944,    0,    0,    0],
+        [   0,    2,    4,    0,    3,    0,    0, 1018,    0,    1],
+        [   1,    0,    4,    0,    1,    2,    0,    0,  965,    1],
+        [   1,    0,    2,    2,    2,    2,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/unbias4unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 4 from unbias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 167.36
+Epoch 1, loss 52.05
+Epoch 2, loss 41.14
+Epoch 3, loss 36.18
+Epoch 4, loss 32.27
+Epoch 5, loss 30.55
+Epoch 6, loss 27.72
+Epoch 7, loss 26.47
+Epoch 8, loss 25.12
+Epoch 9, loss 24.17
+**** Finished Training ****
+Change in stitch weights: 1.0394988059997559
+Largest abs weight change: 0.12709864974021912
+Number of weights changing > 0.1 of that: 1427
+Change in stitch bias: 0.023779042065143585
+Largest abs bias change: 0.005663193762302399
+Number of bias changing > 0.1 of that: 54
+Test the trained stitch against biased data
+Test Accuracy: 98.48 %
+Confusion Matrix
+tensor([[ 970,    1,    1,    0,    1,    1,    2,    1,    0,    3],
+        [   0, 1126,    0,    1,    1,    0,    2,    2,    3,    0],
+        [   0,    0, 1022,    2,    0,    0,    0,    5,    2,    1],
+        [   0,    0,    1, 1002,    0,    3,    0,    2,    1,    1],
+        [   0,    0,    0,    1,  968,    0,    2,    0,    3,    8],
+        [   0,    0,    0,    7,    0,  882,    2,    0,    1,    0],
+        [   4,    4,    0,    1,    8,    3,  936,    0,    2,    0],
+        [   0,    0,    8,    0,    5,    0,    0, 1001,    2,   12],
+        [   1,    2,    4,    1,    1,    0,    2,    2,  955,    6],
+        [   0,    3,    1,    4,    7,    1,    0,    5,    2,  986]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/unbias5unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 5 from unbias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 176.58
+Epoch 1, loss 37.32
+Epoch 2, loss 29.06
+Epoch 3, loss 26.19
+Epoch 4, loss 23.68
+Epoch 5, loss 21.53
+Epoch 6, loss 20.66
+Epoch 7, loss 19.52
+Epoch 8, loss 18.55
+Epoch 9, loss 17.63
+**** Finished Training ****
+Change in stitch weights: 0.9972741007804871
+Largest abs weight change: 0.05093768239021301
+Number of weights changing > 0.1 of that: 7435
+Change in stitch bias: 0.025187334045767784
+Largest abs bias change: 0.00402570515871048
+Number of bias changing > 0.1 of that: 116
+Test the trained stitch against biased data
+Test Accuracy: 98.75 %
+Confusion Matrix
+tensor([[ 972,    1,    2,    0,    0,    0,    2,    1,    0,    2],
+        [   0, 1127,    1,    1,    1,    0,    1,    1,    3,    0],
+        [   2,    0, 1028,    0,    0,    0,    0,    0,    2,    0],
+        [   0,    0,    0, 1002,    0,    4,    0,    1,    3,    0],
+        [   0,    0,    1,    0,  970,    0,    1,    0,    2,    8],
+        [   1,    0,    0,    3,    0,  883,    2,    1,    2,    0],
+        [   9,    3,    1,    0,    3,    1,  937,    0,    4,    0],
+        [   1,    2,    3,    2,    2,    0,    0, 1011,    1,    6],
+        [   6,    0,    3,    0,    0,    2,    1,    3,  957,    2],
+        [   2,    3,    0,    3,    4,    4,    0,    3,    2,  988]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/unbias6unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 6 from unbias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 114.55
+Epoch 1, loss 26.24
+Epoch 2, loss 22.53
+Epoch 3, loss 20.10
+Epoch 4, loss 18.98
+Epoch 5, loss 17.65
+Epoch 6, loss 16.94
+Epoch 7, loss 16.80
+Epoch 8, loss 15.80
+Epoch 9, loss 15.21
+**** Finished Training ****
+Change in stitch weights: 0.8199293613433838
+Largest abs weight change: 0.04448390379548073
+Number of weights changing > 0.1 of that: 8103
+Change in stitch bias: 0.026539677754044533
+Largest abs bias change: 0.00284518301486969
+Number of bias changing > 0.1 of that: 226
+Test the trained stitch against biased data
+Test Accuracy: 98.92 %
+Confusion Matrix
+tensor([[ 976,    0,    1,    0,    0,    0,    1,    1,    1,    0],
+        [   0, 1131,    1,    1,    0,    0,    1,    0,    1,    0],
+        [   1,    1, 1028,    0,    0,    0,    0,    0,    2,    0],
+        [   0,    0,    0,  999,    1,    6,    0,    1,    3,    0],
+        [   0,    0,    1,    0,  973,    0,    1,    0,    3,    4],
+        [   0,    0,    0,    5,    0,  881,    2,    1,    2,    1],
+        [   2,    3,    0,    0,    4,    3,  943,    0,    3,    0],
+        [   0,    1,    2,    4,    0,    0,    0, 1015,    1,    5],
+        [   2,    0,    2,    2,    1,    2,    2,    2,  959,    2],
+        [   2,    3,    0,    4,    7,    1,    0,    3,    2,  987]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/unbias7unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 7 from unbias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 75.45
+Epoch 1, loss 24.18
+Epoch 2, loss 21.22
+Epoch 3, loss 19.95
+Epoch 4, loss 18.96
+Epoch 5, loss 18.44
+Epoch 6, loss 17.98
+Epoch 7, loss 17.14
+Epoch 8, loss 16.98
+Epoch 9, loss 17.17
+**** Finished Training ****
+Change in stitch weights: 0.872195839881897
+Largest abs weight change: 0.010812443681061268
+Number of weights changing > 0.1 of that: 139745
+Change in stitch bias: 0.026681093499064445
+Largest abs bias change: 0.002020377665758133
+Number of bias changing > 0.1 of that: 455
+Test the trained stitch against biased data
+Test Accuracy: 98.77 %
+Confusion Matrix
+tensor([[ 972,    0,    1,    0,    0,    2,    2,    1,    2,    0],
+        [   0, 1129,    1,    2,    0,    0,    2,    0,    1,    0],
+        [   1,    0, 1025,    0,    1,    0,    0,    1,    4,    0],
+        [   0,    0,    0, 1001,    0,    4,    0,    0,    4,    1],
+        [   0,    0,    0,    0,  971,    0,    1,    1,    2,    7],
+        [   0,    0,    0,    4,    0,  882,    1,    1,    2,    2],
+        [   2,    3,    0,    0,    3,    5,  942,    0,    3,    0],
+        [   0,    1,    2,    3,    1,    0,    0, 1015,    1,    5],
+        [   2,    0,    1,    3,    4,    2,    0,    3,  956,    3],
+        [   2,    4,    1,    5,    6,    1,    0,    3,    3,  984]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2f_rank/unbias8unbias-bias-63_2024-08-07_10-12-24_SEED63_EPOCHS4_BGN0.1_exp2f_ResNet18_unbiased_colour_mnist-test.csv
+Train the stitch to a model stitched after layer 8 from unbias to unbias
+Use the biased data loader (train and test) regardless of what unbias was trained on
+Epoch 0, loss 60.31
+Epoch 1, loss 23.37
+Epoch 2, loss 21.26
+Epoch 3, loss 19.79
+Epoch 4, loss 18.50
+Epoch 5, loss 18.54
+Epoch 6, loss 17.39
+Epoch 7, loss 16.83
+Epoch 8, loss 16.77
+Epoch 9, loss 16.59
+**** Finished Training ****
+Change in stitch weights: 0.8407434821128845
+Largest abs weight change: 0.01299821212887764
+Number of weights changing > 0.1 of that: 114342
+Change in stitch bias: 0.02627735398709774
+Largest abs bias change: 0.0020165257155895233
+Number of bias changing > 0.1 of that: 459
+Test the trained stitch against biased data
+Test Accuracy: 98.73 %
+Confusion Matrix
+tensor([[ 974,    0,    1,    0,    0,    1,    2,    1,    1,    0],
+        [   0, 1131,    0,    0,    0,    0,    2,    0,    2,    0],
+        [   2,    0, 1024,    0,    1,    0,    0,    1,    4,    0],
+        [   0,    0,    0, 1001,    0,    4,    0,    1,    3,    1],
+        [   0,    0,    1,    0,  971,    0,    1,    0,    3,    6],
+        [   0,    0,    0,    8,    0,  878,    2,    1,    2,    1],
+        [   2,    3,    1,    0,    2,    4,  944,    0,    2,    0],
+        [   0,    1,    2,    4,    0,    0,    0, 1016,    1,    4],
+        [   2,    0,    3,    3,    3,    2,    2,    3,  954,    2],
+        [   1,    3,    1,    6,    9,    1,    0,    3,    5,  980]],
+       dtype=torch.int32)
+===================================================================
+stitching_accuracies={'mix': {'unbias': {3: 99.88, 4: 99.9, 5: 99.95, 6: 99.99, 7: 100.0, 8: 99.98}}, 'bw': {'unbias': {3: 98.32, 4: 98.16, 5: 98.89, 6: 99.05, 7: 98.75, 8: 98.87}}, 'bgonly': {'unbias': {3: 99.9, 4: 99.98, 5: 99.99, 6: 99.99, 7: 99.94, 8: 99.96}}, 'bg': {'unbias': {3: 99.8, 4: 99.99, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}}, 'bias': {'unbias': {3: 99.91, 4: 99.94, 5: 99.99, 6: 100.0, 7: 100.0, 8: 100.0}}, 'unbias': {'unbias': {3: 99.33, 4: 98.48, 5: 98.75, 6: 98.92, 7: 98.77, 8: 98.73}}}
+stitching_penalties={'mix': {'unbias': {3: -1.3599999999999994, 4: -1.3800000000000097, 5: -1.4300000000000068, 6: -1.4699999999999989, 7: -1.480000000000004, 8: -1.460000000000008}}, 'bw': {'unbias': {3: 0.20000000000000284, 4: 0.35999999999999943, 5: -0.37000000000000455, 6: -0.5300000000000011, 7: -0.23000000000000398, 8: -0.3500000000000085}}, 'bgonly': {'unbias': {3: -1.3800000000000097, 4: -1.460000000000008, 5: -1.4699999999999989, 6: -1.4699999999999989, 7: -1.4200000000000017, 8: -1.4399999999999977}}, 'bg': {'unbias': {3: -1.2800000000000011, 4: -1.4699999999999989, 5: -1.480000000000004, 6: -1.480000000000004, 7: -1.480000000000004, 8: -1.480000000000004}}, 'bias': {'unbias': {3: -1.3900000000000006, 4: -1.4200000000000017, 5: -1.4699999999999989, 6: -1.480000000000004, 7: -1.480000000000004, 8: -1.480000000000004}}, 'unbias': {'unbias': {3: -0.8100000000000023, 4: 0.03999999999999204, 5: -0.23000000000000398, 6: -0.4000000000000057, 7: -0.25, 8: -0.21000000000000796}}}
+synth-mix
+100.0
+Stitch Accuracy
+{3: 99.88, 4: 99.9, 5: 99.95, 6: 99.99, 7: 100.0, 8: 99.98}
+--------------------------
+synth-bw
+67.36
+Stitch Accuracy
+{3: 98.32, 4: 98.16, 5: 98.89, 6: 99.05, 7: 98.75, 8: 98.87}
+--------------------------
+synth-bgonly
+64.32
+Stitch Accuracy
+{3: 99.9, 4: 99.98, 5: 99.99, 6: 99.99, 7: 99.94, 8: 99.96}
+--------------------------
+synth-bg
+100.0
+Stitch Accuracy
+{3: 99.8, 4: 99.99, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}
+--------------------------
+synth-bias
+100.0
+Stitch Accuracy
+{3: 99.91, 4: 99.94, 5: 99.99, 6: 100.0, 7: 100.0, 8: 100.0}
+--------------------------
+synth-unbias
+98.52
+Stitch Accuracy
+{3: 99.33, 4: 98.48, 5: 98.75, 6: 98.92, 7: 98.77, 8: 98.73}
+--------------------------

@@ -1,0 +1,128 @@
+Executed at 2025-04-01_19-57-40
+logging to ./results_2j/2025-04-01_19-57-40_SEED107_EPOCHS50_BGN0.1_exp2h_VGG19_log.txt
+seed=107
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+stitch_train_epochs=50
+================================================
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+Accuracy Calculation for VGG19 trained with key='bw'
+Measure baselines against bias test_loader
+Test the Trained VGG19
+Test Accuracy: 95.71 %
+Confusion Matrix
+tensor([[ 978,    0,    0,    0,    0,    0,    1,    1,    0,    0],
+        [  13, 1092,   14,    3,    0,    1,    2,    2,    8,    0],
+        [   2,    0, 1027,    0,    0,    0,    0,    1,    2,    0],
+        [   0,    3,   36,  949,    0,    1,    0,    3,   17,    1],
+        [   4,    1,    6,    0,  955,    0,    2,    1,   13,    0],
+        [  23,    3,    0,   25,    0,  781,    0,    0,   57,    3],
+        [  16,    5,    4,    0,    1,    3,  921,    0,    8,    0],
+        [   3,    5,   29,    1,    3,    0,    0,  978,    8,    1],
+        [   7,    0,    4,    1,    0,    1,    0,    0,  960,    1],
+        [   7,    2,    0,   10,    7,    1,    0,    3,   49,  930]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 trained with key='mix'
+Measure baselines against bias test_loader
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 trained with key='bgonly'
+Measure baselines against bias test_loader
+Test the Trained VGG19
+Test Accuracy: 47.85 %
+Confusion Matrix
+tensor([[   0,    0,    0,    3,    0,    0,  956,   21,    0,    0],
+        [ 686,  218,    0,    2,    0,    0,   24,  205,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  160,    0,    0,    0,  822,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,  447,    0,    0,  511,    0,    0,    0],
+        [   0,    0,    0,    0,  882,    0,    0,  132,   14,    0],
+        [   0,    0,  211,    0,    0,    0,    0,    0,  763,    0],
+        [   0,    0,  942,    0,    0,    0,    0,    0,    0,   67]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 trained with key='bg'
+Measure baselines against bias test_loader
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 trained with key='bias'
+Measure baselines against bias test_loader
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 trained with key='unbias'
+Measure baselines against bias test_loader
+Test the Trained VGG19
+Test Accuracy: 98.41 %
+Confusion Matrix
+tensor([[ 974,    0,    0,    0,    0,    1,    0,    1,    3,    1],
+        [   1, 1126,    2,    1,    1,    0,    1,    0,    3,    0],
+        [   2,    0, 1019,    0,    0,    0,    1,    5,    5,    0],
+        [   0,    0,    3, 1000,    0,    2,    0,    1,    3,    1],
+        [   0,    0,    1,    0,  953,    0,    4,    2,    1,   21],
+        [   2,    1,    0,    7,    0,  874,    2,    1,    4,    1],
+        [   5,    3,    0,    1,    3,    3,  940,    0,    3,    0],
+        [   2,    2,    3,    1,    0,    0,    0, 1013,    1,    6],
+        [   2,    0,    3,    5,    0,    3,    0,    2,  955,    4],
+        [   3,    3,    0,    6,    3,    1,    0,    5,    1,  987]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'bw': 95.71, 'mix': 100.0, 'bgonly': 47.85, 'bg': 100.0, 'bias': 100.0, 'unbias': 98.41}

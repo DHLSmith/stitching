@@ -1,0 +1,1941 @@
+Executed at 2025-01-10_23-51-35
+logging to ./results_2j/2025-01-10_23-51-35_SEED789_EPOCHS50_BGN0.1_exp2h_VGG19_log.txt
+seed=789
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+stitch_train_epochs=50
+================================================
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+val['loadfrom']='../exp1_ms_with_random_dataset/results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+Accuracy Calculation for VGG19 with key='bw'
+Test the Trained VGG19
+Test Accuracy: 99.12 %
+Confusion Matrix
+tensor([[ 975,    0,    1,    0,    0,    0,    2,    1,    1,    0],
+        [   0, 1133,    0,    0,    0,    0,    1,    1,    0,    0],
+        [   1,    2, 1024,    0,    1,    0,    0,    3,    1,    0],
+        [   0,    0,    0, 1004,    0,    3,    0,    1,    1,    1],
+        [   0,    0,    0,    0,  975,    0,    3,    1,    0,    3],
+        [   2,    0,    0,    8,    0,  880,    1,    0,    0,    1],
+        [   2,    3,    0,    1,    1,    3,  948,    0,    0,    0],
+        [   0,    4,    4,    0,    0,    0,    0, 1016,    1,    3],
+        [   0,    0,    1,    4,    1,    1,    0,    0,  964,    3],
+        [   1,    2,    0,    2,    6,    2,    0,    3,    0,  993]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='mix'
+Test the Trained VGG19
+Test Accuracy: 99.31 %
+Confusion Matrix
+tensor([[ 970,    0,    0,    0,    0,    0,    2,    0,    0,    0],
+        [   0, 1119,    0,    0,    0,    0,    1,    1,    1,    0],
+        [   0,    0,  967,    0,    0,    0,    2,    1,    0,    0],
+        [   0,    0,    1, 1053,    0,    4,    0,    1,    0,    0],
+        [   0,    0,    1,    0,  990,    1,    2,    0,    0,   10],
+        [   0,    0,    0,    4,    0,  865,    0,    0,    0,    0],
+        [   1,    1,    0,    0,    1,    2,  941,    0,    1,    0],
+        [   0,    0,    2,    1,    0,    0,    0, 1027,    0,    1],
+        [   0,    1,    3,    0,    0,    4,    1,    1,  963,    1],
+        [   1,    1,    0,    0,    1,   10,    1,    1,    1, 1036]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='bgonly'
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='bg'
+Test the Trained VGG19
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[1004,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1003,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1003,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  999,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  996,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1002,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1002,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  989,    0],
+        [   0,    1,    0,    0,    0,    0,    0,    0,    0,  998]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='bias'
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='unbias'
+Test the Trained VGG19
+Test Accuracy: 98.27 %
+Confusion Matrix
+tensor([[ 974,    0,    0,    0,    0,    0,    2,    1,    2,    1],
+        [   1, 1124,    0,    1,    0,    1,    3,    2,    3,    0],
+        [   5,    0, 1010,    7,    1,    0,    1,    6,    2,    0],
+        [   0,    0,    1, 1002,    0,    1,    0,    3,    2,    1],
+        [   0,    0,    1,    0,  962,    0,    4,    2,    0,   13],
+        [   1,    0,    0,   16,    0,  871,    1,    0,    2,    1],
+        [   6,    3,    0,    1,    3,    8,  933,    0,    4,    0],
+        [   0,    1,    3,    0,    0,    0,    0, 1020,    1,    3],
+        [   0,    0,    3,    6,    3,    4,    0,    4,  950,    4],
+        [   1,    3,    0,    5,    6,    1,    0,   11,    1,  981]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'bw': 99.12, 'mix': 99.31, 'bgonly': 100.0, 'bg': 99.99, 'bias': 100.0, 'unbias': 98.27}
+Already evaluated for ./results_2j_rank/bw1unbias-bw-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist-test.csv
+Already evaluated for ./results_2j_rank/bw8unbias-bw-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist-test.csv
+Already evaluated for ./results_2j_rank/bw22unbias-bw-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist-test.csv
+Already evaluated for ./results_2j_rank/bw29unbias-bw-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist-test.csv
+Already evaluated for ./results_2j_rank/bw35unbias-bw-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist-test.csv
+Already evaluated for ./results_2j_rank/mix1unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+Already evaluated for ./results_2j_rank/mix8unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+Already evaluated for ./results_2j_rank/mix22unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+Already evaluated for ./results_2j_rank/mix29unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+Evaluate ranks and output to ./results_2j_rank/mix35unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+stitch into model mix
+Train the stitch after layer 35
+Epoch 0, loss 48.76
+Epoch 1, loss 6.66
+Epoch 2, loss 5.53
+Epoch 3, loss 4.81
+Epoch 4, loss 4.70
+Epoch 5, loss 4.04
+Epoch 6, loss 3.74
+Epoch 7, loss 3.78
+Epoch 8, loss 3.88
+Epoch 9, loss 3.53
+Epoch 10, loss 3.35
+Epoch 11, loss 3.11
+Epoch 12, loss 3.46
+Epoch 13, loss 3.37
+Epoch 14, loss 2.85
+Epoch 15, loss 2.81
+Epoch 16, loss 3.09
+Epoch 17, loss 2.91
+Epoch 18, loss 3.13
+Epoch 19, loss 2.97
+Epoch 20, loss 2.87
+Epoch 21, loss 2.83
+Epoch 22, loss 2.79
+Epoch 23, loss 2.66
+Epoch 24, loss 2.67
+Epoch 25, loss 2.65
+Epoch 26, loss 2.66
+Epoch 27, loss 2.50
+Epoch 28, loss 2.48
+Epoch 29, loss 2.50
+Epoch 30, loss 2.52
+Epoch 31, loss 2.60
+Epoch 32, loss 2.31
+Epoch 33, loss 2.39
+Epoch 34, loss 2.27
+Epoch 35, loss 2.43
+Epoch 36, loss 2.35
+Epoch 37, loss 2.40
+Epoch 38, loss 2.21
+Epoch 39, loss 2.07
+Epoch 40, loss 2.14
+Epoch 41, loss 2.23
+Epoch 42, loss 2.12
+Epoch 43, loss 2.46
+Epoch 44, loss 2.28
+Epoch 45, loss 2.24
+Epoch 46, loss 2.36
+Epoch 47, loss 2.22
+Epoch 48, loss 2.14
+Epoch 49, loss 2.10
+**** Finished Training ****
+Change in stitch weights: 7.304842472076416
+Largest abs weight change: 0.08239734917879105
+Number of weights changing > 0.1 of that: 173314
+Change in stitch bias: 0.321129709482193
+Largest abs bias change: 0.024032915011048317
+Number of bias changing > 0.1 of that: 460
+Test the trained stitch
+Test Accuracy: 99.80 %
+Confusion Matrix
+tensor([[ 972,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1122,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  969,    0,    0,    0,    0,    1,    0,    0],
+        [   0,    0,    1, 1055,    0,    1,    0,    1,    1,    0],
+        [   0,    0,    0,    0, 1002,    0,    0,    0,    0,    2],
+        [   0,    0,    0,    0,    0,  868,    0,    0,    0,    1],
+        [   1,    2,    0,    0,    0,    1,  942,    0,    1,    0],
+        [   0,    0,    1,    0,    0,    0,    0, 1029,    0,    1],
+        [   0,    0,    1,    0,    0,    0,    0,    0,  973,    0],
+        [   0,    1,    0,    0,    2,    0,    0,    1,    0, 1048]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_2j_rank/mix-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+Evaluate ranks and output to ./results_2j_rank/bgonly1unbias-bgonly-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch after layer 1
+Epoch 0, loss 347.78
+Epoch 1, loss 329.60
+Epoch 2, loss 311.53
+Epoch 3, loss 298.87
+Epoch 4, loss 287.33
+Epoch 5, loss 272.18
+Epoch 6, loss 259.92
+Epoch 7, loss 252.05
+Epoch 8, loss 245.28
+Epoch 9, loss 238.50
+Epoch 10, loss 233.39
+Epoch 11, loss 228.06
+Epoch 12, loss 223.05
+Epoch 13, loss 217.98
+Epoch 14, loss 211.85
+Epoch 15, loss 207.52
+Epoch 16, loss 203.56
+Epoch 17, loss 199.91
+Epoch 18, loss 195.02
+Epoch 19, loss 192.35
+Epoch 20, loss 187.84
+Epoch 21, loss 185.10
+Epoch 22, loss 183.13
+Epoch 23, loss 179.51
+Epoch 24, loss 177.87
+Epoch 25, loss 174.77
+Epoch 26, loss 166.49
+Epoch 27, loss 163.22
+Epoch 28, loss 159.67
+Epoch 29, loss 157.31
+Epoch 30, loss 154.72
+Epoch 31, loss 153.67
+Epoch 32, loss 151.19
+Epoch 33, loss 150.33
+Epoch 34, loss 149.18
+Epoch 35, loss 147.53
+Epoch 36, loss 146.04
+Epoch 37, loss 145.77
+Epoch 38, loss 144.39
+Epoch 39, loss 142.92
+Epoch 40, loss 141.33
+Epoch 41, loss 139.94
+Epoch 42, loss 139.19
+Epoch 43, loss 138.90
+Epoch 44, loss 137.94
+Epoch 45, loss 137.24
+Epoch 46, loss 135.96
+Epoch 47, loss 134.86
+Epoch 48, loss 134.28
+Epoch 49, loss 135.14
+**** Finished Training ****
+Change in stitch weights: 4.326138019561768
+Largest abs weight change: 0.22819574177265167
+Number of weights changing > 0.1 of that: 3155
+Change in stitch bias: 0.285467267036438
+Largest abs bias change: 0.06256096065044403
+Number of bias changing > 0.1 of that: 54
+Test the trained stitch
+Test Accuracy: 80.09 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,  982,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,  404,    0,   19,    0,  586,    0,    0,    0,    0]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_2j_rank/bgonly-bgonly-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+Evaluate ranks and output to ./results_2j_rank/bgonly8unbias-bgonly-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch after layer 8
+Epoch 0, loss 348.58
+Epoch 1, loss 305.81
+Epoch 2, loss 270.89
+Epoch 3, loss 240.12
+Epoch 4, loss 212.16
+Epoch 5, loss 187.32
+Epoch 6, loss 168.62
+Epoch 7, loss 154.55
+Epoch 8, loss 144.08
+Epoch 9, loss 135.14
+Epoch 10, loss 126.36
+Epoch 11, loss 119.83
+Epoch 12, loss 114.92
+Epoch 13, loss 109.62
+Epoch 14, loss 105.07
+Epoch 15, loss 101.37
+Epoch 16, loss 98.17
+Epoch 17, loss 95.61
+Epoch 18, loss 91.94
+Epoch 19, loss 89.97
+Epoch 20, loss 88.27
+Epoch 21, loss 86.87
+Epoch 22, loss 84.47
+Epoch 23, loss 83.18
+Already evaluated for ./results_2j_rank/bw1unbias-bw-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist-test.csv
+Already evaluated for ./results_2j_rank/bw8unbias-bw-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist-test.csv
+Already evaluated for ./results_2j_rank/bw22unbias-bw-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist-test.csv
+Already evaluated for ./results_2j_rank/bw29unbias-bw-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist-test.csv
+Already evaluated for ./results_2j_rank/bw35unbias-bw-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist-test.csv
+Already evaluated for ./results_2j_rank/mix1unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+Already evaluated for ./results_2j_rank/mix8unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+Already evaluated for ./results_2j_rank/mix22unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+Already evaluated for ./results_2j_rank/mix29unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+Evaluate ranks and output to ./results_2j_rank/mix35unbias-mix-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist-test.csv
+stitch into model mix
+Train the stitch after layer 35
+Epoch 0, loss 50.25
+Epoch 1, loss 6.18
+Epoch 2, loss 5.05
+Epoch 3, loss 4.64
+Epoch 4, loss 4.34
+Epoch 5, loss 4.08
+Epoch 6, loss 4.05
+Epoch 7, loss 3.97
+Epoch 8, loss 3.77
+Epoch 9, loss 3.48
+Epoch 10, loss 3.35
+Epoch 11, loss 3.43
+Epoch 12, loss 3.07
+Epoch 13, loss 3.02
+Epoch 14, loss 2.98
+Epoch 15, loss 3.06
+Epoch 16, loss 2.86
+Epoch 17, loss 3.06
+Epoch 18, loss 2.98
+Epoch 19, loss 2.79
+Epoch 20, loss 2.87
+Epoch 21, loss 2.74
+Epoch 22, loss 2.59
+Epoch 23, loss 2.82
+Epoch 24, loss 2.74
+Epoch 25, loss 2.60
+Epoch 26, loss 2.43
+Epoch 27, loss 2.71
+Epoch 28, loss 2.70
+Epoch 29, loss 2.73
+Epoch 30, loss 2.48
+Epoch 31, loss 2.70
+Epoch 32, loss 2.33
+Epoch 33, loss 2.63
+Epoch 34, loss 2.51
+Epoch 35, loss 2.42
+Epoch 36, loss 2.51
+Epoch 37, loss 2.27
+Epoch 38, loss 2.19
+Epoch 39, loss 2.12
+Epoch 40, loss 2.20
+Epoch 41, loss 2.29
+Epoch 42, loss 2.08
+Epoch 43, loss 2.30
+Epoch 44, loss 2.32
+Epoch 45, loss 2.27
+Epoch 46, loss 2.21
+Epoch 47, loss 2.19
+Epoch 48, loss 2.16
+Epoch 49, loss 1.84
+**** Finished Training ****
+Change in stitch weights: 7.306734561920166
+Largest abs weight change: 0.053565818816423416
+Number of weights changing > 0.1 of that: 204481
+Change in stitch bias: 0.3259750306606293
+Largest abs bias change: 0.023954754695296288
+Number of bias changing > 0.1 of that: 455
+Test the trained stitch
+Test Accuracy: 99.85 %
+Confusion Matrix
+tensor([[ 972,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1122,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  969,    0,    0,    0,    0,    1,    0,    0],
+        [   0,    0,    1, 1055,    0,    1,    0,    1,    1,    0],
+        [   0,    0,    0,    0, 1004,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  868,    0,    0,    0,    1],
+        [   0,    1,    0,    0,    0,    1,  945,    0,    0,    0],
+        [   0,    0,    1,    0,    0,    0,    0, 1028,    0,    2],
+        [   0,    0,    1,    0,    0,    0,    0,    0,  973,    0],
+        [   0,    0,    0,    0,    2,    0,    0,    1,    0, 1049]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bgonly1unbias-bgonly-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch after layer 1
+Epoch 0, loss 329.45
+Epoch 1, loss 311.62
+Epoch 2, loss 305.16
+Epoch 3, loss 299.86
+Epoch 4, loss 293.22
+Epoch 5, loss 285.49
+Epoch 6, loss 274.91
+Epoch 7, loss 258.34
+Epoch 8, loss 243.83
+Epoch 9, loss 232.58
+Epoch 10, loss 222.88
+Epoch 11, loss 215.79
+Epoch 12, loss 210.31
+Epoch 13, loss 204.81
+Epoch 14, loss 201.19
+Epoch 15, loss 196.80
+Epoch 16, loss 193.11
+Epoch 17, loss 191.03
+Epoch 18, loss 187.57
+Epoch 19, loss 185.14
+Epoch 20, loss 183.27
+Epoch 21, loss 180.50
+Epoch 22, loss 179.71
+Epoch 23, loss 177.60
+Epoch 24, loss 175.57
+Epoch 25, loss 173.28
+Epoch 26, loss 170.03
+Epoch 27, loss 168.47
+Epoch 28, loss 165.86
+Epoch 29, loss 164.78
+Epoch 30, loss 163.05
+Epoch 31, loss 161.48
+Epoch 32, loss 159.74
+Epoch 33, loss 158.97
+Epoch 34, loss 157.56
+Epoch 35, loss 156.00
+Epoch 36, loss 154.92
+Epoch 37, loss 154.19
+Epoch 38, loss 152.79
+Epoch 39, loss 151.76
+Epoch 40, loss 149.99
+Epoch 41, loss 149.48
+Epoch 42, loss 148.17
+Epoch 43, loss 147.84
+Epoch 44, loss 146.87
+Epoch 45, loss 145.40
+Epoch 46, loss 144.18
+Epoch 47, loss 142.95
+Epoch 48, loss 142.09
+Epoch 49, loss 142.18
+**** Finished Training ****
+Change in stitch weights: 4.258963584899902
+Largest abs weight change: 0.21824327111244202
+Number of weights changing > 0.1 of that: 3173
+Change in stitch bias: 0.3357350528240204
+Largest abs bias change: 0.06744905561208725
+Number of bias changing > 0.1 of that: 60
+Test the trained stitch
+Test Accuracy: 79.88 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,  982,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,   21,    0,    0,    0,    0,    0, 1007,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,   91,    0,    0,    0,  866,    0,    0,   52,    0]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bgonly8unbias-bgonly-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch after layer 8
+Epoch 0, loss 350.63
+Epoch 1, loss 309.55
+Epoch 2, loss 268.69
+Epoch 3, loss 232.53
+Epoch 4, loss 204.96
+Epoch 5, loss 180.85
+Epoch 6, loss 161.76
+Epoch 7, loss 146.63
+Epoch 8, loss 134.95
+Epoch 9, loss 124.62
+Epoch 10, loss 116.53
+Epoch 11, loss 109.80
+Epoch 12, loss 104.89
+Epoch 13, loss 99.80
+Epoch 14, loss 96.42
+Epoch 15, loss 92.94
+Epoch 16, loss 90.82
+Epoch 17, loss 87.98
+Epoch 18, loss 85.79
+Epoch 19, loss 84.71
+Epoch 20, loss 82.73
+Epoch 21, loss 81.37
+Epoch 22, loss 79.92
+Epoch 23, loss 78.77
+Epoch 24, loss 78.10
+Epoch 25, loss 76.79
+Epoch 26, loss 75.70
+Epoch 27, loss 75.05
+Epoch 28, loss 74.19
+Epoch 29, loss 73.30
+Epoch 30, loss 72.58
+Epoch 31, loss 71.81
+Epoch 32, loss 71.68
+Epoch 33, loss 71.24
+Epoch 34, loss 70.70
+Epoch 35, loss 69.66
+Epoch 36, loss 69.39
+Epoch 37, loss 68.90
+Epoch 38, loss 69.02
+Epoch 39, loss 68.64
+Epoch 40, loss 68.21
+Epoch 41, loss 67.66
+Epoch 42, loss 67.56
+Epoch 43, loss 66.81
+Epoch 44, loss 66.82
+Epoch 45, loss 66.69
+Epoch 46, loss 66.58
+Epoch 47, loss 65.86
+Epoch 48, loss 66.07
+Epoch 49, loss 65.99
+**** Finished Training ****
+Change in stitch weights: 5.51330041885376
+Largest abs weight change: 0.13970708847045898
+Number of weights changing > 0.1 of that: 12910
+Change in stitch bias: 0.3183044195175171
+Largest abs bias change: 0.047976501286029816
+Number of bias changing > 0.1 of that: 111
+Test the trained stitch
+Test Accuracy: 89.91 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0, 1009,    0,    0,    0,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bgonly22unbias-bgonly-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch after layer 22
+Epoch 0, loss 32.36
+Epoch 1, loss 3.42
+Epoch 2, loss 2.39
+Epoch 3, loss 1.83
+Epoch 4, loss 1.61
+Epoch 5, loss 1.37
+Epoch 6, loss 1.28
+Epoch 7, loss 1.14
+Epoch 8, loss 1.12
+Epoch 9, loss 1.08
+Epoch 10, loss 0.98
+Epoch 11, loss 0.97
+Epoch 12, loss 0.95
+Epoch 13, loss 0.94
+Epoch 14, loss 0.94
+Epoch 15, loss 0.89
+Epoch 16, loss 0.87
+Epoch 17, loss 0.88
+Epoch 18, loss 0.87
+Epoch 19, loss 0.86
+Epoch 20, loss 0.87
+Epoch 21, loss 0.86
+Epoch 22, loss 0.83
+Epoch 23, loss 0.85
+Epoch 24, loss 0.86
+Epoch 25, loss 0.86
+Epoch 26, loss 0.86
+Epoch 27, loss 0.84
+Epoch 28, loss 0.86
+Epoch 29, loss 0.88
+Epoch 30, loss 0.83
+Epoch 31, loss 0.87
+Epoch 32, loss 0.86
+Epoch 33, loss 0.84
+Epoch 34, loss 0.87
+Epoch 35, loss 0.86
+Epoch 36, loss 0.87
+Epoch 37, loss 0.84
+Epoch 38, loss 0.87
+Epoch 39, loss 0.87
+Epoch 40, loss 0.90
+Epoch 41, loss 0.86
+Epoch 42, loss 0.89
+Epoch 43, loss 0.86
+Epoch 44, loss 0.87
+Epoch 45, loss 0.88
+Epoch 46, loss 0.90
+Epoch 47, loss 0.89
+Epoch 48, loss 0.90
+Epoch 49, loss 0.90
+**** Finished Training ****
+Change in stitch weights: 7.3378520011901855
+Largest abs weight change: 0.043613649904727936
+Number of weights changing > 0.1 of that: 215614
+Change in stitch bias: 0.314777672290802
+Largest abs bias change: 0.024026988074183464
+Number of bias changing > 0.1 of that: 457
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bgonly29unbias-bgonly-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch after layer 29
+Epoch 0, loss 45.29
+Epoch 1, loss 5.74
+Epoch 2, loss 3.50
+Epoch 3, loss 2.63
+Epoch 4, loss 2.15
+Epoch 5, loss 1.84
+Epoch 6, loss 1.58
+Epoch 7, loss 1.43
+Epoch 8, loss 1.30
+Epoch 9, loss 1.21
+Epoch 10, loss 1.12
+Epoch 11, loss 1.07
+Epoch 12, loss 1.00
+Epoch 13, loss 1.01
+Epoch 14, loss 0.93
+Epoch 15, loss 0.90
+Epoch 16, loss 0.92
+Epoch 17, loss 0.89
+Epoch 18, loss 0.89
+Epoch 19, loss 0.89
+Epoch 20, loss 0.88
+Epoch 21, loss 0.84
+Epoch 22, loss 0.83
+Epoch 23, loss 0.81
+Epoch 24, loss 0.84
+Epoch 25, loss 0.82
+Epoch 26, loss 0.79
+Epoch 27, loss 0.81
+Epoch 28, loss 0.79
+Epoch 29, loss 0.78
+Epoch 30, loss 0.79
+Epoch 31, loss 0.79
+Epoch 32, loss 0.79
+Epoch 33, loss 0.79
+Epoch 34, loss 0.78
+Epoch 35, loss 0.81
+Epoch 36, loss 0.79
+Epoch 37, loss 0.81
+Epoch 38, loss 0.80
+Epoch 39, loss 0.81
+Epoch 40, loss 0.82
+Epoch 41, loss 0.80
+Epoch 42, loss 0.80
+Epoch 43, loss 0.82
+Epoch 44, loss 0.83
+Epoch 45, loss 0.85
+Epoch 46, loss 0.82
+Epoch 47, loss 0.97
+Epoch 48, loss 1.19
+Epoch 49, loss 0.87
+**** Finished Training ****
+Change in stitch weights: 7.325753211975098
+Largest abs weight change: 0.04852715879678726
+Number of weights changing > 0.1 of that: 210027
+Change in stitch bias: 0.3197023570537567
+Largest abs bias change: 0.023892872035503387
+Number of bias changing > 0.1 of that: 480
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bgonly35unbias-bgonly-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch after layer 35
+Epoch 0, loss 42.18
+Epoch 1, loss 0.72
+Epoch 2, loss 0.50
+Epoch 3, loss 0.37
+Epoch 4, loss 0.34
+Epoch 5, loss 0.31
+Epoch 6, loss 0.28
+Epoch 7, loss 0.24
+Epoch 8, loss 0.21
+Epoch 9, loss 0.21
+Epoch 10, loss 0.22
+Epoch 11, loss 0.24
+Epoch 12, loss 0.21
+Epoch 13, loss 0.19
+Epoch 14, loss 0.17
+Epoch 15, loss 0.18
+Epoch 16, loss 0.16
+Epoch 17, loss 0.17
+Epoch 18, loss 0.18
+Epoch 19, loss 0.17
+Epoch 20, loss 0.16
+Epoch 21, loss 0.19
+Epoch 22, loss 0.18
+Epoch 23, loss 0.17
+Epoch 24, loss 0.18
+Epoch 25, loss 0.17
+Epoch 26, loss 0.17
+Epoch 27, loss 0.17
+Epoch 28, loss 0.16
+Epoch 29, loss 0.17
+Epoch 30, loss 0.18
+Epoch 31, loss 0.19
+Epoch 32, loss 0.17
+Epoch 33, loss 0.18
+Epoch 34, loss 0.17
+Epoch 35, loss 0.17
+Epoch 36, loss 0.17
+Epoch 37, loss 0.18
+Epoch 38, loss 0.17
+Epoch 39, loss 0.19
+Epoch 40, loss 0.18
+Epoch 41, loss 0.18
+Epoch 42, loss 0.19
+Epoch 43, loss 0.20
+Epoch 44, loss 0.19
+Epoch 45, loss 0.20
+Epoch 46, loss 0.18
+Epoch 47, loss 0.19
+Epoch 48, loss 0.19
+Epoch 49, loss 0.19
+**** Finished Training ****
+Change in stitch weights: 7.187623023986816
+Largest abs weight change: 0.042888037860393524
+Number of weights changing > 0.1 of that: 215527
+Change in stitch bias: 0.3140881657600403
+Largest abs bias change: 0.024015432223677635
+Number of bias changing > 0.1 of that: 465
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bg1unbias-bg-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+Train the stitch after layer 1
+Epoch 0, loss 327.45
+Epoch 1, loss 291.89
+Epoch 2, loss 270.61
+Epoch 3, loss 253.71
+Epoch 4, loss 239.40
+Epoch 5, loss 226.85
+Epoch 6, loss 214.69
+Epoch 7, loss 204.48
+Epoch 8, loss 193.06
+Epoch 9, loss 184.08
+Epoch 10, loss 177.53
+Epoch 11, loss 169.49
+Epoch 12, loss 163.19
+Epoch 13, loss 156.30
+Epoch 14, loss 151.11
+Epoch 15, loss 145.57
+Epoch 16, loss 139.88
+Epoch 17, loss 136.51
+Epoch 18, loss 132.91
+Epoch 19, loss 131.75
+Epoch 20, loss 125.00
+Epoch 21, loss 123.14
+Epoch 22, loss 120.73
+Epoch 23, loss 116.74
+Epoch 24, loss 115.05
+Epoch 25, loss 110.55
+Epoch 26, loss 108.44
+Epoch 27, loss 109.46
+Epoch 28, loss 106.99
+Epoch 29, loss 104.89
+Epoch 30, loss 103.92
+Epoch 31, loss 102.71
+Epoch 32, loss 101.56
+Epoch 33, loss 99.59
+Epoch 34, loss 101.17
+Epoch 35, loss 97.26
+Epoch 36, loss 97.32
+Epoch 37, loss 96.04
+Epoch 38, loss 92.48
+Epoch 39, loss 94.58
+Epoch 40, loss 94.63
+Epoch 41, loss 93.46
+Epoch 42, loss 95.60
+Epoch 43, loss 92.60
+Epoch 44, loss 94.72
+Epoch 45, loss 87.27
+Epoch 46, loss 90.27
+Epoch 47, loss 87.85
+Epoch 48, loss 89.76
+Epoch 49, loss 87.83
+**** Finished Training ****
+Change in stitch weights: 5.062315464019775
+Largest abs weight change: 0.26358354091644287
+Number of weights changing > 0.1 of that: 3077
+Change in stitch bias: 0.3199211061000824
+Largest abs bias change: 0.06790268421173096
+Number of bias changing > 0.1 of that: 56
+Test the trained stitch
+Test Accuracy: 90.31 %
+Confusion Matrix
+tensor([[ 834,    0,    0,    3,    0,   29,   86,    0,   52,    0],
+        [   0,  993,    0,    2,    2,    5,    0,    0,    0,    1],
+        [   0,    9,  924,   52,    0,    0,    2,    0,   16,    0],
+        [   0,    0,    9,  946,    0,   25,    0,    3,   16,    0],
+        [   0,   68,    1,    0,  848,    0,    9,    2,   59,    9],
+        [   0,    0,    0,    1,    0, 1001,    0,    0,    0,    0],
+        [  26,    1,    3,    8,    1,   47,  878,    0,   38,    0],
+        [   0,   36,    0,   22,    5,    4,    0,  902,   11,   23],
+        [   1,    1,    1,   16,    2,    9,    4,    0,  955,    0],
+        [   0,   58,    0,   88,   38,    5,    0,   15,   45,  750]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bg8unbias-bg-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+Train the stitch after layer 8
+Epoch 0, loss 342.22
+Epoch 1, loss 297.80
+Epoch 2, loss 273.74
+Epoch 3, loss 258.53
+Epoch 4, loss 247.10
+Epoch 5, loss 235.98
+Epoch 6, loss 220.17
+Epoch 7, loss 203.02
+Epoch 8, loss 186.82
+Epoch 9, loss 172.93
+Epoch 10, loss 162.87
+Epoch 11, loss 153.32
+Epoch 12, loss 145.22
+Epoch 13, loss 137.23
+Epoch 14, loss 130.49
+Epoch 15, loss 123.50
+Epoch 16, loss 117.35
+Epoch 17, loss 112.18
+Epoch 18, loss 107.55
+Epoch 19, loss 103.78
+Epoch 20, loss 100.03
+Epoch 21, loss 96.86
+Epoch 22, loss 94.45
+Epoch 23, loss 92.03
+Epoch 24, loss 89.90
+Epoch 25, loss 87.85
+Epoch 26, loss 85.96
+Epoch 27, loss 83.98
+Epoch 28, loss 83.22
+Epoch 29, loss 81.36
+Epoch 30, loss 80.12
+Epoch 31, loss 78.83
+Epoch 32, loss 77.53
+Epoch 33, loss 76.89
+Epoch 34, loss 74.85
+Epoch 35, loss 72.14
+Epoch 36, loss 68.37
+Epoch 37, loss 65.73
+Epoch 38, loss 62.61
+Epoch 39, loss 60.76
+Epoch 40, loss 58.96
+Epoch 41, loss 57.23
+Epoch 42, loss 55.07
+Epoch 43, loss 53.75
+Epoch 44, loss 52.51
+Epoch 45, loss 51.10
+Epoch 46, loss 50.18
+Epoch 47, loss 48.96
+Epoch 48, loss 48.19
+Epoch 49, loss 47.42
+**** Finished Training ****
+Change in stitch weights: 5.783431529998779
+Largest abs weight change: 0.16321276128292084
+Number of weights changing > 0.1 of that: 12416
+Change in stitch bias: 0.3256116807460785
+Largest abs bias change: 0.04783204570412636
+Number of bias changing > 0.1 of that: 120
+Test the trained stitch
+Test Accuracy: 99.96 %
+Confusion Matrix
+tensor([[1004,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1003,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1003,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  996,    0,    2,    0,    0,    1,    0],
+        [   0,    0,    0,    0,  996,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1002,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1002,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  989,    0],
+        [   0,    1,    0,    0,    0,    0,    0,    0,    0,  998]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bg22unbias-bg-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+Train the stitch after layer 22
+Epoch 0, loss 38.57
+Epoch 1, loss 4.36
+Epoch 2, loss 2.90
+Epoch 3, loss 2.16
+Epoch 4, loss 1.84
+Epoch 5, loss 1.60
+Epoch 6, loss 1.43
+Epoch 7, loss 1.34
+Epoch 8, loss 1.21
+Epoch 9, loss 1.16
+Epoch 10, loss 1.12
+Epoch 11, loss 1.06
+Epoch 12, loss 1.02
+Epoch 13, loss 0.97
+Epoch 14, loss 0.98
+Epoch 15, loss 0.98
+Epoch 16, loss 0.91
+Epoch 17, loss 0.91
+Epoch 18, loss 0.97
+Epoch 19, loss 0.89
+Epoch 20, loss 0.92
+Epoch 21, loss 0.89
+Epoch 22, loss 0.86
+Epoch 23, loss 0.87
+Epoch 24, loss 0.85
+Epoch 25, loss 0.83
+Epoch 26, loss 0.84
+Epoch 27, loss 0.85
+Epoch 28, loss 0.86
+Epoch 29, loss 0.84
+Epoch 30, loss 0.83
+Epoch 31, loss 0.85
+Epoch 32, loss 0.84
+Epoch 33, loss 0.84
+Epoch 34, loss 0.82
+Epoch 35, loss 0.84
+Epoch 36, loss 0.83
+Epoch 37, loss 0.83
+Epoch 38, loss 0.85
+Epoch 39, loss 0.86
+Epoch 40, loss 0.84
+Epoch 41, loss 0.84
+Epoch 42, loss 0.85
+Epoch 43, loss 0.84
+Epoch 44, loss 0.86
+Epoch 45, loss 0.86
+Epoch 46, loss 0.86
+Epoch 47, loss 0.89
+Epoch 48, loss 0.87
+Epoch 49, loss 0.88
+**** Finished Training ****
+Change in stitch weights: 7.3642048835754395
+Largest abs weight change: 0.042225971817970276
+Number of weights changing > 0.1 of that: 217114
+Change in stitch bias: 0.32438305020332336
+Largest abs bias change: 0.02402583323419094
+Number of bias changing > 0.1 of that: 464
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1004,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1003,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1003,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  999,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  996,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1002,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1002,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  989,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0,  999]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bg29unbias-bg-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+Train the stitch after layer 29
+Epoch 0, loss 41.13
+Epoch 1, loss 5.33
+Epoch 2, loss 3.43
+Epoch 3, loss 2.54
+Epoch 4, loss 2.09
+Epoch 5, loss 1.84
+Epoch 6, loss 1.67
+Epoch 7, loss 1.48
+Epoch 8, loss 1.34
+Epoch 9, loss 1.28
+Epoch 10, loss 1.17
+Epoch 11, loss 1.13
+Epoch 12, loss 1.06
+Epoch 13, loss 1.04
+Epoch 14, loss 1.02
+Epoch 15, loss 0.99
+Epoch 16, loss 0.98
+Epoch 17, loss 0.94
+Epoch 18, loss 0.95
+Epoch 19, loss 0.91
+Epoch 20, loss 0.90
+Epoch 21, loss 0.87
+Epoch 22, loss 0.89
+Epoch 23, loss 0.85
+Epoch 24, loss 0.86
+Epoch 25, loss 0.86
+Epoch 26, loss 0.86
+Epoch 27, loss 0.85
+Epoch 28, loss 0.85
+Epoch 29, loss 0.85
+Epoch 30, loss 0.86
+Epoch 31, loss 0.87
+Epoch 32, loss 0.83
+Epoch 33, loss 0.84
+Epoch 34, loss 0.87
+Epoch 35, loss 0.84
+Epoch 36, loss 0.86
+Epoch 37, loss 0.85
+Epoch 38, loss 0.85
+Epoch 39, loss 0.87
+Epoch 40, loss 0.88
+Epoch 41, loss 0.87
+Epoch 42, loss 0.90
+Epoch 43, loss 0.88
+Epoch 44, loss 0.88
+Epoch 45, loss 0.92
+Epoch 46, loss 0.92
+Epoch 47, loss 0.92
+Epoch 48, loss 0.93
+Epoch 49, loss 0.92
+**** Finished Training ****
+Change in stitch weights: 7.337409019470215
+Largest abs weight change: 0.055533792823553085
+Number of weights changing > 0.1 of that: 202044
+Change in stitch bias: 0.31439903378486633
+Largest abs bias change: 0.024031702429056168
+Number of bias changing > 0.1 of that: 455
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1004,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1003,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1003,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  999,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  996,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1002,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1002,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  989,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0,  999]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bg35unbias-bg-789_2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+Train the stitch after layer 35
+Epoch 0, loss 41.99
+Epoch 1, loss 0.88
+Epoch 2, loss 0.63
+Epoch 3, loss 0.52
+Epoch 4, loss 0.43
+Epoch 5, loss 0.39
+Epoch 6, loss 0.37
+Epoch 7, loss 0.36
+Epoch 8, loss 0.32
+Epoch 9, loss 0.38
+Epoch 10, loss 0.30
+Epoch 11, loss 0.27
+Epoch 12, loss 0.26
+Epoch 13, loss 0.25
+Epoch 14, loss 0.24
+Epoch 15, loss 0.24
+Epoch 16, loss 0.25
+Epoch 17, loss 0.26
+Epoch 18, loss 0.21
+Epoch 19, loss 0.21
+Epoch 20, loss 0.23
+Epoch 21, loss 0.23
+Epoch 22, loss 0.22
+Epoch 23, loss 0.23
+Epoch 24, loss 0.22
+Epoch 25, loss 0.24
+Epoch 26, loss 0.23
+Epoch 27, loss 0.23
+Epoch 28, loss 0.22
+Epoch 29, loss 0.22
+Epoch 30, loss 0.22
+Epoch 31, loss 0.23
+Epoch 32, loss 0.22
+Epoch 33, loss 0.23
+Epoch 34, loss 0.22
+Epoch 35, loss 0.22
+Epoch 36, loss 0.23
+Epoch 37, loss 0.23
+Epoch 38, loss 0.22
+Epoch 39, loss 0.23
+Epoch 40, loss 0.22
+Epoch 41, loss 0.21
+Epoch 42, loss 0.38
+Epoch 43, loss 0.33
+Epoch 44, loss 0.23
+Epoch 45, loss 0.21
+Epoch 46, loss 0.22
+Epoch 47, loss 0.22
+Epoch 48, loss 0.23
+Epoch 49, loss 0.22
+**** Finished Training ****
+Change in stitch weights: 7.207460880279541
+Largest abs weight change: 0.047707632184028625
+Number of weights changing > 0.1 of that: 210420
+Change in stitch bias: 0.3175751268863678
+Largest abs bias change: 0.023970771580934525
+Number of bias changing > 0.1 of that: 476
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1004,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1003,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1003,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  999,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  996,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1002,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1002,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  989,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0,  999]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bias1unbias-bias-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist-test.csv
+stitch into model bias
+Train the stitch after layer 1
+Epoch 0, loss 17.58
+Epoch 1, loss 9.78
+Epoch 2, loss 9.20
+Epoch 3, loss 8.42
+Epoch 4, loss 7.79
+Epoch 5, loss 7.75
+Epoch 6, loss 7.30
+Epoch 7, loss 7.10
+Epoch 8, loss 6.97
+Epoch 9, loss 6.70
+Epoch 10, loss 6.57
+Epoch 11, loss 6.35
+Epoch 12, loss 6.41
+Epoch 13, loss 6.34
+Epoch 14, loss 6.87
+Epoch 15, loss 6.19
+Epoch 16, loss 6.21
+Epoch 17, loss 6.16
+Epoch 18, loss 5.69
+Epoch 19, loss 5.95
+Epoch 20, loss 5.82
+Epoch 21, loss 5.61
+Epoch 22, loss 5.46
+Epoch 23, loss 5.46
+Epoch 24, loss 5.64
+Epoch 25, loss 5.58
+Epoch 26, loss 5.32
+Epoch 27, loss 5.24
+Epoch 28, loss 5.32
+Epoch 29, loss 5.19
+Epoch 30, loss 5.20
+Epoch 31, loss 5.10
+Epoch 32, loss 5.40
+Epoch 33, loss 5.15
+Epoch 34, loss 5.10
+Epoch 35, loss 4.86
+Epoch 36, loss 5.00
+Epoch 37, loss 4.99
+Epoch 38, loss 4.83
+Epoch 39, loss 4.89
+Epoch 40, loss 4.65
+Epoch 41, loss 4.90
+Epoch 42, loss 4.92
+Epoch 43, loss 4.77
+Epoch 44, loss 4.64
+Epoch 45, loss 4.92
+Epoch 46, loss 4.53
+Epoch 47, loss 4.64
+Epoch 48, loss 4.67
+Epoch 49, loss 4.76
+**** Finished Training ****
+Change in stitch weights: 2.8308069705963135
+Largest abs weight change: 0.12146523594856262
+Number of weights changing > 0.1 of that: 3423
+Change in stitch bias: 0.3041328489780426
+Largest abs bias change: 0.06771129369735718
+Number of bias changing > 0.1 of that: 58
+Test the trained stitch
+Test Accuracy: 99.22 %
+Confusion Matrix
+tensor([[ 976,    0,    0,    0,    0,    0,    1,    1,    1,    1],
+        [   0, 1133,    0,    1,    0,    0,    0,    0,    1,    0],
+        [   2,    0, 1022,    1,    1,    0,    1,    4,    1,    0],
+        [   0,    0,    0, 1006,    0,    0,    0,    2,    2,    0],
+        [   0,    0,    0,    0,  978,    0,    3,    0,    0,    1],
+        [   1,    0,    0,    2,    0,  887,    1,    0,    0,    1],
+        [   1,    2,    0,    0,    2,    3,  950,    0,    0,    0],
+        [   0,    1,    3,    0,    1,    0,    0, 1018,    1,    4],
+        [   0,    0,    1,    3,    3,    2,    0,    3,  960,    2],
+        [   1,    3,    0,    2,    5,    1,    0,    3,    2,  992]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bias8unbias-bias-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist-test.csv
+stitch into model bias
+Train the stitch after layer 8
+Epoch 0, loss 361.53
+Epoch 1, loss 313.95
+Epoch 2, loss 258.72
+Epoch 3, loss 202.67
+Epoch 4, loss 139.61
+Epoch 5, loss 92.61
+Epoch 6, loss 65.48
+Epoch 7, loss 49.81
+Epoch 8, loss 39.66
+Epoch 9, loss 33.17
+Epoch 10, loss 28.89
+Epoch 11, loss 26.01
+Epoch 12, loss 23.60
+Epoch 13, loss 21.62
+Epoch 14, loss 20.31
+Epoch 15, loss 19.29
+Epoch 16, loss 18.33
+Epoch 17, loss 17.67
+Epoch 18, loss 16.64
+Epoch 19, loss 16.49
+Epoch 20, loss 15.80
+Epoch 21, loss 15.43
+Epoch 22, loss 15.25
+Epoch 23, loss 14.71
+Epoch 24, loss 14.43
+Epoch 25, loss 14.30
+Epoch 26, loss 13.96
+Epoch 27, loss 13.77
+Epoch 28, loss 13.61
+Epoch 29, loss 13.46
+Epoch 30, loss 13.28
+Epoch 31, loss 13.21
+Epoch 32, loss 13.18
+Epoch 33, loss 13.14
+Epoch 34, loss 13.01
+Epoch 35, loss 12.88
+Epoch 36, loss 12.85
+Epoch 37, loss 12.74
+Epoch 38, loss 12.70
+Epoch 39, loss 12.73
+Epoch 40, loss 12.63
+Epoch 41, loss 12.49
+Epoch 42, loss 12.50
+Epoch 43, loss 12.73
+Epoch 44, loss 12.53
+Epoch 45, loss 12.43
+Epoch 46, loss 12.46
+Epoch 47, loss 12.37
+Epoch 48, loss 12.28
+Epoch 49, loss 12.29
+**** Finished Training ****
+Change in stitch weights: 5.328286170959473
+Largest abs weight change: 0.1500738263130188
+Number of weights changing > 0.1 of that: 12503
+Change in stitch bias: 0.31092119216918945
+Largest abs bias change: 0.04797990247607231
+Number of bias changing > 0.1 of that: 114
+Test the trained stitch
+Test Accuracy: 99.72 %
+Confusion Matrix
+tensor([[ 979,    1,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   1,    0, 1027,    0,    0,    0,    0,    1,    3,    0],
+        [   0,    0,    0, 1009,    0,    0,    0,    1,    0,    0],
+        [   0,    0,    0,    0,  981,    0,    1,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  886,    1,    1,    3,    1],
+        [   0,    1,    0,    0,    1,    0,  956,    0,    0,    0],
+        [   0,    1,    1,    0,    0,    0,    0, 1026,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0,    1,  971,    1],
+        [   0,    3,    0,    0,    3,    0,    0,    0,    1, 1002]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bias22unbias-bias-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist-test.csv
+stitch into model bias
+Train the stitch after layer 22
+Epoch 0, loss 39.74
+Epoch 1, loss 5.52
+Epoch 2, loss 3.54
+Epoch 3, loss 2.76
+Epoch 4, loss 2.34
+Epoch 5, loss 1.98
+Epoch 6, loss 1.80
+Epoch 7, loss 1.59
+Epoch 8, loss 1.56
+Epoch 9, loss 1.48
+Epoch 10, loss 1.36
+Epoch 11, loss 1.35
+Epoch 12, loss 1.30
+Epoch 13, loss 1.21
+Epoch 14, loss 1.15
+Epoch 15, loss 1.10
+Epoch 16, loss 1.11
+Epoch 17, loss 1.06
+Epoch 18, loss 1.04
+Epoch 19, loss 1.06
+Epoch 20, loss 1.06
+Epoch 21, loss 1.04
+Epoch 22, loss 1.08
+Epoch 23, loss 1.11
+Epoch 24, loss 1.00
+Epoch 25, loss 1.00
+Epoch 26, loss 1.00
+Epoch 27, loss 0.98
+Epoch 28, loss 0.99
+Epoch 29, loss 0.99
+Epoch 30, loss 0.96
+Epoch 31, loss 0.98
+Epoch 32, loss 0.97
+Epoch 33, loss 0.96
+Epoch 34, loss 0.98
+Epoch 35, loss 0.97
+Epoch 36, loss 0.97
+Epoch 37, loss 1.00
+Epoch 38, loss 0.97
+Epoch 39, loss 1.00
+Epoch 40, loss 0.99
+Epoch 41, loss 0.95
+Epoch 42, loss 0.98
+Epoch 43, loss 0.98
+Epoch 44, loss 1.00
+Epoch 45, loss 0.99
+Epoch 46, loss 1.00
+Epoch 47, loss 1.01
+Epoch 48, loss 0.99
+Epoch 49, loss 1.01
+**** Finished Training ****
+Change in stitch weights: 7.375499725341797
+Largest abs weight change: 0.044469598680734634
+Number of weights changing > 0.1 of that: 214554
+Change in stitch bias: 0.31415989995002747
+Largest abs bias change: 0.023957395926117897
+Number of bias changing > 0.1 of that: 466
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bias29unbias-bias-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist-test.csv
+stitch into model bias
+Train the stitch after layer 29
+Epoch 0, loss 48.52
+Epoch 1, loss 6.33
+Epoch 2, loss 3.75
+Epoch 3, loss 2.86
+Epoch 4, loss 2.34
+Epoch 5, loss 2.00
+Epoch 6, loss 1.76
+Epoch 7, loss 1.57
+Epoch 8, loss 1.45
+Epoch 9, loss 1.34
+Epoch 10, loss 1.23
+Epoch 11, loss 1.17
+Epoch 12, loss 1.12
+Epoch 13, loss 1.12
+Epoch 14, loss 1.03
+Epoch 15, loss 1.02
+Epoch 16, loss 0.96
+Epoch 17, loss 0.98
+Epoch 18, loss 0.94
+Epoch 19, loss 0.98
+Epoch 20, loss 0.93
+Epoch 21, loss 0.88
+Epoch 22, loss 0.94
+Epoch 23, loss 0.87
+Epoch 24, loss 0.94
+Epoch 25, loss 0.87
+Epoch 26, loss 0.87
+Epoch 27, loss 0.84
+Epoch 28, loss 0.84
+Epoch 29, loss 0.87
+Epoch 30, loss 0.97
+Epoch 31, loss 0.83
+Epoch 32, loss 0.81
+Epoch 33, loss 0.81
+Epoch 34, loss 0.81
+Epoch 35, loss 0.82
+Epoch 36, loss 0.84
+Epoch 37, loss 0.81
+Epoch 38, loss 0.83
+Epoch 39, loss 0.82
+Epoch 40, loss 0.80
+Epoch 41, loss 0.82
+Epoch 42, loss 0.79
+Epoch 43, loss 0.86
+Epoch 44, loss 0.82
+Epoch 45, loss 0.83
+Epoch 46, loss 0.83
+Epoch 47, loss 0.85
+Epoch 48, loss 0.85
+Epoch 49, loss 0.84
+**** Finished Training ****
+Change in stitch weights: 7.338717937469482
+Largest abs weight change: 0.05059712007641792
+Number of weights changing > 0.1 of that: 208129
+Change in stitch bias: 0.3135911822319031
+Largest abs bias change: 0.023990223184227943
+Number of bias changing > 0.1 of that: 460
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/bias35unbias-bias-789_2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist-test.csv
+stitch into model bias
+Train the stitch after layer 35
+Epoch 0, loss 40.86
+Epoch 1, loss 1.45
+Epoch 2, loss 1.02
+Epoch 3, loss 0.76
+Epoch 4, loss 0.61
+Epoch 5, loss 0.49
+Epoch 6, loss 0.48
+Epoch 7, loss 0.41
+Epoch 8, loss 0.36
+Epoch 9, loss 0.39
+Epoch 10, loss 0.37
+Epoch 11, loss 0.38
+Epoch 12, loss 0.31
+Epoch 13, loss 0.30
+Epoch 14, loss 0.28
+Epoch 15, loss 0.29
+Epoch 16, loss 0.27
+Epoch 17, loss 0.37
+Epoch 18, loss 0.29
+Epoch 19, loss 0.26
+Epoch 20, loss 0.27
+Epoch 21, loss 0.24
+Epoch 22, loss 0.27
+Epoch 23, loss 0.30
+Epoch 24, loss 0.24
+Epoch 25, loss 0.24
+Epoch 26, loss 0.27
+Epoch 27, loss 0.25
+Epoch 28, loss 0.26
+Epoch 29, loss 0.23
+Epoch 30, loss 0.21
+Epoch 31, loss 0.23
+Epoch 32, loss 0.23
+Epoch 33, loss 0.22
+Epoch 34, loss 0.22
+Epoch 35, loss 0.25
+Epoch 36, loss 0.21
+Epoch 37, loss 0.23
+Epoch 38, loss 0.22
+Epoch 39, loss 0.25
+Epoch 40, loss 0.23
+Epoch 41, loss 0.23
+Epoch 42, loss 0.23
+Epoch 43, loss 0.25
+Epoch 44, loss 0.23
+Epoch 45, loss 0.24
+Epoch 46, loss 0.23
+Epoch 47, loss 0.23
+Epoch 48, loss 0.23
+Epoch 49, loss 0.30
+**** Finished Training ****
+Change in stitch weights: 7.209400177001953
+Largest abs weight change: 0.07042688131332397
+Number of weights changing > 0.1 of that: 185734
+Change in stitch bias: 0.3289574384689331
+Largest abs bias change: 0.024023551493883133
+Number of bias changing > 0.1 of that: 472
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/unbias1unbias-unbias-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist-test.csv
+stitch into model unbias
+Train the stitch after layer 1
+Epoch 0, loss 13.11
+Epoch 1, loss 10.15
+Epoch 2, loss 8.66
+Epoch 3, loss 8.61
+Epoch 4, loss 8.34
+Epoch 5, loss 8.34
+Epoch 6, loss 8.14
+Epoch 7, loss 7.95
+Epoch 8, loss 7.70
+Epoch 9, loss 7.56
+Epoch 10, loss 7.53
+Epoch 11, loss 7.42
+Epoch 12, loss 7.47
+Epoch 13, loss 7.44
+Epoch 14, loss 7.19
+Epoch 15, loss 7.14
+Epoch 16, loss 7.28
+Epoch 17, loss 7.04
+Epoch 18, loss 7.10
+Epoch 19, loss 6.94
+Epoch 20, loss 7.05
+Epoch 21, loss 7.02
+Epoch 22, loss 6.94
+Epoch 23, loss 6.73
+Epoch 24, loss 6.78
+Epoch 25, loss 6.74
+Epoch 26, loss 6.78
+Epoch 27, loss 6.63
+Epoch 28, loss 6.75
+Epoch 29, loss 6.78
+Epoch 30, loss 6.71
+Epoch 31, loss 6.73
+Epoch 32, loss 6.42
+Epoch 33, loss 6.49
+Epoch 34, loss 6.54
+Epoch 35, loss 6.54
+Epoch 36, loss 6.52
+Epoch 37, loss 6.57
+Epoch 38, loss 6.43
+Epoch 39, loss 6.47
+Epoch 40, loss 6.48
+Epoch 41, loss 6.22
+Epoch 42, loss 6.34
+Epoch 43, loss 6.52
+Epoch 44, loss 6.47
+Epoch 45, loss 6.46
+Epoch 46, loss 6.42
+Epoch 47, loss 6.44
+Epoch 48, loss 6.43
+Epoch 49, loss 6.26
+**** Finished Training ****
+Change in stitch weights: 2.723796844482422
+Largest abs weight change: 0.12457311153411865
+Number of weights changing > 0.1 of that: 3373
+Change in stitch bias: 0.31889811158180237
+Largest abs bias change: 0.06794920563697815
+Number of bias changing > 0.1 of that: 60
+Test the trained stitch
+Test Accuracy: 98.88 %
+Confusion Matrix
+tensor([[ 975,    0,    1,    0,    0,    0,    1,    1,    1,    1],
+        [   0, 1129,    0,    1,    0,    0,    3,    0,    2,    0],
+        [   3,    0, 1017,    2,    2,    0,    1,    4,    3,    0],
+        [   0,    0,    0, 1000,    0,    3,    0,    2,    4,    1],
+        [   0,    0,    1,    0,  975,    0,    2,    1,    0,    3],
+        [   1,    0,    0,    9,    0,  877,    2,    0,    2,    1],
+        [   2,    2,    0,    0,    2,    4,  947,    0,    1,    0],
+        [   0,    1,    3,    0,    1,    0,    0, 1018,    1,    4],
+        [   0,    0,    2,    4,    3,    1,    0,    2,  959,    3],
+        [   0,    3,    0,    2,    7,    1,    0,    3,    2,  991]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/unbias8unbias-unbias-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist-test.csv
+stitch into model unbias
+Train the stitch after layer 8
+Epoch 0, loss 125.61
+Epoch 1, loss 23.91
+Epoch 2, loss 19.48
+Epoch 3, loss 17.47
+Epoch 4, loss 16.20
+Epoch 5, loss 15.42
+Epoch 6, loss 15.10
+Epoch 7, loss 14.58
+Epoch 8, loss 14.18
+Epoch 9, loss 13.95
+Epoch 10, loss 13.88
+Epoch 11, loss 13.60
+Epoch 12, loss 13.56
+Epoch 13, loss 13.30
+Epoch 14, loss 13.19
+Epoch 15, loss 13.23
+Epoch 16, loss 12.97
+Epoch 17, loss 13.04
+Epoch 18, loss 13.17
+Epoch 19, loss 13.07
+Epoch 20, loss 13.16
+Epoch 21, loss 13.12
+Epoch 22, loss 13.12
+Epoch 23, loss 13.07
+Epoch 24, loss 13.02
+Epoch 25, loss 13.02
+Epoch 26, loss 13.29
+Epoch 27, loss 13.11
+Epoch 28, loss 13.16
+Epoch 29, loss 13.12
+Epoch 30, loss 13.12
+Epoch 31, loss 13.09
+Epoch 32, loss 13.22
+Epoch 33, loss 13.30
+Epoch 34, loss 13.24
+Epoch 35, loss 13.29
+Epoch 36, loss 13.36
+Epoch 37, loss 13.43
+Epoch 38, loss 13.50
+Epoch 39, loss 13.44
+Epoch 40, loss 13.39
+Epoch 41, loss 13.59
+Epoch 42, loss 13.63
+Epoch 43, loss 13.59
+Epoch 44, loss 13.49
+Epoch 45, loss 13.51
+Epoch 46, loss 13.42
+Epoch 47, loss 13.57
+Epoch 48, loss 13.62
+Epoch 49, loss 13.62
+**** Finished Training ****
+Change in stitch weights: 4.42609167098999
+Largest abs weight change: 0.11828881502151489
+Number of weights changing > 0.1 of that: 12881
+Change in stitch bias: 0.3166682720184326
+Largest abs bias change: 0.04802688583731651
+Number of bias changing > 0.1 of that: 116
+Test the trained stitch
+Test Accuracy: 98.69 %
+Confusion Matrix
+tensor([[ 975,    0,    0,    0,    0,    0,    2,    1,    2,    0],
+        [   0, 1131,    0,    1,    0,    1,    1,    0,    1,    0],
+        [   4,    0, 1018,    1,    1,    0,    2,    5,    1,    0],
+        [   0,    0,    1,  998,    0,    4,    0,    3,    4,    0],
+        [   0,    1,    0,    0,  966,    0,    6,    1,    1,    7],
+        [   2,    0,    0,   10,    0,  875,    2,    0,    3,    0],
+        [   2,    3,    0,    0,    2,    4,  946,    0,    1,    0],
+        [   0,    0,    4,    0,    0,    0,    0, 1017,    1,    6],
+        [   1,    0,    1,    2,    3,    2,    0,    4,  957,    4],
+        [   0,    7,    0,    3,    7,    0,    0,    5,    1,  986]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/unbias22unbias-unbias-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist-test.csv
+stitch into model unbias
+Train the stitch after layer 22
+Epoch 0, loss 53.18
+Epoch 1, loss 15.24
+Epoch 2, loss 11.37
+Epoch 3, loss 9.23
+Epoch 4, loss 7.81
+Epoch 5, loss 6.85
+Epoch 6, loss 6.12
+Epoch 7, loss 5.47
+Epoch 8, loss 5.14
+Epoch 9, loss 4.67
+Epoch 10, loss 4.23
+Epoch 11, loss 4.05
+Epoch 12, loss 3.78
+Epoch 13, loss 3.62
+Epoch 14, loss 3.47
+Epoch 15, loss 3.22
+Epoch 16, loss 3.19
+Epoch 17, loss 3.04
+Epoch 18, loss 3.06
+Epoch 19, loss 3.01
+Epoch 20, loss 2.95
+Epoch 21, loss 2.76
+Epoch 22, loss 2.77
+Epoch 23, loss 2.75
+Epoch 24, loss 2.65
+Epoch 25, loss 2.78
+Epoch 26, loss 2.55
+Epoch 27, loss 2.69
+Epoch 28, loss 2.52
+Epoch 29, loss 2.54
+Epoch 30, loss 2.50
+Epoch 31, loss 2.43
+Epoch 32, loss 2.51
+Epoch 33, loss 2.45
+Epoch 34, loss 2.43
+Epoch 35, loss 2.46
+Epoch 36, loss 2.44
+Epoch 37, loss 2.46
+Epoch 38, loss 2.39
+Epoch 39, loss 2.45
+Epoch 40, loss 2.37
+Epoch 41, loss 2.46
+Epoch 42, loss 2.40
+Epoch 43, loss 2.41
+Epoch 44, loss 2.42
+Epoch 45, loss 2.49
+Epoch 46, loss 2.47
+Epoch 47, loss 2.42
+Epoch 48, loss 2.47
+Epoch 49, loss 2.47
+**** Finished Training ****
+Change in stitch weights: 7.59486198425293
+Largest abs weight change: 0.04075726866722107
+Number of weights changing > 0.1 of that: 219105
+Change in stitch bias: 0.3115086257457733
+Largest abs bias change: 0.023890919983386993
+Number of bias changing > 0.1 of that: 473
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/unbias29unbias-unbias-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist-test.csv
+stitch into model unbias
+Train the stitch after layer 29
+Epoch 0, loss 52.31
+Epoch 1, loss 11.73
+Epoch 2, loss 10.32
+Epoch 3, loss 8.84
+Epoch 4, loss 8.26
+Epoch 5, loss 7.73
+Epoch 6, loss 7.24
+Epoch 7, loss 6.47
+Epoch 8, loss 6.22
+Epoch 9, loss 5.80
+Epoch 10, loss 5.76
+Epoch 11, loss 5.38
+Epoch 12, loss 5.19
+Epoch 13, loss 5.03
+Epoch 14, loss 4.93
+Epoch 15, loss 4.55
+Epoch 16, loss 4.64
+Epoch 17, loss 4.45
+Epoch 18, loss 4.31
+Epoch 19, loss 4.35
+Epoch 20, loss 4.11
+Epoch 21, loss 4.07
+Epoch 22, loss 4.04
+Epoch 23, loss 3.86
+Epoch 24, loss 3.75
+Epoch 25, loss 3.79
+Epoch 26, loss 3.50
+Epoch 27, loss 3.61
+Epoch 28, loss 3.47
+Epoch 29, loss 3.48
+Epoch 30, loss 3.55
+Epoch 31, loss 3.26
+Epoch 32, loss 3.24
+Epoch 33, loss 3.29
+Epoch 34, loss 3.17
+Epoch 35, loss 3.00
+Epoch 36, loss 3.18
+Epoch 37, loss 3.00
+Epoch 38, loss 3.03
+Epoch 39, loss 3.04
+Epoch 40, loss 3.16
+Epoch 41, loss 2.95
+Epoch 42, loss 2.80
+Epoch 43, loss 2.96
+Epoch 44, loss 2.98
+Epoch 45, loss 2.90
+Epoch 46, loss 2.90
+Epoch 47, loss 2.90
+Epoch 48, loss 2.78
+Epoch 49, loss 2.71
+**** Finished Training ****
+Change in stitch weights: 7.508307456970215
+Largest abs weight change: 0.04210669547319412
+Number of weights changing > 0.1 of that: 217610
+Change in stitch bias: 0.312601774930954
+Largest abs bias change: 0.023989174515008926
+Number of bias changing > 0.1 of that: 452
+Test the trained stitch
+Test Accuracy: 99.84 %
+Confusion Matrix
+tensor([[ 978,    0,    0,    0,    0,    0,    1,    1,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1008,    0,    1,    0,    1,    0,    0],
+        [   0,    0,    0,    0,  980,    0,    1,    0,    0,    1],
+        [   0,    0,    0,    3,    0,  889,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0,    1,  972,    0],
+        [   0,    0,    0,    0,    4,    0,    0,    1,    0, 1004]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2j_rank/unbias35unbias-unbias-789_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist-test.csv
+stitch into model unbias
+Train the stitch after layer 35
+Epoch 0, loss 50.95
+Epoch 1, loss 9.46
+Epoch 2, loss 8.55
+Epoch 3, loss 8.14
+Epoch 4, loss 7.55
+Epoch 5, loss 6.68
+Epoch 6, loss 7.22
+Epoch 7, loss 6.66
+Epoch 8, loss 6.68
+Epoch 9, loss 7.14
+Epoch 10, loss 6.09
+Epoch 11, loss 5.67
+Epoch 12, loss 5.57
+Epoch 13, loss 5.69
+Epoch 14, loss 5.76
+Epoch 15, loss 5.30
+Epoch 16, loss 5.45
+Epoch 17, loss 5.29
+Epoch 18, loss 5.36
+Epoch 19, loss 4.47
+Epoch 20, loss 4.91
+Epoch 21, loss 4.62
+Epoch 22, loss 4.37
+Epoch 23, loss 4.14
+Epoch 24, loss 4.80
+Epoch 25, loss 4.53
+Epoch 26, loss 4.02
+Epoch 27, loss 4.09
+Epoch 28, loss 4.11
+Epoch 29, loss 4.03
+Epoch 30, loss 4.18
+Epoch 31, loss 4.00
+Epoch 32, loss 3.85
+Epoch 33, loss 3.74
+Epoch 34, loss 4.14
+Epoch 35, loss 4.10
+Epoch 36, loss 3.66
+Epoch 37, loss 3.88
+Epoch 38, loss 3.54
+Epoch 39, loss 3.63
+Epoch 40, loss 3.71
+Epoch 41, loss 3.43
+Epoch 42, loss 3.45
+Epoch 43, loss 3.43
+Epoch 44, loss 3.44
+Epoch 45, loss 3.34
+Epoch 46, loss 2.96
+Epoch 47, loss 3.48
+Epoch 48, loss 3.20
+Epoch 49, loss 2.99
+**** Finished Training ****
+Change in stitch weights: 7.305500507354736
+Largest abs weight change: 0.044083692133426666
+Number of weights changing > 0.1 of that: 214410
+Change in stitch bias: 0.30753186345100403
+Largest abs bias change: 0.024002907797694206
+Number of bias changing > 0.1 of that: 464
+Test the trained stitch
+Test Accuracy: 99.59 %
+Confusion Matrix
+tensor([[ 978,    0,    0,    0,    0,    0,    2,    0,    0,    0],
+        [   0, 1133,    0,    1,    0,    0,    1,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1008,    0,    1,    0,    1,    0,    0],
+        [   0,    0,    0,    0,  978,    0,    1,    0,    0,    3],
+        [   0,    0,    0,    7,    0,  883,    1,    0,    1,    0],
+        [   0,    2,    0,    0,    0,    0,  956,    0,    0,    0],
+        [   0,    1,    3,    0,    0,    0,    0, 1023,    0,    1],
+        [   0,    0,    1,    1,    0,    1,    0,    1,  969,    1],
+        [   0,    1,    0,    0,    7,    0,    0,    1,    1,  999]],
+       dtype=torch.int32)
+===================================================================
+stitching_accuracies={'bw': {}, 'mix': {35: 99.85}, 'bgonly': {1: 79.88, 8: 89.91, 22: 100.0, 29: 100.0, 35: 100.0}, 'bg': {1: 90.31, 8: 99.96, 22: 100.0, 29: 100.0, 35: 100.0}, 'bias': {1: 99.22, 8: 99.72, 22: 100.0, 29: 100.0, 35: 100.0}, 'unbias': {1: 98.88, 8: 98.69, 22: 100.0, 29: 99.84, 35: 99.59}}
+stitching_penalties={'bw': {}, 'mix': {35: -0.539999999999992}, 'bgonly': {1: 20.120000000000005, 8: 10.090000000000003, 22: 0.0, 29: 0.0, 35: 0.0}, 'bg': {1: 9.679999999999993, 8: 0.030000000000001137, 22: -0.010000000000005116, 29: -0.010000000000005116, 35: -0.010000000000005116}, 'bias': {1: 0.7800000000000011, 8: 0.28000000000000114, 22: 0.0, 29: 0.0, 35: 0.0}, 'unbias': {1: -0.6099999999999994, 8: -0.4200000000000017, 22: -1.730000000000004, 29: -1.5700000000000074, 35: -1.3200000000000074}}
+bw
+99.12
+Stitch Accuracy
+--------------------------
+mix
+99.31
+Stitch Accuracy
+layer=35 99.85
+--------------------------
+bgonly
+100.0
+Stitch Accuracy
+layer=1 79.88
+layer=8 89.91
+layer=22 100.0
+layer=29 100.0
+layer=35 100.0
+--------------------------
+bg
+99.99
+Stitch Accuracy
+layer=1 90.31
+layer=8 99.96
+layer=22 100.0
+layer=29 100.0
+layer=35 100.0
+--------------------------
+bias
+100.0
+Stitch Accuracy
+layer=1 99.22
+layer=8 99.72
+layer=22 100.0
+layer=29 100.0
+layer=35 100.0
+--------------------------
+unbias
+98.27
+Stitch Accuracy
+layer=1 98.88
+layer=8 98.69
+layer=22 100.0
+layer=29 99.84
+layer=35 99.59
+--------------------------

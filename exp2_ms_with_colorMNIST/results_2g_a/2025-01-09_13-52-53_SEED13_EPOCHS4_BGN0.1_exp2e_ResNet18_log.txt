@@ -1,0 +1,62 @@
+Executed at 2025-01-09_13-52-53
+logging to ./results_2g_a/2025-01-09_13-52-53_SEED13_EPOCHS4_BGN0.1_exp2e_ResNet18_log.txt
+seed=13
+bg_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='./results_4_epochs/2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results_4_epochs/2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results_4_epochs/2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results_4_epochs/2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_unbiased_colour_mnist.weights'
+stitch_train_epochs=10
+================================================
+val['loadfrom']='./results_4_epochs/2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bg_only_colour_mnist.weights'
+Entering whole model check
+Already evaluated for ./results_2g_a_rank/bw-bias-13_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Already evaluated for ./results_2g_a_rank/bgonly-bias-13_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bg_only_colour_mnist-test.csv
+Entering Stitch/Rank
+device='cuda:2'
+Already evaluated for ./results_2g_a_rank/bw3bw-bw-13_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Already evaluated for ./results_2g_a_rank/bw4bw-bw-13_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Evaluate ranks and output to ./results_2g_a_rank/bw5bw-bw-13_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 5 from bw to bw
+Use the bw data loader (train and test) regardless of what bw was trained on
+Epoch 0, loss 289.53
+Epoch 1, loss 65.89
+Epoch 2, loss 49.28
+Epoch 3, loss 41.35
+Epoch 4, loss 36.47
+Epoch 5, loss 32.97
+Epoch 6, loss 29.84
+Epoch 7, loss 28.33
+Epoch 8, loss 27.29
+Epoch 9, loss 25.81
+**** Finished Training ****
+Change in stitch weights: 1.286628007888794
+Largest abs weight change: 0.06613435596227646
+Number of weights changing > 0.1 of that: 7701
+Change in stitch bias: 0.02617419697344303
+Largest abs bias change: 0.0040195658802986145
+Number of bias changing > 0.1 of that: 114
+Test the trained stitch against key='bgonly' data
+Test Accuracy: 98.44 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    2,    0,    9,    3,    0,    8,    7],
+        [   0,  971,    0,    2,    1,    3,    1,    0,    0,    2],
+        [   0,    2, 1126,    2,    2,    0,    0,    1,    2,    0],
+        [   1,    3,    0, 1018,    0,    1,    0,    3,    3,    3],
+        [   2,    2,    1,    1,  997,    0,    5,    0,    0,    2],
+        [  10,    0,    0,    1,    0,  970,    0,    0,    1,    0],
+        [   5,    3,    0,    0,    3,    1,  877,    0,    1,    2],
+        [   0,    3,    1,    2,    1,    7,    1,  938,    0,    5],
+        [   3,    0,    1,    9,    0,    7,    0,    0, 1007,    1],
+        [   2,    2,    0,    1,    1,    6,    0,    1,    1,  960]],
+       dtype=torch.int32)
+===================================================================
