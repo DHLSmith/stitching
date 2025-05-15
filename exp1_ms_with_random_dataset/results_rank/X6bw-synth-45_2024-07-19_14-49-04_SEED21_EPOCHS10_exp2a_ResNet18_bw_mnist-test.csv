@@ -1,0 +1,8 @@
+,name,model,dataset,seed,val_acc,features_rank,features_dim,normalized_features_rank
+0,stitch.s_conv1,X6bw,synth,45,1.0,354,1024,0.345703125
+1,features.7.0.conv1,X6bw,synth,45,1.0,81,512,0.158203125
+2,features.7.0.conv2,X6bw,synth,45,1.0,11,512,0.021484375
+3,features.7.0.downsample.0,X6bw,synth,45,1.0,114,512,0.22265625
+4,features.7.1.conv1,X6bw,synth,45,1.0,9,512,0.017578125
+5,features.7.1.conv2,X6bw,synth,45,1.0,5,512,0.009765625
+6,originalfc,X6bw,synth,45,1.0,8,10,0.8

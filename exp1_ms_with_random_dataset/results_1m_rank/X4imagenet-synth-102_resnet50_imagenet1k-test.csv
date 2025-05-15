@@ -1,0 +1,2 @@
+,model,dataset,seed,val_acc,name
+0,X4imagenet,synth,102,0.5254,only

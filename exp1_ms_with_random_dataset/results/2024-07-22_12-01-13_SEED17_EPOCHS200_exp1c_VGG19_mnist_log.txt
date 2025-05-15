@@ -1,0 +1,22 @@
+Executed at 2024-07-22_12-01-13
+Training and stitching a VGG19 model with MNIST data
+seed=17
+train_mnist_model=False, model_to_load='./results/2024-07-17_15-56-39_SEED17_EPOCHS200_VGG19_mnist.weights'
+original_train_epochs=200, stitch_train_epochs=100
+synthetic_dataset_noise=0.1
+================================================
+Test the Trained VGG19
+Test Accuracy: 98.87 %
+Confusion Matrix
+tensor([[ 974,    0,    1,    0,    0,    1,    2,    1,    1,    0],
+        [   0, 1131,    1,    0,    0,    1,    1,    0,    1,    0],
+        [   1,    0, 1024,    1,    1,    0,    0,    3,    1,    1],
+        [   0,    0,    0, 1003,    0,    3,    0,    1,    2,    1],
+        [   0,    0,    0,    0,  972,    0,    5,    1,    0,    4],
+        [   1,    0,    0,    5,    0,  883,    2,    1,    0,    0],
+        [   3,    3,    0,    1,    0,    3,  947,    0,    1,    0],
+        [   0,    3,    5,    0,    4,    0,    0, 1007,    1,    8],
+        [   2,    0,    0,    3,    1,    4,    0,    1,  961,    2],
+        [   1,    3,    0,    3,    8,    2,    0,    7,    0,  985]],
+       dtype=torch.int32)
+tensor(10000)

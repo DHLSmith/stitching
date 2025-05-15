@@ -1,0 +1,123 @@
+Executed at 2024-08-11_17-42-40
+logging to ./results_1g/2024-08-11_17-42-40_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_log.txt
+seed=104
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+stitch_train_epochs=50
+================================================
+val['loadfrom']='./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+val['loadfrom']='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+val['loadfrom']='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+val['loadfrom']='./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+val['loadfrom']='./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+val['loadfrom']='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+Accuracy Calculation for VGG19 with key='mix'
+Test the Trained VGG19
+Test Accuracy: 99.23 %
+Confusion Matrix
+tensor([[ 967,    0,    1,    0,    0,    1,    1,    0,    0,    0],
+        [   0, 1179,    0,    0,    0,    1,    1,    0,    0,    0],
+        [   0,    0, 1037,    1,    1,    0,    1,    1,    1,    0],
+        [   0,    1,    0,  960,    0,    3,    0,    1,    0,    0],
+        [   0,    0,    0,    0,  938,    1,    2,    0,    1,   16],
+        [   1,    0,    0,    0,    0,  929,    1,    0,    0,    0],
+        [   1,    0,    0,    2,    0,    1,  930,    0,    0,    0],
+        [   0,    1,    5,    2,    0,    0,    0, 1015,    0,    1],
+        [   0,    0,    3,    0,    1,    5,    1,    2, 1009,    2],
+        [   1,    3,    0,    0,    2,    5,    0,    1,    1,  959]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='bw'
+Test the Trained VGG19
+Test Accuracy: 99.12 %
+Confusion Matrix
+tensor([[ 975,    0,    1,    0,    0,    0,    2,    1,    1,    0],
+        [   0, 1133,    0,    0,    0,    0,    1,    1,    0,    0],
+        [   1,    2, 1024,    0,    1,    0,    0,    3,    1,    0],
+        [   0,    0,    0, 1004,    0,    3,    0,    1,    1,    1],
+        [   0,    0,    0,    0,  975,    0,    3,    1,    0,    3],
+        [   2,    0,    0,    8,    0,  880,    1,    0,    0,    1],
+        [   2,    3,    0,    1,    1,    3,  948,    0,    0,    0],
+        [   0,    4,    4,    0,    0,    0,    0, 1016,    1,    3],
+        [   0,    0,    1,    4,    1,    1,    0,    0,  964,    3],
+        [   1,    2,    0,    2,    6,    2,    0,    3,    0,  993]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='bgonly'
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='bg'
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1004,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,  996,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  996,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1003,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1003,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  999,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1003,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1003,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0,  990]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='bias'
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='unbias'
+Test the Trained VGG19
+Test Accuracy: 98.35 %
+Confusion Matrix
+tensor([[ 976,    0,    0,    0,    0,    0,    2,    1,    1,    0],
+        [   0, 1126,    0,    1,    0,    1,    3,    2,    2,    0],
+        [   6,    0, 1008,    8,    1,    0,    1,    7,    1,    0],
+        [   0,    0,    0, 1003,    0,    1,    0,    3,    2,    1],
+        [   0,    0,    1,    0,  964,    0,    4,    2,    0,   11],
+        [   1,    0,    0,   15,    0,  871,    1,    0,    1,    3],
+        [   6,    3,    0,    1,    4,    8,  932,    0,    4,    0],
+        [   0,    1,    2,    0,    0,    0,    0, 1020,    1,    4],
+        [   0,    0,    3,    8,    3,    3,    0,    4,  950,    3],
+        [   0,    3,    0,    5,    7,    1,    0,    7,    1,  985]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'mix': 99.23, 'bw': 99.12, 'bgonly': 100.0, 'bg': 100.0, 'bias': 100.0, 'unbias': 98.35}
+Measure Rank for key='mix'

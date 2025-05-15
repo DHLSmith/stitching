@@ -1,0 +1,8 @@
+,name,model,dataset,seed,rcv_file,stitch_weight_delta,stitch_bias_delta,stitch_weight_number,stitch_bias_number,val_acc,features_rank,features_dim,normalized_features_rank,weights_rank
+0,stitch.s_conv1,X6mix,synth,102,./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights,1.2064861059188843,0.021246284246444702,34003,238,1.0,280,1024,0.2734375,256
+1,features.7.0.conv1,X6mix,synth,102,./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights,1.2064861059188843,0.021246284246444702,34003,238,1.0,10,512,0.01953125,512
+2,features.7.0.conv2,X6mix,synth,102,./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights,1.2064861059188843,0.021246284246444702,34003,238,1.0,6,512,0.01171875,512
+3,features.7.0.downsample.0,X6mix,synth,102,./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights,1.2064861059188843,0.021246284246444702,34003,238,1.0,10,512,0.01953125,256
+4,features.7.1.conv1,X6mix,synth,102,./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights,1.2064861059188843,0.021246284246444702,34003,238,1.0,7,512,0.013671875,512
+5,features.7.1.conv2,X6mix,synth,102,./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights,1.2064861059188843,0.021246284246444702,34003,238,1.0,3,512,0.005859375,512
+6,originalfc,X6mix,synth,102,./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights,1.2064861059188843,0.021246284246444702,34003,238,1.0,3,10,0.3,10

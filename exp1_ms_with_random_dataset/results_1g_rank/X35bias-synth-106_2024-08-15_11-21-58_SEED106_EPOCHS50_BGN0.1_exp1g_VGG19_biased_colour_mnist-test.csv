@@ -1,0 +1,5 @@
+,name,model,dataset,seed,rcv_file,stitch_weight_delta,stitch_bias_delta,stitch_weight_number,stitch_bias_number,val_acc,features_rank,features_dim,normalized_features_rank
+0,stitch.s_conv1,X35bias,synth,106,./results_1g/2024-08-15_11-21-58_SEED106_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,12.997217178344727,0.5764918327331543,230835,465,1.0,15,2048,0.00732421875
+1,classifier.0,X35bias,synth,106,./results_1g/2024-08-15_11-21-58_SEED106_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,12.997217178344727,0.5764918327331543,230835,465,1.0,9,4096,0.002197265625
+2,classifier.3,X35bias,synth,106,./results_1g/2024-08-15_11-21-58_SEED106_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,12.997217178344727,0.5764918327331543,230835,465,1.0,9,4096,0.002197265625
+3,classifier.6,X35bias,synth,106,./results_1g/2024-08-15_11-21-58_SEED106_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,12.997217178344727,0.5764918327331543,230835,465,1.0,9,10,0.9

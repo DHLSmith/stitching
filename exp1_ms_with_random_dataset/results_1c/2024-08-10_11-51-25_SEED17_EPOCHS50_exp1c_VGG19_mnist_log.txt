@@ -1,0 +1,7 @@
+Executed at 2024-08-10_11-51-25
+Training and stitching a VGG19 model with MNIST data
+seed=17
+train_mnist_model=False, model_to_load='./results/2024-07-17_15-56-39_SEED17_EPOCHS200_VGG19_mnist.weights'
+original_train_epochs=50, stitch_train_epochs=50
+synthetic_dataset_noise=0.1
+================================================

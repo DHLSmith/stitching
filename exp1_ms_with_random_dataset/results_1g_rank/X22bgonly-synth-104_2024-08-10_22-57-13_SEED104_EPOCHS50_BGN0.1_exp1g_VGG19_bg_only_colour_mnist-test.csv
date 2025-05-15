@@ -1,0 +1,11 @@
+,name,model,dataset,seed,rcv_file,stitch_weight_delta,stitch_bias_delta,stitch_weight_number,stitch_bias_number,val_acc,features_rank,features_dim,normalized_features_rank
+0,stitch.s_conv1,X22bgonly,synth,104,./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights,13.022442817687988,0.5875428915023804,231123,464,1.0,9,8192,0.0010986328125
+1,features.23,X22bgonly,synth,104,./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights,13.022442817687988,0.5875428915023804,231123,464,1.0,9,8192,0.0010986328125
+2,features.25,X22bgonly,synth,104,./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights,13.022442817687988,0.5875428915023804,231123,464,1.0,9,8192,0.0010986328125
+3,features.28,X22bgonly,synth,104,./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights,13.022442817687988,0.5875428915023804,231123,464,1.0,7,2048,0.00341796875
+4,features.30,X22bgonly,synth,104,./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights,13.022442817687988,0.5875428915023804,231123,464,1.0,6,2048,0.0029296875
+5,features.32,X22bgonly,synth,104,./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights,13.022442817687988,0.5875428915023804,231123,464,1.0,6,2048,0.0029296875
+6,features.34,X22bgonly,synth,104,./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights,13.022442817687988,0.5875428915023804,231123,464,1.0,6,2048,0.0029296875
+7,classifier.0,X22bgonly,synth,104,./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights,13.022442817687988,0.5875428915023804,231123,464,1.0,6,4096,0.00146484375
+8,classifier.3,X22bgonly,synth,104,./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights,13.022442817687988,0.5875428915023804,231123,464,1.0,6,4096,0.00146484375
+9,classifier.6,X22bgonly,synth,104,./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights,13.022442817687988,0.5875428915023804,231123,464,1.0,5,10,0.5

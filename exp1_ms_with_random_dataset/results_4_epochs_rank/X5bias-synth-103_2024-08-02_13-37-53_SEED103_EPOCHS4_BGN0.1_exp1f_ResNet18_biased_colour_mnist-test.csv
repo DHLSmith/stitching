@@ -1,0 +1,13 @@
+,name,model,dataset,seed,rcv_file,stitch_weight_delta,stitch_bias_delta,stitch_weight_number,stitch_bias_number,val_acc,features_rank,features_dim,normalized_features_rank
+0,stitch.s_conv1,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,311,2048,0.15185546875
+1,features.6.0.conv1,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,116,1024,0.11328125
+2,features.6.0.conv2,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,19,1024,0.0185546875
+3,features.6.0.downsample.0,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,184,1024,0.1796875
+4,features.6.1.conv1,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,12,1024,0.01171875
+5,features.6.1.conv2,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,7,1024,0.0068359375
+6,features.7.0.conv1,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,7,512,0.013671875
+7,features.7.0.conv2,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,5,512,0.009765625
+8,features.7.0.downsample.0,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,9,512,0.017578125
+9,features.7.1.conv1,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,6,512,0.01171875
+10,features.7.1.conv2,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,5,512,0.009765625
+11,originalfc,X5bias,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_biased_colour_mnist.weights,1.238162636756897,0.022164421156048775,8660,114,1.0,9,10,0.9

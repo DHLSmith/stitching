@@ -1,0 +1,1127 @@
+Executed at 2025-01-17_19-21-52
+logging to ./results_4_epochs/2025-01-17_19-21-52_SEED102_EPOCHS4_BGN0.1_exp1f_ResNet18_log.txt
+seed=102
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist.weights'
+stitch_train_epochs=4
+================================================
+val['loadfrom']='./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist.weights'
+Accuracy Calculation for ResNet18 with key='mix'
+Test the Trained Resnet18
+Test Accuracy: 99.26 %
+Confusion Matrix
+tensor([[ 946,    0,    2,    0,    0,    0,    0,    0,    1,    0],
+        [   0, 1117,    2,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1061,    1,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    1, 1003,    0,    4,    0,    2,    2,    0],
+        [   0,    1,    1,    0,  998,    0,    0,    1,    0,    3],
+        [   0,    0,    0,    2,    0,  856,    0,    0,    3,    1],
+        [   4,    1,    1,    0,    1,    0,  977,    0,    5,    0],
+        [   0,    0,    5,    0,    0,    0,    0, 1028,    0,    0],
+        [   2,    0,    5,    0,    0,    1,    0,    2,  944,    1],
+        [   1,    2,    2,    0,    5,    2,    0,    2,    5,  996]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18
+Test Accuracy: 98.26 %
+Confusion Matrix
+tensor([[ 976,    0,    2,    0,    0,    1,    0,    1,    0,    0],
+        [   1, 1132,    0,    1,    0,    0,    0,    0,    1,    0],
+        [   6,    4, 1006,   10,    1,    0,    0,    4,    1,    0],
+        [   0,    1,    1,  994,    0,    9,    0,    1,    4,    0],
+        [   0,    0,    2,    0,  959,    0,    1,    0,    2,   18],
+        [   1,    0,    0,    5,    0,  882,    1,    1,    1,    1],
+        [   7,    4,    0,    1,    1,   11,  933,    0,    1,    0],
+        [   0,    5,    5,    1,    1,    0,    0, 1001,    2,   13],
+        [   5,    0,    0,    3,    2,    2,    2,    2,  954,    4],
+        [   4,    1,    0,    2,    3,    4,    0,    2,    4,  989]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bgonly'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bg'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 990,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1002,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  996,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1003,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  999,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1003,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1003,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1003,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0,  998]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bias'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18
+Test Accuracy: 97.68 %
+Confusion Matrix
+tensor([[ 963,    0,    2,    0,    0,    1,   12,    1,    1,    0],
+        [   1, 1128,    1,    1,    0,    0,    2,    2,    0,    0],
+        [   3,    0, 1023,    0,    0,    0,    1,    2,    3,    0],
+        [   0,    0,    5,  978,    0,   15,    0,    3,    9,    0],
+        [   0,    0,    1,    0,  968,    0,    2,    0,    4,    7],
+        [   1,    0,    1,    3,    0,  870,   13,    1,    3,    0],
+        [   0,    3,    0,    1,    5,    1,  943,    0,    5,    0],
+        [   0,    3,   10,    2,    1,    0,    0, 1005,    1,    6],
+        [   2,    4,    6,    3,    2,    3,    3,    5,  944,    2],
+        [   3,    4,    2,    3,   27,    7,    1,    4,   12,  946]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'mix': 99.26, 'bw': 98.26, 'bgonly': 100.0, 'bg': 100.0, 'bias': 100.0, 'unbias': 97.68}
+Already evaluated for ./results_4_epochs_rank/mix-mix-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bw-bw-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bgonly-bgonly-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bg-bg-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bias-bias-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/unbias-unbias-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/X3mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X3mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+stitch into model mix
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 2278.09
+Epoch 1, loss 38.18
+Epoch 2, loss 8.82
+Epoch 3, loss 43.67
+**** Finished Training ****
+Change in stitch weights: 1.457006573677063
+Largest abs weight change: 0.1278412938117981
+Number of weights changing > 0.1 of that: 2084
+Change in stitch bias: 0.020712366327643394
+Largest abs bias change: 0.00439857691526413
+Number of bias changing > 0.1 of that: 60
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X4mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X4mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+stitch into model mix
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 470.76
+Epoch 1, loss 101.95
+Epoch 2, loss 7.95
+Epoch 3, loss 4.37
+**** Finished Training ****
+Change in stitch weights: 1.2019702196121216
+Largest abs weight change: 0.0830741822719574
+Number of weights changing > 0.1 of that: 2526
+Change in stitch bias: 0.017709776759147644
+Largest abs bias change: 0.004533551633358002
+Number of bias changing > 0.1 of that: 54
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X5mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X5mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+stitch into model mix
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 1171.08
+Epoch 1, loss 3.09
+Epoch 2, loss 32.30
+Epoch 3, loss 1.17
+**** Finished Training ****
+Change in stitch weights: 1.2826297283172607
+Largest abs weight change: 0.05589667707681656
+Number of weights changing > 0.1 of that: 8576
+Change in stitch bias: 0.020607024431228638
+Largest abs bias change: 0.0032383203506469727
+Number of bias changing > 0.1 of that: 113
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X6mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X6mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+stitch into model mix
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 276.84
+Epoch 1, loss 42.72
+Epoch 2, loss 2.29
+Epoch 3, loss 1.10
+**** Finished Training ****
+Change in stitch weights: 1.2064861059188843
+Largest abs weight change: 0.027446232736110687
+Number of weights changing > 0.1 of that: 34003
+Change in stitch bias: 0.021246284246444702
+Largest abs bias change: 0.0022921524941921234
+Number of bias changing > 0.1 of that: 238
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X7mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X7mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+stitch into model mix
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 60.27
+Epoch 1, loss 0.38
+Epoch 2, loss 0.25
+Epoch 3, loss 0.19
+**** Finished Training ****
+Change in stitch weights: 0.7143695950508118
+Largest abs weight change: 0.00882827490568161
+Number of weights changing > 0.1 of that: 139718
+Change in stitch bias: 0.021571150049567223
+Largest abs bias change: 0.0016194134950637817
+Number of bias changing > 0.1 of that: 459
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X8mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X8mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+stitch into model mix
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 66.12
+Epoch 1, loss 0.23
+Epoch 2, loss 0.18
+Epoch 3, loss 0.14
+**** Finished Training ****
+Change in stitch weights: 0.6895490288734436
+Largest abs weight change: 0.007533423602581024
+Number of weights changing > 0.1 of that: 154878
+Change in stitch bias: 0.021245047450065613
+Largest abs bias change: 0.0016216598451137543
+Number of bias changing > 0.1 of that: 462
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X3bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X3bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+stitch into model bw
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 572.08
+Epoch 1, loss 4.02
+Epoch 2, loss 5.04
+Epoch 3, loss 4.71
+**** Finished Training ****
+Change in stitch weights: 0.8689684271812439
+Largest abs weight change: 0.06449682265520096
+Number of weights changing > 0.1 of that: 2308
+Change in stitch bias: 0.020167553797364235
+Largest abs bias change: 0.004552669823169708
+Number of bias changing > 0.1 of that: 56
+Test the trained stitch
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,  999,    0,    0,    1,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X4bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X4bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+stitch into model bw
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 829.42
+Epoch 1, loss 6.63
+Epoch 2, loss 5.45
+Epoch 3, loss 3.87
+**** Finished Training ****
+Change in stitch weights: 1.0920593738555908
+Largest abs weight change: 0.09709145128726959
+Number of weights changing > 0.1 of that: 2155
+Change in stitch bias: 0.020634783431887627
+Largest abs bias change: 0.004514455795288086
+Number of bias changing > 0.1 of that: 61
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X5bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X5bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+stitch into model bw
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 124.23
+Epoch 1, loss 7.89
+Epoch 2, loss 14.10
+Epoch 3, loss 8.29
+**** Finished Training ****
+Change in stitch weights: 0.8907257914543152
+Largest abs weight change: 0.038351502269506454
+Number of weights changing > 0.1 of that: 9000
+Change in stitch bias: 0.017771465703845024
+Largest abs bias change: 0.0031484439969062805
+Number of bias changing > 0.1 of that: 112
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X6bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X6bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+stitch into model bw
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 198.65
+Epoch 1, loss 2.16
+Epoch 2, loss 1.78
+Epoch 3, loss 0.50
+**** Finished Training ****
+Change in stitch weights: 0.8682066798210144
+Largest abs weight change: 0.01964852213859558
+Number of weights changing > 0.1 of that: 35280
+Change in stitch bias: 0.0211957860738039
+Largest abs bias change: 0.0022849738597869873
+Number of bias changing > 0.1 of that: 238
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X7bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X7bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+stitch into model bw
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 39.43
+Epoch 1, loss 0.33
+Epoch 2, loss 0.23
+Epoch 3, loss 0.18
+**** Finished Training ****
+Change in stitch weights: 0.6443902850151062
+Largest abs weight change: 0.006652329117059708
+Number of weights changing > 0.1 of that: 163289
+Change in stitch bias: 0.02193322777748108
+Largest abs bias change: 0.0016194209456443787
+Number of bias changing > 0.1 of that: 466
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X8bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X8bw-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+stitch into model bw
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 31.17
+Epoch 1, loss 0.35
+Epoch 2, loss 0.25
+Epoch 3, loss 0.20
+**** Finished Training ****
+Change in stitch weights: 0.6177470684051514
+Largest abs weight change: 0.0070196837186813354
+Number of weights changing > 0.1 of that: 155655
+Change in stitch bias: 0.021047774702310562
+Largest abs bias change: 0.0016203038394451141
+Number of bias changing > 0.1 of that: 455
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X3bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X3bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 547.15
+Epoch 1, loss 37.97
+Epoch 2, loss 3.97
+Epoch 3, loss 3.83
+**** Finished Training ****
+Change in stitch weights: 1.2282549142837524
+Largest abs weight change: 0.10437541455030441
+Number of weights changing > 0.1 of that: 2104
+Change in stitch bias: 0.022165503352880478
+Largest abs bias change: 0.004524856805801392
+Number of bias changing > 0.1 of that: 54
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X4bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X4bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 595.39
+Epoch 1, loss 52.66
+Epoch 2, loss 39.48
+Epoch 3, loss 28.05
+**** Finished Training ****
+Change in stitch weights: 1.273520588874817
+Largest abs weight change: 0.13451582193374634
+Number of weights changing > 0.1 of that: 1853
+Change in stitch bias: 0.02087167091667652
+Largest abs bias change: 0.0044635385274887085
+Number of bias changing > 0.1 of that: 58
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X5bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X5bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 89.69
+Epoch 1, loss 19.18
+Epoch 2, loss 30.79
+Epoch 3, loss 11.41
+**** Finished Training ****
+Change in stitch weights: 0.8376408815383911
+Largest abs weight change: 0.037018388509750366
+Number of weights changing > 0.1 of that: 8723
+Change in stitch bias: 0.020251041278243065
+Largest abs bias change: 0.0031999871134757996
+Number of bias changing > 0.1 of that: 112
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X6bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X6bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 149.94
+Epoch 1, loss 19.45
+Epoch 2, loss 5.92
+Epoch 3, loss 0.15
+**** Finished Training ****
+Change in stitch weights: 0.89071124792099
+Largest abs weight change: 0.01946333609521389
+Number of weights changing > 0.1 of that: 36610
+Change in stitch bias: 0.021855449303984642
+Largest abs bias change: 0.0022779926657676697
+Number of bias changing > 0.1 of that: 237
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X7bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X7bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 30.75
+Epoch 1, loss 0.29
+Epoch 2, loss 0.21
+Epoch 3, loss 0.16
+**** Finished Training ****
+Change in stitch weights: 0.6233978271484375
+Largest abs weight change: 0.005656944587826729
+Number of weights changing > 0.1 of that: 176141
+Change in stitch bias: 0.02095199003815651
+Largest abs bias change: 0.0016210153698921204
+Number of bias changing > 0.1 of that: 445
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X8bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X8bgonly-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 44.88
+Epoch 1, loss 0.31
+Epoch 2, loss 0.21
+Epoch 3, loss 0.17
+**** Finished Training ****
+Change in stitch weights: 0.6746646761894226
+Largest abs weight change: 0.006848569959402084
+Number of weights changing > 0.1 of that: 162584
+Change in stitch bias: 0.0205511674284935
+Largest abs bias change: 0.0016200020909309387
+Number of bias changing > 0.1 of that: 457
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X3bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X3bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 435.93
+Epoch 1, loss 12.96
+Epoch 2, loss 28.76
+Epoch 3, loss 6.27
+**** Finished Training ****
+Change in stitch weights: 1.2382735013961792
+Largest abs weight change: 0.09895869344472885
+Number of weights changing > 0.1 of that: 2220
+Change in stitch bias: 0.01858016476035118
+Largest abs bias change: 0.004497133195400238
+Number of bias changing > 0.1 of that: 58
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X4bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X4bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 448.52
+Epoch 1, loss 28.37
+Epoch 2, loss 7.61
+Epoch 3, loss 45.31
+**** Finished Training ****
+Change in stitch weights: 1.2004464864730835
+Largest abs weight change: 0.1144566684961319
+Number of weights changing > 0.1 of that: 1994
+Change in stitch bias: 0.019981233403086662
+Largest abs bias change: 0.004533044993877411
+Number of bias changing > 0.1 of that: 55
+Test the trained stitch
+Test Accuracy: 99.98 %
+Confusion Matrix
+tensor([[ 999,    1,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  999,    0,    0,    0,    1,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X5bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X5bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 174.85
+Epoch 1, loss 17.14
+Epoch 2, loss 31.28
+Epoch 3, loss 2.32
+**** Finished Training ****
+Change in stitch weights: 1.0715194940567017
+Largest abs weight change: 0.04636875540018082
+Number of weights changing > 0.1 of that: 8563
+Change in stitch bias: 0.021380862221121788
+Largest abs bias change: 0.0031966418027877808
+Number of bias changing > 0.1 of that: 111
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X6bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X6bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 231.25
+Epoch 1, loss 17.13
+Epoch 2, loss 74.77
+Epoch 3, loss 2.15
+**** Finished Training ****
+Change in stitch weights: 1.1745293140411377
+Largest abs weight change: 0.027418844401836395
+Number of weights changing > 0.1 of that: 32778
+Change in stitch bias: 0.020647546276450157
+Largest abs bias change: 0.002284649759531021
+Number of bias changing > 0.1 of that: 235
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X7bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X7bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 31.55
+Epoch 1, loss 0.06
+Epoch 2, loss 0.04
+Epoch 3, loss 0.04
+**** Finished Training ****
+Change in stitch weights: 0.6380492448806763
+Largest abs weight change: 0.006855662912130356
+Number of weights changing > 0.1 of that: 159897
+Change in stitch bias: 0.02125147171318531
+Largest abs bias change: 0.00161810964345932
+Number of bias changing > 0.1 of that: 458
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X8bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X8bg-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+stitch into model bg
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 37.80
+Epoch 1, loss 0.10
+Epoch 2, loss 0.07
+Epoch 3, loss 0.05
+**** Finished Training ****
+Change in stitch weights: 0.6325461268424988
+Largest abs weight change: 0.007731383666396141
+Number of weights changing > 0.1 of that: 146951
+Change in stitch bias: 0.0212018471211195
+Largest abs bias change: 0.0016207359731197357
+Number of bias changing > 0.1 of that: 459
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X3bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X3bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+stitch into model bias
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 342.15
+Epoch 1, loss 34.15
+Epoch 2, loss 28.36
+Epoch 3, loss 58.63
+**** Finished Training ****
+Change in stitch weights: 1.2181299924850464
+Largest abs weight change: 0.08851195126771927
+Number of weights changing > 0.1 of that: 2384
+Change in stitch bias: 0.020312296226620674
+Largest abs bias change: 0.004510670900344849
+Number of bias changing > 0.1 of that: 57
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X4bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X4bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+stitch into model bias
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 185.87
+Epoch 1, loss 91.94
+Epoch 2, loss 28.60
+Epoch 3, loss 28.84
+**** Finished Training ****
+Change in stitch weights: 1.151288628578186
+Largest abs weight change: 0.1104721873998642
+Number of weights changing > 0.1 of that: 1908
+Change in stitch bias: 0.022509243339300156
+Largest abs bias change: 0.004545725882053375
+Number of bias changing > 0.1 of that: 62
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X5bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X5bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+stitch into model bias
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 3350.58
+Epoch 1, loss 25.20
+Epoch 2, loss 48.59
+Epoch 3, loss 45.16
+**** Finished Training ****
+Change in stitch weights: 1.4632481336593628
+Largest abs weight change: 0.051754117012023926
+Number of weights changing > 0.1 of that: 10485
+Change in stitch bias: 0.02230777218937874
+Largest abs bias change: 0.0032284408807754517
+Number of bias changing > 0.1 of that: 115
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X6bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X6bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+stitch into model bias
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 183.49
+Epoch 1, loss 49.87
+Epoch 2, loss 1.39
+Epoch 3, loss 1.49
+**** Finished Training ****
+Change in stitch weights: 1.0066808462142944
+Largest abs weight change: 0.025497719645500183
+Number of weights changing > 0.1 of that: 31404
+Change in stitch bias: 0.020541882142424583
+Largest abs bias change: 0.0022871308028697968
+Number of bias changing > 0.1 of that: 234
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X7bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X7bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+stitch into model bias
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 55.08
+Epoch 1, loss 0.34
+Epoch 2, loss 0.22
+Epoch 3, loss 0.18
+**** Finished Training ****
+Change in stitch weights: 0.6804515719413757
+Largest abs weight change: 0.009123876690864563
+Number of weights changing > 0.1 of that: 133171
+Change in stitch bias: 0.02202453836798668
+Largest abs bias change: 0.0016190297901630402
+Number of bias changing > 0.1 of that: 460
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X8bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X8bias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+stitch into model bias
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 34.42
+Epoch 1, loss 0.34
+Epoch 2, loss 0.24
+Epoch 3, loss 0.20
+**** Finished Training ****
+Change in stitch weights: 0.6271318793296814
+Largest abs weight change: 0.006355369463562965
+Number of weights changing > 0.1 of that: 166368
+Change in stitch bias: 0.02148015983402729
+Largest abs bias change: 0.0016213543713092804
+Number of bias changing > 0.1 of that: 461
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X3unbias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X3unbias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist-test.csv
+stitch into model unbias
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 199.19
+Epoch 1, loss 8.88
+Epoch 2, loss 6.77
+Epoch 3, loss 4.19
+**** Finished Training ****
+Change in stitch weights: 0.8805849552154541
+Largest abs weight change: 0.07331611216068268
+Number of weights changing > 0.1 of that: 1935
+Change in stitch bias: 0.020534658804535866
+Largest abs bias change: 0.004520870745182037
+Number of bias changing > 0.1 of that: 56
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X4unbias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X4unbias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist-test.csv
+stitch into model unbias
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 377.88
+Epoch 1, loss 7.93
+Epoch 2, loss 5.35
+Epoch 3, loss 3.97
+**** Finished Training ****
+Change in stitch weights: 1.035851240158081
+Largest abs weight change: 0.07321096211671829
+Number of weights changing > 0.1 of that: 2539
+Change in stitch bias: 0.020864758640527725
+Largest abs bias change: 0.00458323210477829
+Number of bias changing > 0.1 of that: 60
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Already evaluated for ./results_4_epochs_rank/X5unbias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X5unbias-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist-test.csv
+stitch into model unbias
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 290.00
+Epoch 1, loss 20.91

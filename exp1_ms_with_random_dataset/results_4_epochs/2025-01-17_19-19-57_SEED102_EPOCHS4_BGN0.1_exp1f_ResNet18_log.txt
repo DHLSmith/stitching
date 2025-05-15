@@ -1,0 +1,133 @@
+Executed at 2025-01-17_19-19-57
+logging to ./results_4_epochs/2025-01-17_19-19-57_SEED102_EPOCHS4_BGN0.1_exp1f_ResNet18_log.txt
+seed=102
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist.weights'
+stitch_train_epochs=4
+================================================
+val['loadfrom']='./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist.weights'
+Accuracy Calculation for ResNet18 with key='mix'
+Test the Trained Resnet18
+Test Accuracy: 99.26 %
+Confusion Matrix
+tensor([[ 946,    0,    2,    0,    0,    0,    0,    0,    1,    0],
+        [   0, 1117,    2,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1061,    1,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    1, 1003,    0,    4,    0,    2,    2,    0],
+        [   0,    1,    1,    0,  998,    0,    0,    1,    0,    3],
+        [   0,    0,    0,    2,    0,  856,    0,    0,    3,    1],
+        [   4,    1,    1,    0,    1,    0,  977,    0,    5,    0],
+        [   0,    0,    5,    0,    0,    0,    0, 1028,    0,    0],
+        [   2,    0,    5,    0,    0,    1,    0,    2,  944,    1],
+        [   1,    2,    2,    0,    5,    2,    0,    2,    5,  996]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18
+Test Accuracy: 98.26 %
+Confusion Matrix
+tensor([[ 976,    0,    2,    0,    0,    1,    0,    1,    0,    0],
+        [   1, 1132,    0,    1,    0,    0,    0,    0,    1,    0],
+        [   6,    4, 1006,   10,    1,    0,    0,    4,    1,    0],
+        [   0,    1,    1,  994,    0,    9,    0,    1,    4,    0],
+        [   0,    0,    2,    0,  959,    0,    1,    0,    2,   18],
+        [   1,    0,    0,    5,    0,  882,    1,    1,    1,    1],
+        [   7,    4,    0,    1,    1,   11,  933,    0,    1,    0],
+        [   0,    5,    5,    1,    1,    0,    0, 1001,    2,   13],
+        [   5,    0,    0,    3,    2,    2,    2,    2,  954,    4],
+        [   4,    1,    0,    2,    3,    4,    0,    2,    4,  989]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bgonly'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bg'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 990,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1002,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  996,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1003,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  999,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1003,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1003,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1003,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0,  998]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bias'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18
+Test Accuracy: 97.68 %
+Confusion Matrix
+tensor([[ 963,    0,    2,    0,    0,    1,   12,    1,    1,    0],
+        [   1, 1128,    1,    1,    0,    0,    2,    2,    0,    0],
+        [   3,    0, 1023,    0,    0,    0,    1,    2,    3,    0],
+        [   0,    0,    5,  978,    0,   15,    0,    3,    9,    0],
+        [   0,    0,    1,    0,  968,    0,    2,    0,    4,    7],
+        [   1,    0,    1,    3,    0,  870,   13,    1,    3,    0],
+        [   0,    3,    0,    1,    5,    1,  943,    0,    5,    0],
+        [   0,    3,   10,    2,    1,    0,    0, 1005,    1,    6],
+        [   2,    4,    6,    3,    2,    3,    3,    5,  944,    2],
+        [   3,    4,    2,    3,   27,    7,    1,    4,   12,  946]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'mix': 99.26, 'bw': 98.26, 'bgonly': 100.0, 'bg': 100.0, 'bias': 100.0, 'unbias': 97.68}
+Already evaluated for ./results_4_epochs_rank/mix-mix-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bw-bw-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bgonly-bgonly-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bg-bg-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/bias-bias-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/unbias-unbias-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist-test.csv
+Already evaluated for ./results_4_epochs_rank/X3mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+Evaluate ranks and output to ./results_4_epochs_rank/X3mix-synth-102_2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist-test.csv
+stitch into model mix
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3

@@ -1,0 +1,23 @@
+Executed at 2024-07-28_16-57-35
+logging to ./results/2024-07-28_16-57-35_SEED50_EPOCHS10_BGN0.1_exp1e_ResNet18_log.txt
+seed=50
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='./results/2024-07-28_09-14-39_SEED48_EPOCHS10_BGN0.1_exp1e_ResNet18_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results/2024-07-28_09-14-39_SEED48_EPOCHS10_BGN0.1_exp1e_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results/2024-07-28_09-14-39_SEED48_EPOCHS10_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results/2024-07-22_17-24-48_SEED41_EPOCHS10_BGN0.1_exp2b_ResNet18_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results/2024-07-28_09-14-39_SEED48_EPOCHS10_BGN0.1_exp1e_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results/2024-07-28_09-14-39_SEED48_EPOCHS10_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist.weights'
+stitch_train_epochs=5
+================================================
+val['loadfrom']='./results/2024-07-28_09-14-39_SEED48_EPOCHS10_BGN0.1_exp1e_ResNet18_mix_mnist.weights'
+val['loadfrom']='./results/2024-07-28_09-14-39_SEED48_EPOCHS10_BGN0.1_exp1e_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results/2024-07-28_09-14-39_SEED48_EPOCHS10_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'
+val['loadfrom']='./results/2024-07-22_17-24-48_SEED41_EPOCHS10_BGN0.1_exp2b_ResNet18_bg_unbiased_colour_mnist.weights'

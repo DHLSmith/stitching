@@ -1,0 +1,8 @@
+,name,model,dataset,seed,rcv_file,stitch_weight_delta,stitch_bias_delta,stitch_weight_number,stitch_bias_number,val_acc,features_rank,features_dim,normalized_features_rank
+0,stitch.s_conv1,X29bias,synth,104,./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,13.084613800048828,0.5661312341690063,230442,461,1.0,12,2048,0.005859375
+1,features.30,X29bias,synth,104,./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,13.084613800048828,0.5661312341690063,230442,461,1.0,9,2048,0.00439453125
+2,features.32,X29bias,synth,104,./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,13.084613800048828,0.5661312341690063,230442,461,1.0,9,2048,0.00439453125
+3,features.34,X29bias,synth,104,./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,13.084613800048828,0.5661312341690063,230442,461,1.0,9,2048,0.00439453125
+4,classifier.0,X29bias,synth,104,./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,13.084613800048828,0.5661312341690063,230442,461,1.0,9,4096,0.002197265625
+5,classifier.3,X29bias,synth,104,./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,13.084613800048828,0.5661312341690063,230442,461,1.0,9,4096,0.002197265625
+6,classifier.6,X29bias,synth,104,./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights,13.084613800048828,0.5661312341690063,230442,461,1.0,6,10,0.6

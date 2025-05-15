@@ -1,0 +1,3 @@
+,name,model,dataset,seed,rcv_file,stitch_weight_delta,stitch_bias_delta,stitch_weight_number,stitch_bias_number,val_acc,features_rank,features_dim,normalized_features_rank
+0,stitch.s_conv1,X8bgonly,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_bg_only_colour_mnist.weights,0.6581419110298157,0.021850833669304848,166021,463,1.0,257,512,0.501953125
+1,originalfc,X8bgonly,synth,103,./results_4_epochs/2024-08-02_13-37-53_SEED103_EPOCHS4_BGN0.1_exp1f_ResNet18_bg_only_colour_mnist.weights,0.6581419110298157,0.021850833669304848,166021,463,1.0,9,10,0.9

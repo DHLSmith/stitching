@@ -1,0 +1,2 @@
+,model,dataset,seed,val_acc,name
+0,X6imagenet,synth,102,1.0,only

@@ -1,0 +1,1240 @@
+Executed at 2024-08-01_00-39-52
+logging to ./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_log.txt
+seed=100
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+train_mix_mnist_model=True
+save_mix_mnist_model_as='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights'
+original_train_epochs=4
+train_bw_mnist_model=True
+save_bw_mnist_model_as='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist.weights'
+original_train_epochs=4
+train_bg_only_colour_mnist_model=True
+save_bg_only_colour_mnist_model_as='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'
+original_train_epochs=4
+train_bg_unbiased_colour_mnist_model=True
+save_bg_unbiased_colour_mnist_model_as='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist.weights'
+original_train_epochs=4
+train_biased_colour_mnist_model=True
+save_biased_colour_mnist_model_as='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist.weights'
+original_train_epochs=4
+train_unbiased_colour_mnist_model=True
+save_unbiased_colour_mnist_model_as='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist.weights'
+original_train_epochs=4
+stitch_train_epochs=10
+================================================
+Train ResNet18 on mix
+Epoch 0, loss 356.43
+Epoch 1, loss 31.93
+Epoch 2, loss 20.44
+Epoch 3, loss 16.33
+**** Finished Training ****
+saveas='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights'
+Train ResNet18 on bw
+Epoch 0, loss 106.01
+Epoch 1, loss 24.92
+Epoch 2, loss 17.33
+Epoch 3, loss 13.26
+**** Finished Training ****
+saveas='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist.weights'
+Train ResNet18 on bgonly
+Epoch 0, loss 60.34
+Epoch 1, loss 4.55
+Epoch 2, loss 3.52
+Epoch 3, loss 3.29
+**** Finished Training ****
+saveas='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'
+Train ResNet18 on bg
+Epoch 0, loss 120.28
+Epoch 1, loss 4.61
+Epoch 2, loss 2.12
+Epoch 3, loss 1.77
+**** Finished Training ****
+saveas='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist.weights'
+Train ResNet18 on bias
+Epoch 0, loss 38.19
+Epoch 1, loss 0.98
+Epoch 2, loss 1.50
+Epoch 3, loss 1.00
+**** Finished Training ****
+saveas='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist.weights'
+Train ResNet18 on unbias
+Epoch 0, loss 336.73
+Epoch 1, loss 45.47
+Epoch 2, loss 32.39
+Epoch 3, loss 26.43
+**** Finished Training ****
+saveas='./results_4_epochs/2024-08-01_00-39-52_SEED100_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist.weights'
+Accuracy Calculation for ResNet18 with key='mix'
+Test the Trained Resnet18
+Test Accuracy: 99.08 %
+Confusion Matrix
+tensor([[1011,    0,    1,    0,    0,    0,    4,    0,    1,    0],
+        [   0, 1120,    0,    0,    0,    0,    2,    1,    2,    0],
+        [   3,    0, 1019,    0,    0,    1,    0,    3,    0,    0],
+        [   0,    0,    1, 1011,    0,    7,    0,    5,    3,    0],
+        [   0,    0,    1,    0,  935,    0,    0,    2,    3,   11],
+        [   0,    0,    0,    0,    0,  886,    1,    1,    1,    0],
+        [   2,    0,    0,    0,    1,    7,  981,    0,    2,    0],
+        [   0,    1,    0,    0,    0,    0,    0, 1075,    1,    0],
+        [   1,    0,    1,    3,    1,    2,    0,    0,  935,    1],
+        [   1,    0,    0,    3,    2,    3,    0,    4,    2,  935]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18
+Test Accuracy: 99.04 %
+Confusion Matrix
+tensor([[ 977,    0,    0,    0,    1,    0,    0,    1,    1,    0],
+        [   0, 1130,    0,    0,    0,    1,    0,    2,    2,    0],
+        [   0,    1, 1025,    0,    0,    0,    0,    4,    2,    0],
+        [   1,    0,    1, 1000,    0,    6,    0,    0,    1,    1],
+        [   0,    0,    1,    0,  974,    0,    0,    2,    1,    4],
+        [   2,    0,    0,    5,    0,  882,    1,    0,    1,    1],
+        [   1,    3,    0,    1,    5,    1,  941,    0,    6,    0],
+        [   0,    0,    1,    0,    0,    0,    0, 1021,    2,    4],
+        [   3,    0,    3,    0,    0,    1,    0,    1,  964,    2],
+        [   1,    0,    0,    2,    1,    1,    0,    3,   11,  990]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bgonly'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bg'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 999,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1003,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  996,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1004,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  989,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1002,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1002,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1003,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  999,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1003]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bias'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='unbias'
+Test the Trained Resnet18
+Test Accuracy: 97.67 %
+Confusion Matrix
+tensor([[ 969,    0,    0,    1,    0,    0,    1,    1,    8,    0],
+        [   0, 1117,    1,    2,    0,    0,    2,    1,   12,    0],
+        [   0,    2, 1010,    9,    2,    0,    1,    1,    7,    0],
+        [   1,    0,    0, 1002,    0,    5,    0,    0,    0,    2],
+        [   1,    1,    2,    2,  915,    1,    6,    0,    1,   53],
+        [   2,    0,    0,    7,    0,  881,    1,    0,    1,    0],
+        [   4,    2,    1,    1,    1,   12,  936,    0,    1,    0],
+        [   0,    1,   10,    4,    0,    0,    1, 1005,    1,    6],
+        [   2,    0,    1,   12,    4,    9,    1,    1,  940,    4],
+        [   2,    3,    0,    3,    1,    3,    0,    1,    4,  992]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'mix': 99.08, 'bw': 99.04, 'bgonly': 100.0, 'bg': 100.0, 'bias': 100.0, 'unbias': 97.67}
+Measure Rank for key='mix'
+Measure Rank for key='bw'
+Measure Rank for key='bgonly'
+Measure Rank for key='bg'
+Measure Rank for key='bias'
+Measure Rank for key='unbias'
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 2043.55
+Epoch 1, loss 919.98
+Epoch 2, loss 854.09
+Epoch 3, loss 816.90
+Epoch 4, loss 826.83
+Epoch 5, loss 803.87
+Epoch 6, loss 804.40
+Epoch 7, loss 812.48
+Epoch 8, loss 773.82
+Epoch 9, loss 804.39
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 96.66 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  998,    0,    2,    0,    0,    0,    0],
+        [   0,    1,    0,    0,  995,    2,    0,    0,    1,    1],
+        [   0,    1,    0,    0,    0,  999,    0,    0,    0,    0],
+        [   0,    0,    1,    0,    0,    0,  999,    0,    0,    0],
+        [   0,    1,    0,    0,    0,    0,    0,  999,    0,    0],
+        [   2,    0,  321,    0,    0,    0,    0,    0,  677,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    1,    0,  999]],
+       dtype=torch.int32)
+===================================================================
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 421.85
+Epoch 1, loss 9.27
+Epoch 2, loss 9.61
+Epoch 3, loss 2.11
+Epoch 4, loss 14.55
+Epoch 5, loss 4.60
+Epoch 6, loss 17.95
+Epoch 7, loss 3.16
+Epoch 8, loss 1.74
+Epoch 9, loss 1.39
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 385.99
+Epoch 1, loss 5.25
+Epoch 2, loss 1.79
+Epoch 3, loss 3.01
+Epoch 4, loss 5.47
+Epoch 5, loss 0.82
+Epoch 6, loss 3.91
+Epoch 7, loss 1.48
+Epoch 8, loss 0.81
+Epoch 9, loss 0.67
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 189.47
+Epoch 1, loss 6.62
+Epoch 2, loss 5.87
+Epoch 3, loss 13.60
+Epoch 4, loss 5.32
+Epoch 5, loss 3.93
+Epoch 6, loss 3.55
+Epoch 7, loss 2.88
+Epoch 8, loss 3.20
+Epoch 9, loss 11.08
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    1,    0,    0,    0,    0,  999,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 34.66
+Epoch 1, loss 0.24
+Epoch 2, loss 0.17
+Epoch 3, loss 0.13
+Epoch 4, loss 0.12
+Epoch 5, loss 0.11
+Epoch 6, loss 0.10
+Epoch 7, loss 0.09
+Epoch 8, loss 0.09
+Epoch 9, loss 0.09
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 22.06
+Epoch 1, loss 0.31
+Epoch 2, loss 0.21
+Epoch 3, loss 0.17
+Epoch 4, loss 0.14
+Epoch 5, loss 0.13
+Epoch 6, loss 0.12
+Epoch 7, loss 0.11
+Epoch 8, loss 0.10
+Epoch 9, loss 0.09
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 210.75
+Epoch 1, loss 11.83
+Epoch 2, loss 3.24
+Epoch 3, loss 4.21
+Epoch 4, loss 1.91
+Epoch 5, loss 3.95
+Epoch 6, loss 4.26
+Epoch 7, loss 2.90
+Epoch 8, loss 5.55
+Epoch 9, loss 3.31
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 195.80
+Epoch 1, loss 3.18
+Epoch 2, loss 1.95
+Epoch 3, loss 2.19
+Epoch 4, loss 1.01
+Epoch 5, loss 1.12
+Epoch 6, loss 0.89
+Epoch 7, loss 0.90
+Epoch 8, loss 0.76
+Epoch 9, loss 1.65
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 108.86
+Epoch 1, loss 2.54
+Epoch 2, loss 1.50
+Epoch 3, loss 1.37
+Epoch 4, loss 0.68
+Epoch 5, loss 0.95
+Epoch 6, loss 0.78
+Epoch 7, loss 0.82
+Epoch 8, loss 0.39
+Epoch 9, loss 1.12
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 66.03
+Epoch 1, loss 1.39
+Epoch 2, loss 0.88
+Epoch 3, loss 0.61
+Epoch 4, loss 0.58
+Epoch 5, loss 0.43
+Epoch 6, loss 0.38
+Epoch 7, loss 0.33
+Epoch 8, loss 0.27
+Epoch 9, loss 0.28
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 29.93
+Epoch 1, loss 0.64
+Epoch 2, loss 0.42
+Epoch 3, loss 0.32
+Epoch 4, loss 0.26
+Epoch 5, loss 0.23
+Epoch 6, loss 0.21
+Epoch 7, loss 0.19
+Epoch 8, loss 0.18
+Epoch 9, loss 0.17
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 25.03
+Epoch 1, loss 0.65
+Epoch 2, loss 0.44
+Epoch 3, loss 0.33
+Epoch 4, loss 0.28
+Epoch 5, loss 0.24
+Epoch 6, loss 0.23
+Epoch 7, loss 0.20
+Epoch 8, loss 0.19
+Epoch 9, loss 0.18
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 1564.80
+Epoch 1, loss 30.74
+Epoch 2, loss 7.89
+Epoch 3, loss 11.95
+Epoch 4, loss 4.28
+Epoch 5, loss 10.12
+Epoch 6, loss 16.17
+Epoch 7, loss 20.18
+Epoch 8, loss 3.00
+Epoch 9, loss 13.57
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 880.30
+Epoch 1, loss 15.94
+Epoch 2, loss 6.23
+Epoch 3, loss 10.22
+Epoch 4, loss 12.18
+Epoch 5, loss 11.46
+Epoch 6, loss 3.09
+Epoch 7, loss 11.06
+Epoch 8, loss 2.54
+Epoch 9, loss 2.08
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 138.65
+Epoch 1, loss 7.86
+Epoch 2, loss 5.53
+Epoch 3, loss 1.95
+Epoch 4, loss 10.22
+Epoch 5, loss 1.69
+Epoch 6, loss 4.23
+Epoch 7, loss 6.60
+Epoch 8, loss 6.18
+Epoch 9, loss 3.60
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 115.27
+Epoch 1, loss 1.99
+Epoch 2, loss 3.42
+Epoch 3, loss 2.72
+Epoch 4, loss 0.86
+Epoch 5, loss 0.68
+Epoch 6, loss 2.07
+Epoch 7, loss 0.54
+Epoch 8, loss 0.48
+Epoch 9, loss 1.89
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 39.65
+Epoch 1, loss 0.53
+Epoch 2, loss 0.38
+Epoch 3, loss 0.30
+Epoch 4, loss 0.26
+Epoch 5, loss 0.23
+Epoch 6, loss 0.20
+Epoch 7, loss 0.19
+Epoch 8, loss 0.18
+Epoch 9, loss 0.17
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 32.23
+Epoch 1, loss 0.64
+Epoch 2, loss 0.44
+Epoch 3, loss 0.35
+Epoch 4, loss 0.30
+Epoch 5, loss 0.26
+Epoch 6, loss 0.24
+Epoch 7, loss 0.22
+Epoch 8, loss 0.20
+Epoch 9, loss 0.19
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 618.81
+Epoch 1, loss 28.27
+Epoch 2, loss 9.83
+Epoch 3, loss 10.95
+Epoch 4, loss 2.18
+Epoch 5, loss 9.50
+Epoch 6, loss 8.42
+Epoch 7, loss 18.20
+Epoch 8, loss 17.82
+Epoch 9, loss 10.47
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 317.99
+Epoch 1, loss 2.67
+Epoch 2, loss 7.39
+Epoch 3, loss 5.11
+Epoch 4, loss 1.43
+Epoch 5, loss 3.40
+Epoch 6, loss 1.01
+Epoch 7, loss 0.81
+Epoch 8, loss 2.49
+Epoch 9, loss 2.41
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 377.73
+Epoch 1, loss 3.85
+Epoch 2, loss 2.21
+Epoch 3, loss 4.44
+Epoch 4, loss 1.44
+Epoch 5, loss 2.65
+Epoch 6, loss 2.45
+Epoch 7, loss 0.76
+Epoch 8, loss 1.94
+Epoch 9, loss 0.61
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 421.58
+Epoch 1, loss 1.32
+Epoch 2, loss 0.96
+Epoch 3, loss 0.68
+Epoch 4, loss 0.82
+Epoch 5, loss 2.16
+Epoch 6, loss 0.36
+Epoch 7, loss 0.35
+Epoch 8, loss 1.26
+Epoch 9, loss 1.08
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 24.06
+Epoch 1, loss 0.53
+Epoch 2, loss 0.37
+Epoch 3, loss 0.30
+Epoch 4, loss 0.25
+Epoch 5, loss 0.22
+Epoch 6, loss 0.19
+Epoch 7, loss 0.18
+Epoch 8, loss 0.17
+Epoch 9, loss 0.16
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 24.76
+Epoch 1, loss 0.54
+Epoch 2, loss 0.38
+Epoch 3, loss 0.29
+Epoch 4, loss 0.25
+Epoch 5, loss 0.22
+Epoch 6, loss 0.20
+Epoch 7, loss 0.18
+Epoch 8, loss 0.17
+Epoch 9, loss 0.16
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 700.15
+Epoch 1, loss 19.91
+Epoch 2, loss 5.65
+Epoch 3, loss 3.66
+Epoch 4, loss 27.68
+Epoch 5, loss 16.26
+Epoch 6, loss 23.31
+Epoch 7, loss 2.32
+Epoch 8, loss 14.14
+Epoch 9, loss 3.76
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 8444.84
+Epoch 1, loss 3696.27
+Epoch 2, loss 8.61
+Epoch 3, loss 4.59
+Epoch 4, loss 12.89
+Epoch 5, loss 14.78
+Epoch 6, loss 13.24
+Epoch 7, loss 12.04
+Epoch 8, loss 11.45
+Epoch 9, loss 2.52
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 141.16
+Epoch 1, loss 30.02
+Epoch 2, loss 2.57
+Epoch 3, loss 17.50
+Epoch 4, loss 2.01
+Epoch 5, loss 1.59
+Epoch 6, loss 1.58
+Epoch 7, loss 31.67
+Epoch 8, loss 9.70
+Epoch 9, loss 10.10
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 229.00
+Epoch 1, loss 2.84
+Epoch 2, loss 7.00
+Epoch 3, loss 6.54
+Epoch 4, loss 3.37
+Epoch 5, loss 5.85
+Epoch 6, loss 6.56
+Epoch 7, loss 0.60
+Epoch 8, loss 0.38
+Epoch 9, loss 0.58
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 41.49
+Epoch 1, loss 0.56
+Epoch 2, loss 0.40
+Epoch 3, loss 0.30
+Epoch 4, loss 0.26
+Epoch 5, loss 0.23
+Epoch 6, loss 0.20
+Epoch 7, loss 0.19
+Epoch 8, loss 0.17
+Epoch 9, loss 0.16
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 53.28
+Epoch 1, loss 0.59
+Epoch 2, loss 0.42
+Epoch 3, loss 0.33
+Epoch 4, loss 0.27
+Epoch 5, loss 0.24
+Epoch 6, loss 0.22
+Epoch 7, loss 0.20
+Epoch 8, loss 0.19
+Epoch 9, loss 0.17
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 3, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 3
+Epoch 0, loss 421.38
+Epoch 1, loss 4.88
+Epoch 2, loss 3.77
+Epoch 3, loss 2.59
+Epoch 4, loss 1.68
+Epoch 5, loss 2.01
+Epoch 6, loss 1.51
+Epoch 7, loss 1.51
+Epoch 8, loss 1.67
+Epoch 9, loss 0.99
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 99.99 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    1,    0,    0,    0,    0,    0,  999,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 4, activations shape is torch.Size([10, 64, 7, 7])
+Train the stitch to a top model cut after layer 4
+Epoch 0, loss 245.81
+Epoch 1, loss 4.57
+Epoch 2, loss 2.16
+Epoch 3, loss 2.84
+Epoch 4, loss 2.40
+Epoch 5, loss 1.06
+Epoch 6, loss 2.09
+Epoch 7, loss 0.92
+Epoch 8, loss 2.08
+Epoch 9, loss 0.78
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 161.90
+Epoch 1, loss 2.36
+Epoch 2, loss 1.25
+Epoch 3, loss 1.02
+Epoch 4, loss 0.93
+Epoch 5, loss 0.75
+Epoch 6, loss 0.78
+Epoch 7, loss 1.14
+Epoch 8, loss 1.03
+Epoch 9, loss 0.99
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 6, activations shape is torch.Size([10, 256, 2, 2])
+Train the stitch to a top model cut after layer 6
+Epoch 0, loss 58.83
+Epoch 1, loss 2.70
+Epoch 2, loss 1.79
+Epoch 3, loss 1.41
+Epoch 4, loss 1.16
+Epoch 5, loss 1.07
+Epoch 6, loss 0.86
+Epoch 7, loss 0.78
+Epoch 8, loss 0.71
+Epoch 9, loss 0.71
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 7, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 30.37
+Epoch 1, loss 0.56
+Epoch 2, loss 0.39
+Epoch 3, loss 0.31
+Epoch 4, loss 0.26
+Epoch 5, loss 0.23
+Epoch 6, loss 0.21
+Epoch 7, loss 0.19
+Epoch 8, loss 0.18
+Epoch 9, loss 0.17
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+after layer 8, activations shape is torch.Size([10, 512, 1, 1])
+Train the stitch to a top model cut after layer 8
+Epoch 0, loss 37.23
+Epoch 1, loss 0.56
+Epoch 2, loss 0.41
+Epoch 3, loss 0.33
+Epoch 4, loss 0.28
+Epoch 5, loss 0.25
+Epoch 6, loss 0.22
+Epoch 7, loss 0.21
+Epoch 8, loss 0.19
+Epoch 9, loss 0.18
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0, 1000,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0, 1000,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1000,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0, 1000,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+stitching_accuracies={'mix': {3: 96.66, 4: 100.0, 5: 100.0, 6: 99.99, 7: 100.0, 8: 100.0}, 'bw': {3: 100.0, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}, 'bgonly': {3: 100.0, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}, 'bg': {3: 100.0, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}, 'bias': {3: 100.0, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}, 'unbias': {3: 99.99, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}}
+stitching_penalties={'mix': {3: 2.4200000000000017, 4: -0.9200000000000017, 5: -0.9200000000000017, 6: -0.9099999999999966, 7: -0.9200000000000017, 8: -0.9200000000000017}, 'bw': {3: -0.9599999999999937, 4: -0.9599999999999937, 5: -0.9599999999999937, 6: -0.9599999999999937, 7: -0.9599999999999937, 8: -0.9599999999999937}, 'bgonly': {3: 0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0}, 'bg': {3: 0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0}, 'bias': {3: 0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0}, 'unbias': {3: -2.319999999999993, 4: -2.3299999999999983, 5: -2.3299999999999983, 6: -2.3299999999999983, 7: -2.3299999999999983, 8: -2.3299999999999983}}
+synth-mix
+99.08
+Stitch Accuracy
+96.66
+100.0
+100.0
+99.99
+100.0
+100.0
+--------------------------
+synth-bw
+99.04
+Stitch Accuracy
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+--------------------------
+synth-bgonly
+100.0
+Stitch Accuracy
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+--------------------------
+synth-bg
+100.0
+Stitch Accuracy
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+--------------------------
+synth-bias
+100.0
+Stitch Accuracy
+100.0
+100.0
+100.0
+100.0
+100.0
+100.0
+--------------------------
+synth-unbias
+97.67
+Stitch Accuracy
+99.99
+100.0
+100.0
+100.0
+100.0
+100.0
+--------------------------

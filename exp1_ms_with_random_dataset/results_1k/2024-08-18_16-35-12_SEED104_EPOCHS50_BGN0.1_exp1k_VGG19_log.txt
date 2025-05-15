@@ -1,0 +1,552 @@
+Executed at 2024-08-18_16-35-12
+logging to ./results_1k/2024-08-18_16-35-12_SEED104_EPOCHS50_BGN0.1_exp1k_VGG19_log.txt
+seed=104
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+train_mix_mnist_model=False
+mix_mnist_model_to_load='./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results_1g/2024-08-11_11-32-44_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+stitch_train_epochs=50
+================================================
+val['loadfrom']='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+Accuracy Calculation for VGG19 with key='bgonly'
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'bgonly': 100.0}
+Already evaluated for ./results_1k_rank/bgonly-bgonly-104_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+Iteration 0 of test
+Evaluate ranks and output to ./results_1k_rank/X1bgonly-synth-104-0_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+recreate synthetic test data
+after layer 1, activations shape is torch.Size([10, 64, 32, 32])
+Train the stitch to a top model cut after layer 1
+Epoch 0, loss 8572.00
+Epoch 1, loss 7908.02
+Epoch 2, loss 7884.53
+Epoch 3, loss 7864.43
+Epoch 4, loss 7853.79
+Epoch 5, loss 7861.45
+Epoch 6, loss 7852.56
+Epoch 7, loss 7850.61
+Epoch 8, loss 7857.17
+Epoch 9, loss 7862.69
+Epoch 10, loss 7855.31
+Epoch 11, loss 7853.09
+Epoch 12, loss 7842.45
+Epoch 13, loss 7849.86
+Epoch 14, loss 7837.16
+Epoch 15, loss 7848.21
+Epoch 16, loss 7837.24
+Epoch 17, loss 7836.92
+Epoch 18, loss 7836.36
+Epoch 19, loss 7836.45
+Epoch 20, loss 7830.19
+Epoch 21, loss 7825.40
+Epoch 22, loss 7833.00
+Epoch 23, loss 7829.22
+Epoch 24, loss 7838.27
+Epoch 25, loss 7834.37
+Epoch 26, loss 7835.17
+Epoch 27, loss 7837.42
+Epoch 28, loss 7825.31
+Epoch 29, loss 7829.55
+Epoch 30, loss 7832.94
+Epoch 31, loss 7832.42
+Epoch 32, loss 7820.25
+Epoch 33, loss 7832.47
+Epoch 34, loss 7831.76
+Epoch 35, loss 7829.71
+Epoch 36, loss 7821.08
+Epoch 37, loss 7824.68
+Epoch 38, loss 7821.59
+Epoch 39, loss 7826.38
+Epoch 40, loss 7816.41
+Epoch 41, loss 7828.73
+Epoch 42, loss 7824.20
+Epoch 43, loss 7830.08
+Epoch 44, loss 7830.90
+Epoch 45, loss 7825.56
+Epoch 46, loss 7824.07
+Epoch 47, loss 7827.74
+Epoch 48, loss 7828.73
+Epoch 49, loss 7815.11
+**** Finished Training ****
+Number of weight / bias in stitch layer is 4096 : torch.Size([64, 64, 1, 1])
+Change in stitch weights: 5.255571365356445
+Largest abs weight change: 0.24551938474178314
+Number of weights changing > 0.1 of that: 3281
+Change in stitch bias: 0.6010867357254028
+Largest abs bias change: 0.12268754094839096
+Number of bias changing > 0.1 of that: 59
+Test the trained stitch
+Test Accuracy: 43.77 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  990,    0,   10,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   4,    0,    0,    0,    0,    0,    0,    0,    0,  996],
+        [   0,    0,    0,    0,    0,    0,  512,    0,  488,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  508,  492],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  377,  623],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Iteration 1 of test
+Evaluate ranks and output to ./results_1k_rank/X1bgonly-synth-104-1_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+recreate synthetic test data
+after layer 1, activations shape is torch.Size([10, 64, 32, 32])
+Train the stitch to a top model cut after layer 1
+Epoch 0, loss 8579.30
+Epoch 1, loss 7904.82
+Epoch 2, loss 7880.38
+Epoch 3, loss 7875.10
+Epoch 4, loss 7867.94
+Epoch 5, loss 7857.01
+Epoch 6, loss 7868.39
+Epoch 7, loss 7845.76
+Epoch 8, loss 7855.81
+Epoch 9, loss 7859.07
+Epoch 10, loss 7851.81
+Epoch 11, loss 7846.55
+Epoch 12, loss 7837.04
+Epoch 13, loss 7850.26
+Epoch 14, loss 7857.01
+Epoch 15, loss 7843.45
+Epoch 16, loss 7834.26
+Epoch 17, loss 7845.70
+Epoch 18, loss 7843.11
+Epoch 19, loss 7835.10
+Epoch 20, loss 7846.92
+Epoch 21, loss 7840.28
+Epoch 22, loss 7839.92
+Epoch 23, loss 7838.58
+Epoch 24, loss 7836.48
+Epoch 25, loss 7837.35
+Epoch 26, loss 7838.39
+Epoch 27, loss 7831.47
+Epoch 28, loss 7837.23
+Epoch 29, loss 7827.43
+Epoch 30, loss 7831.73
+Epoch 31, loss 7826.62
+Epoch 32, loss 7817.53
+Epoch 33, loss 7821.88
+Epoch 34, loss 7822.16
+Epoch 35, loss 7822.85
+Epoch 36, loss 7836.75
+Epoch 37, loss 7828.24
+Epoch 38, loss 7832.57
+Epoch 39, loss 7829.34
+Epoch 40, loss 7827.25
+Epoch 41, loss 7828.39
+Epoch 42, loss 7832.23
+Epoch 43, loss 7830.09
+Epoch 44, loss 7835.68
+Epoch 45, loss 7816.75
+Epoch 46, loss 7836.31
+Epoch 47, loss 7825.04
+Epoch 48, loss 7826.22
+Epoch 49, loss 7832.52
+**** Finished Training ****
+Number of weight / bias in stitch layer is 4096 : torch.Size([64, 64, 1, 1])
+Change in stitch weights: 5.36923885345459
+Largest abs weight change: 0.27306485176086426
+Number of weights changing > 0.1 of that: 3197
+Change in stitch bias: 0.5629392266273499
+Largest abs bias change: 0.12226409465074539
+Number of bias changing > 0.1 of that: 57
+Test the trained stitch
+Test Accuracy: 41.23 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  891,    0,  109,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [ 192,    0,    0,    0,    0,    0,    0,    0,    0,  808],
+        [   0,    0,    0,    0,    0,    0,  126,    0,  860,   14],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  123,  877],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Iteration 2 of test
+Evaluate ranks and output to ./results_1k_rank/X1bgonly-synth-104-2_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+recreate synthetic test data
+after layer 1, activations shape is torch.Size([10, 64, 32, 32])
+Train the stitch to a top model cut after layer 1
+Epoch 0, loss 8703.53
+Epoch 1, loss 7908.71
+Epoch 2, loss 7878.50
+Epoch 3, loss 7868.03
+Epoch 4, loss 7868.97
+Epoch 5, loss 7858.39
+Epoch 6, loss 7853.07
+Epoch 7, loss 7860.85
+Epoch 8, loss 7847.01
+Epoch 9, loss 7861.21
+Epoch 10, loss 7848.00
+Epoch 11, loss 7840.80
+Epoch 12, loss 7841.08
+Epoch 13, loss 7851.15
+Epoch 14, loss 7862.03
+Epoch 15, loss 7839.85
+Epoch 16, loss 7844.58
+Epoch 17, loss 7846.13
+Epoch 18, loss 7843.45
+Epoch 19, loss 7849.55
+Epoch 20, loss 7837.18
+Epoch 21, loss 7830.55
+Epoch 22, loss 7839.48
+Epoch 23, loss 7841.60
+Epoch 24, loss 7836.29
+Epoch 25, loss 7832.29
+Epoch 26, loss 7841.83
+Epoch 27, loss 7842.93
+Epoch 28, loss 7836.08
+Epoch 29, loss 7837.48
+Epoch 30, loss 7836.06
+Epoch 31, loss 7839.93
+Epoch 32, loss 7818.60
+Epoch 33, loss 7839.28
+Epoch 34, loss 7837.89
+Epoch 35, loss 7825.96
+Epoch 36, loss 7826.20
+Epoch 37, loss 7828.09
+Epoch 38, loss 7829.75
+Epoch 39, loss 7822.33
+Epoch 40, loss 7824.36
+Epoch 41, loss 7824.54
+Epoch 42, loss 7830.10
+Epoch 43, loss 7828.34
+Epoch 44, loss 7840.61
+Epoch 45, loss 7823.00
+Epoch 46, loss 7822.72
+Epoch 47, loss 7829.04
+Epoch 48, loss 7827.87
+Epoch 49, loss 7833.17
+**** Finished Training ****
+Number of weight / bias in stitch layer is 4096 : torch.Size([64, 64, 1, 1])
+Change in stitch weights: 5.462520599365234
+Largest abs weight change: 0.2468552589416504
+Number of weights changing > 0.1 of that: 3347
+Change in stitch bias: 0.5715252161026001
+Largest abs bias change: 0.1230308935046196
+Number of bias changing > 0.1 of that: 60
+Test the trained stitch
+Test Accuracy: 49.60 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  664,    0,  336,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000],
+        [   0,    0,    0,    0,    0,    0,  285,    0,  714,    1],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    2,    0,  644,  354],
+        [   0,    0,    0,    0,    0,    0,   36,    0,  960,    4],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Iteration 3 of test
+Evaluate ranks and output to ./results_1k_rank/X1bgonly-synth-104-3_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+recreate synthetic test data
+after layer 1, activations shape is torch.Size([10, 64, 32, 32])
+Train the stitch to a top model cut after layer 1
+Epoch 0, loss 8597.04
+Epoch 1, loss 7916.17
+Epoch 2, loss 7873.22
+Epoch 3, loss 7855.79
+Epoch 4, loss 7854.71
+Epoch 5, loss 7858.51
+Epoch 6, loss 7841.98
+Epoch 7, loss 7836.63
+Epoch 8, loss 7838.18
+Epoch 9, loss 7826.69
+Epoch 10, loss 7836.58
+Epoch 11, loss 7823.73
+Epoch 12, loss 7833.84
+Epoch 13, loss 7827.57
+Epoch 14, loss 7819.04
+Epoch 15, loss 7818.51
+Epoch 16, loss 7816.22
+Epoch 17, loss 7821.81
+Epoch 18, loss 7824.39
+Epoch 19, loss 7822.65
+Epoch 20, loss 7815.60
+Epoch 21, loss 7806.62
+Epoch 22, loss 7819.07
+Epoch 23, loss 7820.21
+Epoch 24, loss 7820.85
+Epoch 25, loss 7824.32
+Epoch 26, loss 7806.09
+Epoch 27, loss 7813.95
+Epoch 28, loss 7818.56
+Epoch 29, loss 7825.98
+Epoch 30, loss 7815.35
+Epoch 31, loss 7810.90
+Epoch 32, loss 7811.82
+Epoch 33, loss 7820.79
+Epoch 34, loss 7809.24
+Epoch 35, loss 7824.15
+Epoch 36, loss 7815.92
+Epoch 37, loss 7819.24
+Epoch 38, loss 7796.70
+Epoch 39, loss 7809.29
+Epoch 40, loss 7813.16
+Epoch 41, loss 7809.11
+Epoch 42, loss 7812.52
+Epoch 43, loss 7816.85
+Epoch 44, loss 7815.03
+Epoch 45, loss 7815.69
+Epoch 46, loss 7811.62
+Epoch 47, loss 7813.87
+Epoch 48, loss 7817.04
+Epoch 49, loss 7810.58
+**** Finished Training ****
+Number of weight / bias in stitch layer is 4096 : torch.Size([64, 64, 1, 1])
+Change in stitch weights: 5.374542713165283
+Largest abs weight change: 0.22325018048286438
+Number of weights changing > 0.1 of that: 3375
+Change in stitch bias: 0.5660529732704163
+Largest abs bias change: 0.12363485246896744
+Number of bias changing > 0.1 of that: 58
+Test the trained stitch
+Test Accuracy: 40.38 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  252,    0,  746,    2],
+        [   0,    0,    0,    0,    0,    0,  962,    0,   38,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Iteration 4 of test
+Evaluate ranks and output to ./results_1k_rank/X1bgonly-synth-104-4_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+recreate synthetic test data
+after layer 1, activations shape is torch.Size([10, 64, 32, 32])
+Train the stitch to a top model cut after layer 1
+Epoch 0, loss 8565.79
+Epoch 1, loss 7895.57
+Epoch 2, loss 7881.28
+Epoch 3, loss 7858.21
+Epoch 4, loss 7845.92
+Epoch 5, loss 7840.32
+Epoch 6, loss 7827.43
+Epoch 7, loss 7833.26
+Epoch 8, loss 7829.96
+Epoch 9, loss 7835.19
+Epoch 10, loss 7828.06
+Epoch 11, loss 7832.89
+Epoch 12, loss 7813.19
+Epoch 13, loss 7823.64
+Epoch 14, loss 7821.62
+Epoch 15, loss 7826.84
+Epoch 16, loss 7815.39
+Epoch 17, loss 7814.58
+Epoch 18, loss 7816.35
+Epoch 19, loss 7816.26
+Epoch 20, loss 7818.88
+Epoch 21, loss 7821.90
+Epoch 22, loss 7804.31
+Epoch 23, loss 7820.01
+Epoch 24, loss 7821.15
+Epoch 25, loss 7810.42
+Epoch 26, loss 7813.61
+Epoch 27, loss 7817.30
+Epoch 28, loss 7811.75
+Epoch 29, loss 7815.52
+Epoch 30, loss 7811.94
+Epoch 31, loss 7812.32
+Epoch 32, loss 7814.50
+Epoch 33, loss 7811.51
+Epoch 34, loss 7810.43
+Epoch 35, loss 7819.16
+Epoch 36, loss 7807.74
+Epoch 37, loss 7807.39
+Epoch 38, loss 7811.44
+Epoch 39, loss 7806.36
+Epoch 40, loss 7808.32
+Epoch 41, loss 7800.02
+Epoch 42, loss 7801.23
+Epoch 43, loss 7799.31
+Epoch 44, loss 7815.65
+Epoch 45, loss 7804.69
+Epoch 46, loss 7798.49
+Epoch 47, loss 7803.00
+Epoch 48, loss 7806.02
+Epoch 49, loss 7789.45
+**** Finished Training ****
+Number of weight / bias in stitch layer is 4096 : torch.Size([64, 64, 1, 1])
+Change in stitch weights: 5.317193031311035
+Largest abs weight change: 0.2344711422920227
+Number of weights changing > 0.1 of that: 3354
+Change in stitch bias: 0.5546042919158936
+Largest abs bias change: 0.12268302589654922
+Number of bias changing > 0.1 of that: 57
+Test the trained stitch
+Test Accuracy: 48.72 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  960,    0,   40,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [  14,    0,    0,    0,    0,    0,    0,    0,    0,  986],
+        [   0,    0,    0,    0,    0,    0,  638,    0,  362,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,   16,    0,  751,  233],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  872,  128],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Iteration 5 of test
+Evaluate ranks and output to ./results_1k_rank/X1bgonly-synth-104-5_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+recreate synthetic test data
+after layer 1, activations shape is torch.Size([10, 64, 32, 32])
+Train the stitch to a top model cut after layer 1
+Epoch 0, loss 8810.33
+Epoch 1, loss 7913.53
+Epoch 2, loss 7860.88
+Epoch 3, loss 7850.89
+Epoch 4, loss 7829.47
+Epoch 5, loss 7834.66
+Epoch 6, loss 7831.21
+Epoch 7, loss 7829.35
+Epoch 8, loss 7830.99
+Epoch 9, loss 7833.34
+Epoch 10, loss 7818.99
+Epoch 11, loss 7837.10
+Epoch 12, loss 7823.46
+Epoch 13, loss 7833.95
+Epoch 14, loss 7830.12
+Epoch 15, loss 7830.02
+Epoch 16, loss 7847.10
+Epoch 17, loss 7832.00
+Epoch 18, loss 7833.70
+Epoch 19, loss 7822.03
+Epoch 20, loss 7838.24
+Epoch 21, loss 7821.47
+Epoch 22, loss 7835.52
+Epoch 23, loss 7824.15
+Epoch 24, loss 7828.77
+Epoch 25, loss 7835.14
+Epoch 26, loss 7828.39
+Epoch 27, loss 7838.83
+Epoch 28, loss 7836.63
+Epoch 29, loss 7831.85
+Epoch 30, loss 7837.50
+Epoch 31, loss 7835.40
+Epoch 32, loss 7850.06
+Epoch 33, loss 7843.63
+Epoch 34, loss 7842.82
+Epoch 35, loss 7831.37
+Epoch 36, loss 7845.09
+Epoch 37, loss 7839.22
+Epoch 38, loss 7835.06
+Epoch 39, loss 7848.19
+Epoch 40, loss 7838.07
+Epoch 41, loss 7839.70
+Epoch 42, loss 7829.57
+Epoch 43, loss 7831.23
+Epoch 44, loss 7834.37
+Epoch 45, loss 7833.45
+Epoch 46, loss 7842.09
+Epoch 47, loss 7837.68
+Epoch 48, loss 7839.27
+Epoch 49, loss 7831.56
+**** Finished Training ****
+Number of weight / bias in stitch layer is 4096 : torch.Size([64, 64, 1, 1])
+Change in stitch weights: 5.352747917175293
+Largest abs weight change: 0.29762011766433716
+Number of weights changing > 0.1 of that: 3148
+Change in stitch bias: 0.5703346729278564
+Largest abs bias change: 0.1240047737956047
+Number of bias changing > 0.1 of that: 62
+Test the trained stitch
+Test Accuracy: 47.96 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  325,    0,  675,    0],
+        [   0,    0,    0, 1000,    0,    0,    0,    0,    0,    0],
+        [   2,    0,    0,    0,    0,    0,    0,    0,    0,  998],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  559,  441],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  725,  275],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  796,  204],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1000]],
+       dtype=torch.int32)
+===================================================================
+Iteration 6 of test
+Evaluate ranks and output to ./results_1k_rank/X1bgonly-synth-104-6_2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+recreate synthetic test data
+after layer 1, activations shape is torch.Size([10, 64, 32, 32])
+Train the stitch to a top model cut after layer 1
+Epoch 0, loss 8681.01
+Epoch 1, loss 7911.18
+Epoch 2, loss 7867.56
+Epoch 3, loss 7858.77
+Epoch 4, loss 7857.37
+Epoch 5, loss 7853.55
+Epoch 6, loss 7844.22
+Epoch 7, loss 7849.65
+Epoch 8, loss 7842.79
+Epoch 9, loss 7852.82
+Epoch 10, loss 7840.50
+Epoch 11, loss 7843.36
+Epoch 12, loss 7839.28
+Epoch 13, loss 7844.51
+Epoch 14, loss 7841.85
+Epoch 15, loss 7843.77
+Epoch 16, loss 7829.71
+Epoch 17, loss 7845.28
+Epoch 18, loss 7842.69
+Epoch 19, loss 7831.44
+Epoch 20, loss 7837.90
+Epoch 21, loss 7838.33
+Epoch 22, loss 7839.71
+Epoch 23, loss 7828.65
+Epoch 24, loss 7839.90
+Epoch 25, loss 7829.10
+Epoch 26, loss 7827.84
+Epoch 27, loss 7834.97
+Epoch 28, loss 7834.19
+Epoch 29, loss 7835.31
+Epoch 30, loss 7829.68
+Epoch 31, loss 7835.25
+Epoch 32, loss 7830.72
+Epoch 33, loss 7829.16

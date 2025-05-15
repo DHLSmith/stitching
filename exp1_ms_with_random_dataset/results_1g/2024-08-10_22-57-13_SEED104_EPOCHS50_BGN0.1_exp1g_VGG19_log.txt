@@ -1,0 +1,462 @@
+Executed at 2024-08-10_22-57-13
+logging to ./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_log.txt
+seed=104
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+train_mix_mnist_model=True
+save_mix_mnist_model_as='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+original_train_epochs=50
+train_bw_mnist_model=True
+save_bw_mnist_model_as='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+original_train_epochs=50
+train_bg_only_colour_mnist_model=True
+save_bg_only_colour_mnist_model_as='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+original_train_epochs=50
+train_bg_unbiased_colour_mnist_model=True
+save_bg_unbiased_colour_mnist_model_as='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+original_train_epochs=50
+train_biased_colour_mnist_model=True
+save_biased_colour_mnist_model_as='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+original_train_epochs=50
+train_unbiased_colour_mnist_model=True
+save_unbiased_colour_mnist_model_as='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+original_train_epochs=50
+stitch_train_epochs=50
+================================================
+Train ResNet18 on mix
+Epoch 0, loss 2159.25
+Epoch 1, loss 2158.60
+Epoch 2, loss 2158.59
+Epoch 3, loss 2158.51
+Epoch 4, loss 2158.53
+Epoch 5, loss 2158.55
+Epoch 6, loss 2158.56
+Epoch 7, loss 2158.48
+Epoch 8, loss 2158.53
+Epoch 9, loss 2158.56
+Epoch 10, loss 2158.56
+Epoch 11, loss 2158.56
+Epoch 12, loss 2158.56
+Epoch 13, loss 2158.56
+Epoch 14, loss 2158.51
+Epoch 15, loss 2158.55
+Epoch 16, loss 2158.53
+Epoch 17, loss 2158.52
+Epoch 18, loss 2158.54
+Epoch 19, loss 2158.54
+Epoch 20, loss 2158.52
+Train ResNet18 on bw
+Epoch 0, loss 2151.70
+Epoch 1, loss 1122.43
+Epoch 2, loss 127.95
+Epoch 3, loss 75.56
+Epoch 4, loss 54.41
+Epoch 5, loss 44.10
+Epoch 6, loss 33.01
+Epoch 7, loss 27.13
+Epoch 8, loss 21.08
+Epoch 9, loss 18.25
+Epoch 10, loss 14.23
+Epoch 11, loss 13.36
+Epoch 12, loss 10.59
+Epoch 13, loss 7.64
+Epoch 14, loss 6.86
+Epoch 15, loss 6.47
+Epoch 16, loss 5.71
+Epoch 17, loss 4.57
+Epoch 18, loss 4.28
+Epoch 19, loss 2.69
+Epoch 20, loss 5.18
+Epoch 21, loss 3.72
+Epoch 22, loss 3.18
+Epoch 23, loss 2.93
+Epoch 24, loss 1.46
+Epoch 25, loss 1.00
+Epoch 26, loss 3.64
+Epoch 27, loss 2.96
+Epoch 28, loss 1.25
+Epoch 29, loss 0.15
+Epoch 30, loss 0.06
+Epoch 31, loss 0.04
+Epoch 32, loss 0.03
+Epoch 33, loss 0.03
+Epoch 34, loss 0.02
+Epoch 35, loss 0.02
+Epoch 36, loss 0.02
+Epoch 37, loss 0.02
+Epoch 38, loss 0.02
+Epoch 39, loss 0.02
+Epoch 40, loss 0.02
+Epoch 41, loss 0.02
+Epoch 42, loss 0.01
+Epoch 43, loss 0.02
+Epoch 44, loss 0.02
+Epoch 45, loss 0.01
+Epoch 46, loss 0.01
+Epoch 47, loss 0.02
+Epoch 48, loss 0.02
+Epoch 49, loss 0.02
+**** Finished Training ****
+saveas='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+Train ResNet18 on mix
+Epoch 0, loss 2158.96
+Epoch 1, loss 2158.66
+Epoch 2, loss 2158.66
+Epoch 3, loss 2158.60
+Epoch 4, loss 2158.66
+Epoch 5, loss 2158.63
+Epoch 6, loss 2158.60
+Epoch 7, loss 2158.55
+Epoch 8, loss 2158.54
+Epoch 9, loss 2158.63
+Epoch 10, loss 2158.66
+Epoch 11, loss 2158.56
+Epoch 12, loss 2158.61
+Epoch 13, loss 2158.62
+Epoch 14, loss 2158.61
+Epoch 15, loss 2158.51
+Epoch 16, loss 2158.61
+Epoch 17, loss 2158.57
+Epoch 18, loss 2158.58
+Epoch 19, loss 2158.52
+Epoch 20, loss 2158.61
+Epoch 21, loss 2158.61
+Epoch 22, loss 2158.59
+Epoch 23, loss 2158.57
+Epoch 24, loss 2158.56
+Epoch 25, loss 2158.57
+Epoch 26, loss 2158.54
+Epoch 27, loss 2158.57
+Epoch 28, loss 2158.54
+Epoch 29, loss 2158.57
+Epoch 30, loss 2158.54
+Epoch 31, loss 2158.57
+Epoch 32, loss 2158.58
+Epoch 33, loss 2158.54
+Epoch 34, loss 2158.60
+Epoch 35, loss 2158.59
+Epoch 36, loss 2158.57
+Epoch 37, loss 2158.57
+Epoch 38, loss 2158.53
+Epoch 39, loss 2158.54
+Epoch 40, loss 2158.55
+Epoch 41, loss 2158.60
+Epoch 42, loss 2158.50
+Epoch 43, loss 2158.57
+Epoch 44, loss 2158.54
+Epoch 45, loss 2158.54
+Epoch 46, loss 2158.51
+Epoch 47, loss 2158.45
+Epoch 48, loss 2158.55
+Epoch 49, loss 2158.55
+**** Finished Training ****
+saveas='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+Train ResNet18 on bgonly
+Epoch 0, loss 2158.87
+Epoch 1, loss 2158.31
+Epoch 2, loss 2156.52
+Epoch 3, loss 1772.15
+Epoch 4, loss 1187.95
+Epoch 5, loss 1020.90
+Epoch 6, loss 330.48
+Epoch 7, loss 16.90
+Epoch 8, loss 6.63
+Epoch 9, loss 1.23
+Epoch 10, loss 12.95
+Epoch 11, loss 3.35
+Epoch 12, loss 38.05
+Epoch 13, loss 1.32
+Epoch 14, loss 0.70
+Epoch 15, loss 0.38
+Epoch 16, loss 0.33
+Epoch 17, loss 0.75
+Epoch 18, loss 31.74
+Epoch 19, loss 2.27
+Epoch 20, loss 20.62
+Epoch 21, loss 0.84
+Epoch 22, loss 0.46
+Epoch 23, loss 0.41
+Epoch 24, loss 0.34
+Epoch 25, loss 0.73
+Epoch 26, loss 0.29
+Epoch 27, loss 0.18
+Epoch 28, loss 0.14
+Epoch 29, loss 0.12
+Epoch 30, loss 0.23
+Epoch 31, loss 0.11
+Epoch 32, loss 0.12
+Epoch 33, loss 0.11
+Epoch 34, loss 0.11
+Epoch 35, loss 0.08
+Epoch 36, loss 0.07
+Epoch 37, loss 0.07
+Epoch 38, loss 0.06
+Epoch 39, loss 0.07
+Epoch 40, loss 51.64
+Epoch 41, loss 12.05
+Epoch 42, loss 0.82
+Epoch 43, loss 0.45
+Epoch 44, loss 0.33
+Epoch 45, loss 0.25
+Epoch 46, loss 0.65
+Epoch 47, loss 0.19
+Epoch 48, loss 0.16
+Epoch 49, loss 0.14
+**** Finished Training ****
+saveas='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+Train ResNet18 on bg
+Epoch 0, loss  nan
+Epoch 1, loss  nan
+Epoch 2, loss  nan
+Epoch 3, loss  nan
+Epoch 4, loss  nan
+Epoch 5, loss  nan
+Epoch 6, loss  nan
+Epoch 7, loss  nan
+Epoch 8, loss  nan
+Epoch 9, loss  nan
+Epoch 10, loss  nan
+Epoch 11, loss  nan
+Epoch 12, loss  nan
+Epoch 13, loss  nan
+Epoch 14, loss  nan
+Epoch 15, loss  nan
+Epoch 16, loss  nan
+Epoch 17, loss  nan
+Epoch 18, loss  nan
+Epoch 19, loss  nan
+Epoch 20, loss  nan
+Epoch 21, loss  nan
+Epoch 22, loss  nan
+Epoch 23, loss  nan
+Epoch 24, loss  nan
+Epoch 25, loss  nan
+Epoch 26, loss  nan
+Epoch 27, loss  nan
+Epoch 28, loss  nan
+Epoch 29, loss  nan
+Epoch 30, loss  nan
+Epoch 31, loss  nan
+Epoch 32, loss  nan
+Epoch 33, loss  nan
+Epoch 34, loss  nan
+Epoch 35, loss  nan
+Epoch 36, loss  nan
+Epoch 37, loss  nan
+Epoch 38, loss  nan
+Epoch 39, loss  nan
+Epoch 40, loss  nan
+Epoch 41, loss  nan
+Epoch 42, loss  nan
+Epoch 43, loss  nan
+Epoch 44, loss  nan
+Epoch 45, loss  nan
+Epoch 46, loss  nan
+Epoch 47, loss  nan
+Epoch 48, loss  nan
+Epoch 49, loss  nan
+**** Finished Training ****
+saveas='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+Train ResNet18 on bias
+Epoch 0, loss  nan
+Epoch 1, loss  nan
+Epoch 2, loss  nan
+Epoch 3, loss  nan
+Epoch 4, loss  nan
+Epoch 5, loss  nan
+Epoch 6, loss  nan
+Epoch 7, loss  nan
+Epoch 8, loss  nan
+Epoch 9, loss  nan
+Epoch 10, loss  nan
+Epoch 11, loss  nan
+Epoch 12, loss  nan
+Epoch 13, loss  nan
+Epoch 14, loss  nan
+Epoch 15, loss  nan
+Epoch 16, loss  nan
+Epoch 17, loss  nan
+Epoch 18, loss  nan
+Epoch 19, loss  nan
+Epoch 20, loss  nan
+Epoch 21, loss  nan
+Epoch 22, loss  nan
+Epoch 23, loss  nan
+Epoch 24, loss  nan
+Epoch 25, loss  nan
+Epoch 26, loss  nan
+Epoch 27, loss  nan
+Epoch 28, loss  nan
+Epoch 29, loss  nan
+Epoch 30, loss  nan
+Epoch 31, loss  nan
+Epoch 32, loss  nan
+Epoch 33, loss  nan
+Epoch 34, loss  nan
+Epoch 35, loss  nan
+Epoch 36, loss  nan
+Epoch 37, loss  nan
+Epoch 38, loss  nan
+Epoch 39, loss  nan
+Epoch 40, loss  nan
+Epoch 41, loss  nan
+Epoch 42, loss  nan
+Epoch 43, loss  nan
+Epoch 44, loss  nan
+Epoch 45, loss  nan
+Epoch 46, loss  nan
+Epoch 47, loss  nan
+Epoch 48, loss  nan
+Epoch 49, loss  nan
+**** Finished Training ****
+saveas='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+Train ResNet18 on unbias
+Epoch 0, loss 2160.48
+Epoch 1, loss 2158.67
+Epoch 2, loss 2158.56
+Epoch 3, loss 2158.54
+Epoch 4, loss 2158.56
+Epoch 5, loss 2158.56
+Epoch 6, loss 2158.55
+Epoch 7, loss 2158.57
+Epoch 8, loss 2158.56
+Epoch 9, loss 2158.57
+Epoch 10, loss 2158.57
+Epoch 11, loss 2158.58
+Epoch 12, loss 2158.57
+Epoch 13, loss 2158.59
+Epoch 14, loss 2158.60
+Epoch 15, loss 2158.55
+Epoch 16, loss 2158.54
+Epoch 17, loss 2158.56
+Epoch 18, loss 2158.58
+Epoch 19, loss 2158.52
+Epoch 20, loss 2158.54
+Epoch 21, loss 2158.54
+Epoch 22, loss 2158.52
+Epoch 23, loss 2158.55
+Epoch 24, loss 2158.54
+Epoch 25, loss 2158.53
+Epoch 26, loss 2158.54
+Epoch 27, loss 2158.53
+Epoch 28, loss 2158.53
+Epoch 29, loss 2158.53
+Epoch 30, loss 2158.55
+Epoch 31, loss 2158.56
+Epoch 32, loss 2158.53
+Epoch 33, loss 2158.50
+Epoch 34, loss 2158.51
+Epoch 35, loss 2158.52
+Epoch 36, loss 2158.48
+Epoch 37, loss 2158.44
+Epoch 38, loss 2158.42
+Epoch 39, loss 2158.34
+Epoch 40, loss 2158.25
+Epoch 41, loss 2157.98
+Epoch 42, loss 2156.63
+Epoch 43, loss 2084.40
+Epoch 44, loss 630.69
+Epoch 45, loss 125.33
+Epoch 46, loss 85.37
+Epoch 47, loss 63.16
+Epoch 48, loss 51.72
+Epoch 49, loss 42.94
+**** Finished Training ****
+saveas='./results_1g/2024-08-10_22-57-13_SEED104_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+Accuracy Calculation for VGG19 with key='bw'
+Test the Trained VGG19
+Test Accuracy: 99.12 %
+Confusion Matrix
+tensor([[ 975,    0,    1,    0,    0,    0,    2,    1,    1,    0],
+        [   0, 1133,    0,    0,    0,    0,    1,    1,    0,    0],
+        [   1,    2, 1024,    0,    1,    0,    0,    3,    1,    0],
+        [   0,    0,    0, 1004,    0,    3,    0,    1,    1,    1],
+        [   0,    0,    0,    0,  975,    0,    3,    1,    0,    3],
+        [   2,    0,    0,    8,    0,  880,    1,    0,    0,    1],
+        [   2,    3,    0,    1,    1,    3,  948,    0,    0,    0],
+        [   0,    4,    4,    0,    0,    0,    0, 1016,    1,    3],
+        [   0,    0,    1,    4,    1,    1,    0,    0,  964,    3],
+        [   1,    2,    0,    2,    6,    2,    0,    3,    0,  993]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='mix'
+Test the Trained VGG19
+Test Accuracy: 11.81 %
+Confusion Matrix
+tensor([[   0,  970,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1181,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1042,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,  965,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,  958,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,  931,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,  934,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1024,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1023,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,  972,    0,    0,    0,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='bgonly'
+Test the Trained VGG19
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='bg'
+Test the Trained VGG19
+Test Accuracy: 10.04 %
+Confusion Matrix
+tensor([[1004,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [ 996,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [ 996,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [1003,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [1003,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [ 999,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [1003,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [1003,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [1003,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [ 990,    0,    0,    0,    0,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='bias'
+Test the Trained VGG19
+Test Accuracy: 9.80 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [1135,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [1032,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [1010,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [ 982,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [ 892,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [ 958,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [1028,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [ 974,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [1009,    0,    0,    0,    0,    0,    0,    0,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for VGG19 with key='unbias'
+Test the Trained VGG19
+Test Accuracy: 98.36 %
+Confusion Matrix
+tensor([[ 976,    0,    0,    0,    0,    0,    2,    1,    1,    0],
+        [   0, 1126,    0,    1,    0,    1,    3,    2,    2,    0],
+        [   6,    0, 1008,    8,    1,    0,    1,    7,    1,    0],
+        [   0,    0,    0, 1003,    0,    1,    0,    3,    2,    1],
+        [   0,    0,    1,    0,  965,    0,    4,    2,    0,   10],
+        [   1,    0,    0,   15,    0,  871,    1,    0,    1,    3],
+        [   6,    3,    0,    1,    4,    8,  932,    0,    4,    0],
+        [   0,    1,    2,    0,    0,    0,    0, 1020,    1,    4],
+        [   0,    0,    3,    8,    3,    3,    0,    4,  950,    3],
+        [   0,    3,    0,    5,    7,    1,    0,    7,    1,  985]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'bw': 99.12, 'mix': 11.81, 'bgonly': 100.0, 'bg': 10.04, 'bias': 9.8, 'unbias': 98.36}

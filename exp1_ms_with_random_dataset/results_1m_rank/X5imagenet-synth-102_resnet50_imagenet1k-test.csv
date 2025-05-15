@@ -1,0 +1,2 @@
+,model,dataset,seed,val_acc,name
+0,X5imagenet,synth,102,0.9983083333333334,only

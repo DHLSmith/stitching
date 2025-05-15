@@ -1,0 +1,38 @@
+Executed at 2025-01-18_22-06-18
+logging to ./results_1m/2025-01-18_22-06-18_SEED102_exp1m_ResNet50_log.txt
+seed=102
+synthetic_dataset_noise=0.1
+num_classes=1000 num_train_samples=1200000 num_test_samples=120000
+model will be model = torchvision.models.resnet50(pretrained=True)
+stitch_train_epochs=10
+================================================
+not measuring initial accuracy as I assume this is available
+Evaluate ranks and output to ./results_1m_rank/X7imagenet-synth-102_resnet50_imagenet1k-test.csv
+stitch into model imagenet
+About to generate activations
+after layer 7, activations shape is torch.Size([1000, 2048, 7, 7])
+About to create datasets
+Train the stitch to a top model cut after layer 7
+Epoch 0, loss 49490.29
+Epoch 1, loss 23587.84
+Epoch 2, loss 10392.19
+Epoch 3, loss 5952.04
+Epoch 4, loss 4513.81
+Epoch 5, loss 4029.97
+Epoch 6, loss 3920.72
+Epoch 7, loss 4002.59
+Epoch 8, loss 4206.15
+Epoch 9, loss 4506.18
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[120,   0,   0,  ...,   0,   0,   0],
+        [  0, 120,   0,  ...,   0,   0,   0],
+        [  0,   0, 120,  ...,   0,   0,   0],
+        ...,
+        [  0,   0,   0,  ..., 120,   0,   0],
+        [  0,   0,   0,  ...,   0, 120,   0],
+        [  0,   0,   0,  ...,   0,   0, 120]], dtype=torch.int32)
+===================================================================
+output to ./results_1m_rank/X7imagenet-synth-102_resnet50_imagenet1k-test.csv

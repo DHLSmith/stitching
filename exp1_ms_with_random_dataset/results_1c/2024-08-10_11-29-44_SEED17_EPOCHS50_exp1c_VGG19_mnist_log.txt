@@ -1,0 +1,50 @@
+Executed at 2024-08-10_11-29-44
+Training and stitching a VGG19 model with MNIST data
+seed=17
+train_mnist_model=False, model_to_load='./results/2024-07-17_15-56-39_SEED17_EPOCHS200_VGG19_mnist.weights'
+original_train_epochs=50, stitch_train_epochs=100
+synthetic_dataset_noise=0.1
+================================================
+Test the Trained VGG19
+Test Accuracy: 98.87 %
+Confusion Matrix
+tensor([[ 974,    0,    1,    0,    0,    1,    2,    1,    1,    0],
+        [   0, 1131,    1,    0,    0,    1,    1,    0,    1,    0],
+        [   1,    0, 1024,    1,    1,    0,    0,    3,    1,    1],
+        [   0,    0,    0, 1003,    0,    3,    0,    1,    2,    1],
+        [   0,    0,    0,    0,  972,    0,    5,    1,    0,    4],
+        [   1,    0,    0,    5,    0,  883,    2,    1,    0,    0],
+        [   3,    3,    0,    1,    0,    3,  947,    0,    1,    0],
+        [   0,    3,    5,    0,    4,    0,    0, 1007,    1,    8],
+        [   2,    0,    0,    3,    1,    4,    0,    1,  961,    2],
+        [   1,    3,    0,    3,    8,    2,    0,    7,    0,  985]],
+       dtype=torch.int32)
+tensor(10000)
+after layer 1, activations shape is torch.Size([10, 64, 32, 32])
+Train the stitch to a top model cut after layer 1
+Epoch 0, loss 129.71
+Epoch 1, loss 35.88
+Epoch 2, loss 37.02
+Epoch 3, loss 36.12
+Epoch 4, loss 36.02
+Epoch 5, loss 35.55
+Epoch 6, loss 35.50
+Epoch 7, loss 35.25
+Epoch 8, loss 35.17
+Epoch 9, loss 35.07
+Epoch 10, loss 35.06
+Epoch 11, loss 35.14
+Epoch 12, loss 35.06
+after layer 1, activations shape is torch.Size([10, 64, 32, 32])
+Train the stitch to a top model cut after layer 1
+Epoch 0, loss 542.63
+Epoch 1, loss 47.36
+Epoch 2, loss 34.53
+Epoch 3, loss 30.79
+Epoch 4, loss 29.53
+Epoch 5, loss 29.45
+Epoch 6, loss 29.87
+Epoch 7, loss 30.91
+Epoch 8, loss 31.87
+Epoch 9, loss 32.68
+Epoch 10, loss 33.61

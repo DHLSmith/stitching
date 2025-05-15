@@ -1,0 +1,2 @@
+,model,dataset,seed,val_acc,name,syn_noise
+0,X5bgonly,synth,102,0.9631000000000001,only,0.99

@@ -1,0 +1,520 @@
+Executed at 2025-01-21_10-12-57
+logging to ./results_1n/2025-01-21_10-12-57_SEED102_EPOCHS4_BGN0.1_exp1f_ResNet18_log.txt
+seed=102
+bg_noise=0.1
+synthetic_dataset_noises=[0.5, 0.9, 0.99, 1.0]
+measure_rank=False
+train_mix_mnist_model=False
+mix_mnist_model_to_load='./results_4_epochs/2024-08-01_07-29-36_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_unbiased_colour_mnist.weights'
+stitch_train_epochs=4
+================================================
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist.weights'
+val['loadfrom']='./results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18
+Test Accuracy: 98.26 %
+Confusion Matrix
+tensor([[ 976,    0,    2,    0,    0,    1,    0,    1,    0,    0],
+        [   1, 1132,    0,    1,    0,    0,    0,    0,    1,    0],
+        [   6,    4, 1006,   10,    1,    0,    0,    4,    1,    0],
+        [   0,    1,    1,  994,    0,    9,    0,    1,    4,    0],
+        [   0,    0,    2,    0,  959,    0,    1,    0,    2,   18],
+        [   1,    0,    0,    5,    0,  882,    1,    1,    1,    1],
+        [   7,    4,    0,    1,    1,   11,  933,    0,    1,    0],
+        [   0,    5,    5,    1,    1,    0,    0, 1001,    2,   13],
+        [   5,    0,    0,    3,    2,    2,    2,    2,  954,    4],
+        [   4,    1,    0,    2,    3,    4,    0,    2,    4,  989]],
+       dtype=torch.int32)
+tensor(10000)
+output to ./results_1n_rank/bw-bw-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Accuracy Calculation for ResNet18 with key='bgonly'
+Test the Trained Resnet18
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+output to ./results_1n_rank/bgonly-bgonly-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+original_accuracy={'bw': 98.26, 'bgonly': 100.0}
+key='bw' val={'model': ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+), 'train': False, 'train_loader': <torch.utils.data.dataloader.DataLoader object at 0x7f305cdecdc0>, 'test_loader': <torch.utils.data.dataloader.DataLoader object at 0x7f305cdeccd0>, 'saveas': './results_1n/2025-01-21_10-12-57_SEED102_EPOCHS4_BGN0.1_exp1f_ResNet18_bw_mnist.weights', 'loadfrom': './results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist.weights'}
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+key='bw' val={'model': ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+), 'train': False, 'train_loader': <torch.utils.data.dataloader.DataLoader object at 0x7f305cdecdc0>, 'test_loader': <torch.utils.data.dataloader.DataLoader object at 0x7f305cdeccd0>, 'saveas': './results_1n/2025-01-21_10-12-57_SEED102_EPOCHS4_BGN0.1_exp1f_ResNet18_bw_mnist.weights', 'loadfrom': './results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist.weights'}
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Testing stitch with synthetic noise radius synthetic_dataset_noise=0.5
+Evaluate ranks and output to ./results_1n_rank/X5bw-SYN_NOISE0.5-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+stitch into model bw
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 644.15
+Epoch 1, loss 53.74
+Epoch 2, loss 29.81
+Epoch 3, loss 22.05
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 99.74 %
+Confusion Matrix
+tensor([[1000,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   1,  999,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  998,    0,    1,    0,    0,    0,    1],
+        [   1,    1,    0,    1,  993,    0,    0,    1,    1,    2],
+        [   1,    0,    0,    0,    0,  999,    0,    0,    0,    0],
+        [   1,    0,    0,    0,    0,    2,  996,    0,    1,    0],
+        [   0,    3,    0,    0,    0,    1,    0,  994,    0,    2],
+        [   0,    0,    0,    0,    0,    3,    0,    0,  997,    0],
+        [   0,    0,    0,    0,    0,    2,    0,    0,    0,  998]],
+       dtype=torch.int32)
+===================================================================
+output to ./results_1n_rank/X5bw-SYN_NOISE0.5-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Testing stitch with synthetic noise radius synthetic_dataset_noise=0.9
+Evaluate ranks and output to ./results_1n_rank/X5bw-SYN_NOISE0.9-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+stitch into model bw
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 1690.49
+Epoch 1, loss 273.66
+Epoch 2, loss 164.24
+Epoch 3, loss 109.09
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 97.29 %
+Confusion Matrix
+tensor([[990,   0,   4,   1,   0,   4,   0,   0,   0,   1],
+        [  2, 983,   1,   0,   1,   7,   0,   1,   4,   1],
+        [ 13,   8, 960,   7,   3,   0,   4,   1,   4,   0],
+        [  1,   1,   4, 969,   0,  11,   0,   3,   8,   3],
+        [  0,   0,   3,   4, 962,   3,   0,   4,   2,  22],
+        [  1,   6,   0,   9,   0, 978,   0,   1,   2,   3],
+        [ 17,   1,   0,   0,   0,  20, 955,   0,   7,   0],
+        [  3,   6,   2,   1,  10,  11,   0, 963,   0,   4],
+        [  1,   2,   1,   4,   0,   5,   0,   1, 981,   5],
+        [  0,   0,   0,   2,   3,   4,   0,   1,   2, 988]], dtype=torch.int32)
+===================================================================
+output to ./results_1n_rank/X5bw-SYN_NOISE0.9-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Testing stitch with synthetic noise radius synthetic_dataset_noise=0.99
+Evaluate ranks and output to ./results_1n_rank/X5bw-SYN_NOISE0.99-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+stitch into model bw
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 2871.19
+Epoch 1, loss 356.33
+Epoch 2, loss 202.82
+Epoch 3, loss 143.17
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 96.41 %
+Confusion Matrix
+tensor([[984,   0,   6,   2,   0,   3,   2,   0,   3,   0],
+        [ 11, 967,   3,   1,   3,  11,   0,   2,   2,   0],
+        [ 16,   6, 960,   9,   1,   1,   4,   0,   3,   0],
+        [  0,   1,   3, 956,   0,  26,   0,   4,   7,   3],
+        [  0,   9,   0,   2, 963,   3,   0,   3,   5,  15],
+        [  5,   1,   0,   3,   0, 981,   3,   1,   1,   5],
+        [ 19,   1,   2,   0,   1,  20, 957,   0,   0,   0],
+        [ 12,  11,   4,   3,   2,  12,   0, 949,   1,   6],
+        [  3,   1,   1,   4,   0,  13,   8,   3, 961,   6],
+        [  2,   0,   0,   6,   5,  17,   0,   6,   1, 963]], dtype=torch.int32)
+===================================================================
+output to ./results_1n_rank/X5bw-SYN_NOISE0.99-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+Testing stitch with synthetic noise radius synthetic_dataset_noise=1.0
+Evaluate ranks and output to ./results_1n_rank/X5bw-SYN_NOISE1.0-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+stitch into model bw
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 3590.87
+Epoch 1, loss 379.38
+Epoch 2, loss 210.42
+Epoch 3, loss 155.31
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 95.96 %
+Confusion Matrix
+tensor([[993,   0,   1,   0,   0,   3,   0,   0,   2,   1],
+        [  7, 959,   5,   1,   1,  15,   1,   5,   4,   2],
+        [ 20,   2, 952,   9,   5,   0,   5,   1,   6,   0],
+        [  1,   4,   5, 958,   1,  20,   0,   2,   6,   3],
+        [  2,   6,   3,   5, 954,   3,   1,   8,   6,  12],
+        [  1,   2,   1,  13,   0, 977,   4,   0,   1,   1],
+        [ 22,   3,   0,   0,   0,  29, 937,   0,   9,   0],
+        [  8,   9,   7,   4,   5,  11,   0, 946,   2,   8],
+        [  4,   1,   0,   3,   0,  10,   7,   1, 961,  13],
+        [  6,   1,   2,   1,   5,  15,   0,   3,   8, 959]], dtype=torch.int32)
+===================================================================
+output to ./results_1n_rank/X5bw-SYN_NOISE1.0-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bw_mnist-test.csv
+key='bgonly' val={'model': ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+), 'train': False, 'train_loader': <torch.utils.data.dataloader.DataLoader object at 0x7f3146828970>, 'test_loader': <torch.utils.data.dataloader.DataLoader object at 0x7f31468287c0>, 'saveas': './results_1n/2025-01-21_10-12-57_SEED102_EPOCHS4_BGN0.1_exp1f_ResNet18_bg_only_colour_mnist.weights', 'loadfrom': './results_4_epochs/2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist.weights'}
+after layer 5, activations shape is torch.Size([10, 128, 4, 4])
+Testing stitch with synthetic noise radius synthetic_dataset_noise=0.5
+Evaluate ranks and output to ./results_1n_rank/X5bgonly-SYN_NOISE0.5-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 874.85
+Epoch 1, loss 119.95
+Epoch 2, loss 31.76
+Epoch 3, loss 37.47
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 99.83 %
+Confusion Matrix
+tensor([[ 996,    0,    0,    0,    0,    0,    1,    0,    3,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1000,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  999,    0,    0,    1,    0,    0,    0],
+        [   0,    0,    0,    0,  997,    0,    0,    1,    2,    0],
+        [   0,    0,    0,    0,    2,  998,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1000,    0,    0,    0],
+        [   0,    0,    0,    0,    1,    0,    0,  999,    0,    0],
+        [   0,    0,    0,    1,    3,    0,    0,    0,  996,    0],
+        [   0,    0,    0,    1,    0,    0,    0,    0,    1,  998]],
+       dtype=torch.int32)
+===================================================================
+output to ./results_1n_rank/X5bgonly-SYN_NOISE0.5-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Testing stitch with synthetic noise radius synthetic_dataset_noise=0.9
+Evaluate ranks and output to ./results_1n_rank/X5bgonly-SYN_NOISE0.9-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 2248.05
+Epoch 1, loss 312.18
+Epoch 2, loss 209.47
+Epoch 3, loss 153.93
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 97.75 %
+Confusion Matrix
+tensor([[967,   0,   2,   7,   3,   0,   4,  13,   4,   0],
+        [  1, 999,   0,   0,   0,   0,   0,   0,   0,   0],
+        [  1,   0, 987,   1,   2,   6,   0,   0,   3,   0],
+        [  1,   1,   0, 988,   5,   1,   1,   0,   3,   0],
+        [  0,   0,   3,   5, 952,   2,   3,  11,  23,   1],
+        [  0,   1,   1,   0,   2, 995,   1,   0,   0,   0],
+        [  2,   1,   0,   5,   6,   2, 972,   3,   3,   6],
+        [  0,   0,   0,   1,   3,   1,   2, 993,   0,   0],
+        [  2,   0,   7,  12,  25,   0,   8,   0, 943,   3],
+        [  0,   0,   3,   3,   2,   0,   7,   1,   5, 979]], dtype=torch.int32)
+===================================================================
+output to ./results_1n_rank/X5bgonly-SYN_NOISE0.9-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Testing stitch with synthetic noise radius synthetic_dataset_noise=0.99
+Evaluate ranks and output to ./results_1n_rank/X5bgonly-SYN_NOISE0.99-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 2793.20
+Epoch 1, loss 459.48
+Epoch 2, loss 319.69
+Epoch 3, loss 249.11
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 96.31 %
+Confusion Matrix
+tensor([[ 941,    0,    7,   11,    3,    7,    5,    9,   17,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  983,    1,    0,    6,    0,    0,    6,    4],
+        [   3,    0,    1,  963,    7,    0,    5,    0,   20,    1],
+        [   0,    0,   10,   20,  913,    5,    7,   10,   33,    2],
+        [   0,    0,    1,    0,    0,  999,    0,    0,    0,    0],
+        [   6,    1,    0,    5,   10,    3,  966,    1,    3,    5],
+        [   5,    0,    1,    0,    5,    2,    3,  984,    0,    0],
+        [   1,    4,   16,   17,   30,    0,    9,    0,  920,    3],
+        [   1,    0,    1,    7,    2,    3,   16,    1,    7,  962]],
+       dtype=torch.int32)
+===================================================================
+output to ./results_1n_rank/X5bgonly-SYN_NOISE0.99-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+Testing stitch with synthetic noise radius synthetic_dataset_noise=1.0
+Evaluate ranks and output to ./results_1n_rank/X5bgonly-SYN_NOISE1.0-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitch into model bgonly
+Train the stitch to a top model cut after layer 5
+Epoch 0, loss 3346.32
+Epoch 1, loss 442.85
+Epoch 2, loss 281.83
+Epoch 3, loss 194.84
+**** Finished Training ****
+Test the trained stitch
+Test Accuracy: 96.63 %
+Confusion Matrix
+tensor([[ 950,    1,    8,    9,    2,    2,    8,    6,   14,    0],
+        [   0, 1000,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,  983,    3,    0,    5,    0,    1,    7,    1],
+        [   2,    0,    0,  974,    7,    1,    2,    1,   12,    1],
+        [   0,    0,    0,   18,  929,    4,   10,   12,   24,    3],
+        [   0,    0,    3,    0,    1,  994,    1,    0,    0,    1],
+        [   3,    1,    2,    8,    8,    2,  948,    2,   16,   10],
+        [   4,    0,    0,    1,    3,    1,    2,  985,    3,    1],
+        [   2,    1,    9,   19,   17,    0,    4,    1,  943,    4],
+        [   0,    1,    3,    7,    1,    9,   15,    0,    7,  957]],
+       dtype=torch.int32)
+===================================================================
+output to ./results_1n_rank/X5bgonly-SYN_NOISE1.0-synth-102_2024-08-01_11-00-22_SEED101_EPOCHS4_BGN0.1_exp1e_ResNet18_bg_only_colour_mnist-test.csv
+stitching_accuracies={'bw': {5: 95.96}, 'bgonly': {5: 96.63}}
+stitching_penalties={'bw': {5: 2.3000000000000114}, 'bgonly': {5: 3.3700000000000045}}
+synth-bw
+98.26
+Stitch Accuracy
+95.96
+--------------------------
+synth-bgonly
+100.0
+Stitch Accuracy
+96.63
+--------------------------
