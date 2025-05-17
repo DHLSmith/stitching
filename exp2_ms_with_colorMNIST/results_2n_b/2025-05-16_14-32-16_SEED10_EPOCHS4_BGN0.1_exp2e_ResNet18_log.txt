@@ -1,0 +1,12 @@
+Executed at 2025-05-16_14-32-16
+logging to ./results_2n_b/2025-05-16_14-32-16_SEED10_EPOCHS4_BGN0.1_exp2e_ResNet18_log.txt
+seed=10
+bg_noise=0.1
+gen_randinit_model=True
+save_randinit_model_as='./results_2n_b/2025-05-16_14-32-16_SEED10_EPOCHS4_BGN0.1_exp2e_ResNet18_randinit.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bg_only_colour_mnist.weights'
+stitch_train_epochs=10
+================================================

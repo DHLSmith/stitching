@@ -1,0 +1,660 @@
+Executed at 2025-05-16_16-30-54
+logging to ./results_2n_b/2025-05-16_16-30-54_SEED10_EPOCHS4_BGN0.1_exp2e_ResNet18_log.txt
+seed=10
+bg_noise=0.1
+gen_randinit_model=False
+randinit_model_to_load='./2025-03-26_12-06-31_SEED57_EPOCHS4_BGN0.1_exp2e_ResNet18_randinit.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='./2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='./2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bg_only_colour_mnist.weights'
+stitch_train_epochs=10
+================================================
+val['loadfrom']='./2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist.weights'
+val['loadfrom']='./2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bg_only_colour_mnist.weights'
+val['loadfrom']='./2025-03-26_12-06-31_SEED57_EPOCHS4_BGN0.1_exp2e_ResNet18_randinit.weights'
+Entering Confusion
+Accuracy Calculation for ResNet18 with key='bw'
+Test the Trained Resnet18 against OWN TEST LOADER: key='bw'
+Test Accuracy: 99.09 %
+Confusion Matrix
+tensor([[ 979,    0,    0,    0,    0,    1,    0,    0,    0,    0],
+        [   0, 1132,    0,    0,    0,    2,    1,    0,    0,    0],
+        [   1,    1, 1025,    3,    1,    0,    0,    1,    0,    0],
+        [   1,    0,    0, 1000,    0,    5,    0,    0,    3,    1],
+        [   0,    0,    0,    0,  973,    0,    0,    1,    0,    8],
+        [   2,    0,    0,    1,    0,  881,    1,    0,    2,    5],
+        [   3,    4,    0,    0,    0,    2,  948,    0,    1,    0],
+        [   0,    5,    9,    2,    0,    0,    0, 1006,    1,    5],
+        [   3,    0,    1,    0,    0,    1,    0,    2,  965,    2],
+        [   1,    1,    0,    2,    3,    1,    0,    0,    1, 1000]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='bgonly'
+Test the Trained Resnet18 against OWN TEST LOADER: key='bgonly'
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+tensor(10000)
+Accuracy Calculation for ResNet18 with key='randinit'
+Test the Trained Resnet18 against OWN TEST LOADER: key='randinit'
+Test Accuracy: 9.58 %
+Confusion Matrix
+tensor([[   0,    0,    0,    0,    0,    0,  980,    0,    0,    0],
+        [   0,    0,    0, 1135,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1032,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1010,    0,    0,    0],
+        [   0,    0,    0,  874,    0,    0,  108,    0,    0,    0],
+        [   0,    0,    0,  892,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0, 1028,    0,    0,    0],
+        [   0,    0,    0,  974,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,  525,    0,    0,  443,   41,    0,    0]],
+       dtype=torch.int32)
+tensor(10000)
+original_accuracy={'bw': 99.09, 'bgonly': 100.0, 'randinit': 9.58}
+Entering whole model check
+Entering Stitch/Rank
+device='cuda'
+Already evaluated for ./results_2n_b_rank/bw3bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Already evaluated for ./results_2n_b_rank/bw4bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Already evaluated for ./results_2n_b_rank/bw5bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Evaluate ranks and output to ./results_2n_b_rank/bw6bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 6 from bw to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 229.76
+Epoch 1, loss 34.16
+Epoch 2, loss 20.98
+Epoch 3, loss 15.06
+Epoch 4, loss 11.13
+Epoch 5, loss 9.44
+Epoch 6, loss 7.83
+Epoch 7, loss 6.84
+Epoch 8, loss 5.71
+Epoch 9, loss 6.03
+**** Finished Training ****
+Change in stitch weights: 0.9960662126541138
+Largest abs weight change: 0.052247218787670135
+Number of weights changing > 0.1 of that: 9380
+Change in stitch bias: 0.025582490488886833
+Largest abs bias change: 0.0028533414006233215
+Number of bias changing > 0.1 of that: 230
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/bw7bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 7 from bw to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 161.07
+Epoch 1, loss 48.33
+Epoch 2, loss 34.52
+Epoch 3, loss 27.67
+Epoch 4, loss 25.46
+Epoch 5, loss 21.44
+Epoch 6, loss 18.44
+Epoch 7, loss 17.57
+Epoch 8, loss 17.03
+Epoch 9, loss 16.30
+**** Finished Training ****
+Change in stitch weights: 1.1505815982818604
+Largest abs weight change: 0.033749260008335114
+Number of weights changing > 0.1 of that: 27486
+Change in stitch bias: 0.026522697880864143
+Largest abs bias change: 0.0020207837224006653
+Number of bias changing > 0.1 of that: 466
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/bw8bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 8 from bw to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 156.37
+Epoch 1, loss 49.29
+Epoch 2, loss 37.17
+Epoch 3, loss 31.29
+Epoch 4, loss 27.06
+Epoch 5, loss 23.19
+Epoch 6, loss 21.75
+Epoch 7, loss 19.09
+Epoch 8, loss 17.40
+Epoch 9, loss 16.61
+**** Finished Training ****
+Change in stitch weights: 1.13477623462677
+Largest abs weight change: 0.02988794818520546
+Number of weights changing > 0.1 of that: 36290
+Change in stitch bias: 0.026316387578845024
+Largest abs bias change: 0.002017073333263397
+Number of bias changing > 0.1 of that: 464
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 99.85 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,   15,    0,    0,    0,  959,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch to bw: skipping
+NOTE: Only running stitch to bw: skipping
+Evaluate ranks and output to ./results_2n_b_rank/bgonly3bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from bgonly to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 204.86
+Epoch 1, loss 19.94
+Epoch 2, loss 12.07
+Epoch 3, loss 8.59
+Epoch 4, loss 7.35
+Epoch 5, loss 5.34
+Epoch 6, loss 5.01
+Epoch 7, loss 4.22
+Epoch 8, loss 9.54
+Epoch 9, loss 3.87
+**** Finished Training ****
+Change in stitch weights: 0.7889275550842285
+Largest abs weight change: 0.07016375660896301
+Number of weights changing > 0.1 of that: 2200
+Change in stitch bias: 0.02530595473945141
+Largest abs bias change: 0.005661375820636749
+Number of bias changing > 0.1 of that: 59
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/bgonly4bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 4 from bgonly to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 415.29
+Epoch 1, loss 11.06
+Epoch 2, loss 5.17
+Epoch 3, loss 3.88
+Epoch 4, loss 3.20
+Epoch 5, loss 3.66
+Epoch 6, loss 2.43
+Epoch 7, loss 2.38
+Epoch 8, loss 2.47
+Epoch 9, loss 1.65
+**** Finished Training ****
+Change in stitch weights: 0.8369736075401306
+Largest abs weight change: 0.06485995650291443
+Number of weights changing > 0.1 of that: 2418
+Change in stitch bias: 0.026111258193850517
+Largest abs bias change: 0.005540862679481506
+Number of bias changing > 0.1 of that: 50
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/bgonly5bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 5 from bgonly to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 192.42
+Epoch 1, loss 12.15
+Epoch 2, loss 8.74
+Epoch 3, loss 5.22
+Epoch 4, loss 3.73
+Epoch 5, loss 3.25
+Epoch 6, loss 2.57
+Epoch 7, loss 2.83
+Epoch 8, loss 2.15
+Epoch 9, loss 2.20
+**** Finished Training ****
+Change in stitch weights: 0.8695576786994934
+Largest abs weight change: 0.032741956412792206
+Number of weights changing > 0.1 of that: 9770
+Change in stitch bias: 0.026035448536276817
+Largest abs bias change: 0.003999389708042145
+Number of bias changing > 0.1 of that: 117
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/bgonly6bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 6 from bgonly to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 62.82
+Epoch 1, loss 3.59
+Epoch 2, loss 2.94
+Epoch 3, loss 2.68
+Epoch 4, loss 1.97
+Epoch 5, loss 1.73
+Epoch 6, loss 1.46
+Epoch 7, loss 1.42
+Epoch 8, loss 1.38
+Epoch 9, loss 1.21
+**** Finished Training ****
+Change in stitch weights: 0.6929352283477783
+Largest abs weight change: 0.0223921537399292
+Number of weights changing > 0.1 of that: 25166
+Change in stitch bias: 0.027041031047701836
+Largest abs bias change: 0.0028583407402038574
+Number of bias changing > 0.1 of that: 230
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/bgonly7bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 7 from bgonly to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 38.44
+Epoch 1, loss 2.52
+Epoch 2, loss 2.19
+Epoch 3, loss 1.66
+Epoch 4, loss 1.50
+Epoch 5, loss 1.22
+Epoch 6, loss 1.10
+Epoch 7, loss 0.96
+Epoch 8, loss 1.08
+Epoch 9, loss 1.34
+**** Finished Training ****
+Change in stitch weights: 0.7703478932380676
+Largest abs weight change: 0.01091817021369934
+Number of weights changing > 0.1 of that: 130597
+Change in stitch bias: 0.026551928371191025
+Largest abs bias change: 0.0020208023488521576
+Number of bias changing > 0.1 of that: 457
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/bgonly8bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 8 from bgonly to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 37.70
+Epoch 1, loss 3.02
+Epoch 2, loss 1.76
+Epoch 3, loss 1.55
+Epoch 4, loss 1.67
+Epoch 5, loss 1.43
+Epoch 6, loss 1.17
+Epoch 7, loss 1.29
+Epoch 8, loss 1.27
+Epoch 9, loss 0.70
+**** Finished Training ****
+Change in stitch weights: 0.7659389972686768
+Largest abs weight change: 0.009577260352671146
+Number of weights changing > 0.1 of that: 145711
+Change in stitch bias: 0.02710561640560627
+Largest abs bias change: 0.0020171664655208588
+Number of bias changing > 0.1 of that: 472
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch to bw: skipping
+NOTE: Only running stitch to bw: skipping
+Evaluate ranks and output to ./results_2n_b_rank/randinit3bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 3 from randinit to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 216.85
+Epoch 1, loss 32.76
+Epoch 2, loss 16.69
+Epoch 3, loss 14.03
+Epoch 4, loss 9.90
+Epoch 5, loss 9.84
+Epoch 6, loss 6.67
+Epoch 7, loss 5.73
+Epoch 8, loss 4.49
+Epoch 9, loss 7.02
+**** Finished Training ****
+Change in stitch weights: 0.9546381235122681
+Largest abs weight change: 0.07365165650844574
+Number of weights changing > 0.1 of that: 2405
+Change in stitch bias: 0.024919433519244194
+Largest abs bias change: 0.005682133138179779
+Number of bias changing > 0.1 of that: 56
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/randinit4bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 4 from randinit to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 157.91
+Epoch 1, loss 10.02
+Epoch 2, loss 6.04
+Epoch 3, loss 4.07
+Epoch 4, loss 3.17
+Epoch 5, loss 2.36
+Epoch 6, loss 2.12
+Epoch 7, loss 1.82
+Epoch 8, loss 1.28
+Epoch 9, loss 1.07
+**** Finished Training ****
+Change in stitch weights: 0.8236826658248901
+Largest abs weight change: 0.05077265202999115
+Number of weights changing > 0.1 of that: 2781
+Change in stitch bias: 0.025024842470884323
+Largest abs bias change: 0.005662485957145691
+Number of bias changing > 0.1 of that: 53
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/randinit5bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 5 from randinit to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 135.91
+Epoch 1, loss 7.14
+Epoch 2, loss 3.69
+Epoch 3, loss 2.89
+Epoch 4, loss 2.10
+Epoch 5, loss 1.75
+Epoch 6, loss 1.45
+Epoch 7, loss 1.43
+Epoch 8, loss 1.16
+Epoch 9, loss 1.18
+**** Finished Training ****
+Change in stitch weights: 0.7976728677749634
+Largest abs weight change: 0.027186982333660126
+Number of weights changing > 0.1 of that: 10586
+Change in stitch bias: 0.025498323142528534
+Largest abs bias change: 0.004032976925373077
+Number of bias changing > 0.1 of that: 110
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/randinit6bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 6 from randinit to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 106.79
+Epoch 1, loss 5.60
+Epoch 2, loss 3.67
+Epoch 3, loss 2.67
+Epoch 4, loss 2.13
+Epoch 5, loss 2.21
+Epoch 6, loss 1.61
+Epoch 7, loss 1.33
+Epoch 8, loss 1.11
+Epoch 9, loss 1.44
+**** Finished Training ****
+Change in stitch weights: 0.8565991520881653
+Largest abs weight change: 0.023971866816282272
+Number of weights changing > 0.1 of that: 29294
+Change in stitch bias: 0.025971435010433197
+Largest abs bias change: 0.002848859876394272
+Number of bias changing > 0.1 of that: 234
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/randinit7bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 7 from randinit to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 71.30
+Epoch 1, loss 5.49
+Epoch 2, loss 3.59
+Epoch 3, loss 2.70
+Epoch 4, loss 2.26
+Epoch 5, loss 1.76
+Epoch 6, loss 1.72
+Epoch 7, loss 1.55
+Epoch 8, loss 1.51
+Epoch 9, loss 1.22
+**** Finished Training ****
+Change in stitch weights: 0.910165011882782
+Largest abs weight change: 0.010549470782279968
+Number of weights changing > 0.1 of that: 147052
+Change in stitch bias: 0.025708168745040894
+Largest abs bias change: 0.002019967883825302
+Number of bias changing > 0.1 of that: 459
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+Evaluate ranks and output to ./results_2n_b_rank/randinit8bw-bgonly-10_2024-08-06_12-57-58_SEED60_EPOCHS4_BGN0.1_exp2e_ResNet18_bw_mnist-test.csv
+Train the stitch to a model stitched after layer 8 from randinit to bw
+Use the bgonly data loader (train and test) regardless of what the models were trained on
+Epoch 0, loss 73.21
+Epoch 1, loss 6.83
+Epoch 2, loss 4.19
+Epoch 3, loss 3.20
+Epoch 4, loss 2.80
+Epoch 5, loss 2.44
+Epoch 6, loss 1.92
+Epoch 7, loss 1.46
+Epoch 8, loss 1.60
+Epoch 9, loss 1.07
+**** Finished Training ****
+Change in stitch weights: 0.9259644150733948
+Largest abs weight change: 0.011032503098249435
+Number of weights changing > 0.1 of that: 143670
+Change in stitch bias: 0.026620423421263695
+Largest abs bias change: 0.002020515501499176
+Number of bias changing > 0.1 of that: 472
+Test the trained stitch against dataset_type='bgonly' data
+Test Accuracy: 100.00 %
+Confusion Matrix
+tensor([[ 980,    0,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0, 1135,    0,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0, 1032,    0,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0, 1010,    0,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,  982,    0,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,  892,    0,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,  958,    0,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0, 1028,    0,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,  974,    0],
+        [   0,    0,    0,    0,    0,    0,    0,    0,    0, 1009]],
+       dtype=torch.int32)
+===================================================================
+NOTE: Only running stitch to bw: skipping
+NOTE: Only running stitch to bw: skipping
+stitching_accuracies={'bw': {'bw': {6: 100.0, 7: 100.0, 8: 99.85}}, 'bgonly': {'bw': {3: 100.0, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}}, 'randinit': {'bw': {3: 100.0, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}}}
+stitching_penalties={'bw': {'bw': {6: -0.9099999999999966, 7: -0.9099999999999966, 8: -0.7599999999999909}}, 'bgonly': {'bw': {3: -0.9099999999999966, 4: -0.9099999999999966, 5: -0.9099999999999966, 6: -0.9099999999999966, 7: -0.9099999999999966, 8: -0.9099999999999966}}, 'randinit': {'bw': {3: -0.9099999999999966, 4: -0.9099999999999966, 5: -0.9099999999999966, 6: -0.9099999999999966, 7: -0.9099999999999966, 8: -0.9099999999999966}}}
+bw-bw
+original_accuracy[r_key]=99.09
+Stitch Accuracy
+L6: 100.0
+L7: 100.0
+L8: 99.85
+--------------------------
+bgonly-bw
+original_accuracy[r_key]=99.09
+Stitch Accuracy
+L3: 100.0
+L4: 100.0
+L5: 100.0
+L6: 100.0
+L7: 100.0
+L8: 100.0
+--------------------------
+randinit-bw
+original_accuracy[r_key]=99.09
+Stitch Accuracy
+L3: 100.0
+L4: 100.0
+L5: 100.0
+L6: 100.0
+L7: 100.0
+L8: 100.0
+--------------------------
+stitching_accuracies={'bw': {'bw': {6: 100.0, 7: 100.0, 8: 99.85}}, 'bgonly': {'bw': {3: 100.0, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}}, 'randinit': {'bw': {3: 100.0, 4: 100.0, 5: 100.0, 6: 100.0, 7: 100.0, 8: 100.0}}}
+stitching_penalties={'bw': {'bw': {6: -0.9099999999999966, 7: -0.9099999999999966, 8: -0.7599999999999909}}, 'bgonly': {'bw': {3: -0.9099999999999966, 4: -0.9099999999999966, 5: -0.9099999999999966, 6: -0.9099999999999966, 7: -0.9099999999999966, 8: -0.9099999999999966}}, 'randinit': {'bw': {3: -0.9099999999999966, 4: -0.9099999999999966, 5: -0.9099999999999966, 6: -0.9099999999999966, 7: -0.9099999999999966, 8: -0.9099999999999966}}}
+bw-bw
+original_accuracy[r_key]=99.09
+Stitch Accuracy
+L6: 100.0
+L7: 100.0
+L8: 99.85
+--------------------------
+bgonly-bw
+original_accuracy[r_key]=99.09
+Stitch Accuracy
+L3: 100.0
+L4: 100.0
+L5: 100.0
+L6: 100.0
+L7: 100.0
+L8: 100.0
+--------------------------
+randinit-bw
+original_accuracy[r_key]=99.09
+Stitch Accuracy
+L3: 100.0
+L4: 100.0
+L5: 100.0
+L6: 100.0
+L7: 100.0
+L8: 100.0
+--------------------------

@@ -1,0 +1,2 @@
+,model,dataset,seed,send_file,rcv_file,val_acc,name
+0,randinit3bw,bgonly,10,./2025-03-26_12-06-31_SEED57_EPOCHS4_BGN0.1_exp2e_ResNet18_randinit.weights,./2025-03-26_12-06-31_SEED57_EPOCHS4_BGN0.1_exp2e_ResNet18_randinit.weights,1.0,only
