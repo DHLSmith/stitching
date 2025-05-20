@@ -1,0 +1,22 @@
+Executed at 2025-05-18_21-28-37
+logging to ./results_2j_b/2025-05-18_21-28-37_SEED107_EPOCHS50_BGN0.1_exp2h_VGG19_log.txt
+seed=107
+bg_noise=0.1
+synthetic_dataset_noise=0.1
+gen_randinit_model=False
+randinit_model_to_load='2025-03-26_18-57-22_SEED107_EPOCHS50_BGN0.1_exp2h_VGG19_randinit.weights'
+train_mix_mnist_model=False
+mix_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_mix_mnist.weights'
+train_bw_mnist_model=False
+bw_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bw_mnist.weights'
+train_bg_only_colour_mnist_model=False
+bg_only_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_only_colour_mnist.weights'
+train_bg_unbiased_colour_mnist_model=False
+bg_unbiased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_bg_unbiased_colour_mnist.weights'
+train_biased_colour_mnist_model=False
+biased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_biased_colour_mnist.weights'
+train_unbiased_colour_mnist_model=False
+unbiased_colour_mnist_model_to_load='../exp1_ms_with_random_dataset/results_1g/2025-01-07_10-01-18_SEED107_EPOCHS50_BGN0.1_exp1g_VGG19_unbiased_colour_mnist.weights'
+stitch_train_epochs=50
+================================================
+val['loadfrom']='2025-03-26_18-57-22_SEED107_EPOCHS50_BGN0.1_exp2h_VGG19_randinit.weights'
