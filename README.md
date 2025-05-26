@@ -2,6 +2,10 @@
 
 Notebooks and code to perform experiments on model-stitching:
 
+- **exp_autoencoder**
+	- *autoencoder.ipynb* jupyter notebook to train autoencoders on MNIST and CIFAR data and stitch them together.
+	- *autoencoder_cifar_mnist.ipynb* notebook for Google Colab to train autoencoders on MNIST and CIFAR data and stitch them together.
+	- *autoencoder_fashion_mnist.ipynb* notebook for Google Colab to train autoencoders on MNIST and Fashion-MNIST data and stitch them together.
 - **exp1_ms_with_random_dataset**
     - *exp1f_weak_ResNet-18_synthdata_rank.ipynb* (Optionally) trains ResNet-18 models to use as receivers, and stitches ‘synth’ data into them as a
 sender. Uses https://github.com/DHLSmith/jons-tunnel-effect.git packages to record rank and accuracy. Change seed and rerun to generate differently initialised and stitched
